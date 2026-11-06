@@ -1,0 +1,254 @@
+2026-11-01T00:05:49.201185+00:00 srv-bastion sshd[4075]: Accepted publickey for deploy from 10.0.0.12 port 34734 ssh2: ED25519 SHA256:RbacaILS61N1ZS1X0Xb3I8WW0CUeT51UfeOXXKCFCH2
+2026-11-01T00:05:49.460806+00:00 srv-bastion sshd[4075]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T00:06:09.566682+00:00 srv-bastion sudo[55825]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T00:06:09.265340+00:00 srv-bastion sudo[58713]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T00:07:49.998943+00:00 srv-bastion sshd[4075]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T00:17:00.970494+00:00 srv-bastion CRON[41685]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T00:17:01.559169+00:00 srv-bastion CRON[41685]: pam_unix(cron:session): session closed for user root
+2026-11-01T00:23:01.833600+00:00 srv-bastion sshd[43771]: Failed password for ubuntu from 45.128.206.217 port 51794 ssh2
+2026-11-01T00:26:00.589586+00:00 srv-bastion sshd[64783]: Invalid user test from 45.128.206.217 port 46927
+2026-11-01T00:26:01.875304+00:00 srv-bastion sshd[64783]: Failed password for invalid user test from 45.128.206.217 port 46927 ssh2
+2026-11-01T01:17:00.383619+00:00 srv-bastion CRON[47722]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T01:17:01.598714+00:00 srv-bastion CRON[47722]: pam_unix(cron:session): session closed for user root
+2026-11-01T01:22:00.316909+00:00 srv-bastion sshd[11446]: Invalid user user from 61.44.145.97 port 46557
+2026-11-01T01:22:01.995720+00:00 srv-bastion sshd[11446]: Failed password for invalid user user from 61.44.145.97 port 46557 ssh2
+2026-11-01T02:05:03.151067+00:00 srv-bastion sshd[37542]: Accepted publickey for deploy from 10.0.0.12 port 39827 ssh2: ED25519 SHA256:RZ57SfGaOCOcZeIUZXGd3QI0aRGTdNBZaM7W04JMSPa
+2026-11-01T02:05:03.653960+00:00 srv-bastion sshd[37542]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T02:05:23.289021+00:00 srv-bastion sudo[51177]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T02:05:23.782545+00:00 srv-bastion sudo[16713]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T02:07:03.860199+00:00 srv-bastion sshd[37542]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T02:17:00.767447+00:00 srv-bastion CRON[39590]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T02:17:01.173735+00:00 srv-bastion CRON[39590]: pam_unix(cron:session): session closed for user root
+2026-11-01T03:12:06.701690+00:00 srv-bastion sshd[58705]: Failed password for root from 203.0.113.45 port 41867 ssh2
+2026-11-01T03:12:10.158530+00:00 srv-bastion sshd[9333]: Failed password for root from 203.0.113.45 port 36858 ssh2
+2026-11-01T03:12:13.084316+00:00 srv-bastion sshd[29802]: Invalid user admin from 203.0.113.45 port 59722
+2026-11-01T03:12:14.079851+00:00 srv-bastion sshd[29802]: Failed password for invalid user admin from 203.0.113.45 port 59722 ssh2
+2026-11-01T03:12:17.571906+00:00 srv-bastion sshd[43998]: Invalid user admin from 203.0.113.45 port 55495
+2026-11-01T03:12:18.209980+00:00 srv-bastion sshd[43998]: Failed password for invalid user admin from 203.0.113.45 port 55495 ssh2
+2026-11-01T03:12:21.821105+00:00 srv-bastion sshd[58576]: Invalid user test from 203.0.113.45 port 38331
+2026-11-01T03:12:22.370656+00:00 srv-bastion sshd[58576]: Failed password for invalid user test from 203.0.113.45 port 38331 ssh2
+2026-11-01T03:12:25.963469+00:00 srv-bastion sshd[37543]: Invalid user oracle from 203.0.113.45 port 35044
+2026-11-01T03:12:26.976552+00:00 srv-bastion sshd[37543]: Failed password for invalid user oracle from 203.0.113.45 port 35044 ssh2
+2026-11-01T03:12:30.943657+00:00 srv-bastion sshd[56855]: Failed password for root from 203.0.113.45 port 57337 ssh2
+2026-11-01T03:12:34.746720+00:00 srv-bastion sshd[56756]: Failed password for ubuntu from 203.0.113.45 port 35842 ssh2
+2026-11-01T03:12:37.292071+00:00 srv-bastion sshd[48021]: Invalid user postgres from 203.0.113.45 port 58478
+2026-11-01T03:12:38.676389+00:00 srv-bastion sshd[48021]: Failed password for invalid user postgres from 203.0.113.45 port 58478 ssh2
+2026-11-01T03:12:42.090855+00:00 srv-bastion sshd[63459]: Failed password for root from 203.0.113.45 port 48799 ssh2
+2026-11-01T03:12:45.980511+00:00 srv-bastion sshd[50060]: Invalid user admin from 203.0.113.45 port 44117
+2026-11-01T03:12:46.680750+00:00 srv-bastion sshd[50060]: Failed password for invalid user admin from 203.0.113.45 port 44117 ssh2
+2026-11-01T03:12:49.862984+00:00 srv-bastion sshd[62740]: Invalid user git from 203.0.113.45 port 62347
+2026-11-01T03:12:50.340981+00:00 srv-bastion sshd[62740]: Failed password for invalid user git from 203.0.113.45 port 62347 ssh2
+2026-11-01T03:12:54.429357+00:00 srv-bastion sshd[19240]: Failed password for root from 203.0.113.45 port 56372 ssh2
+2026-11-01T03:12:57.198006+00:00 srv-bastion sshd[64445]: Invalid user pi from 203.0.113.45 port 44703
+2026-11-01T03:12:58.463605+00:00 srv-bastion sshd[64445]: Failed password for invalid user pi from 203.0.113.45 port 44703 ssh2
+2026-11-01T03:17:00.864418+00:00 srv-bastion CRON[52003]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T03:17:01.348954+00:00 srv-bastion CRON[52003]: pam_unix(cron:session): session closed for user root
+2026-11-01T03:20:01.572188+00:00 srv-bastion sshd[26293]: Failed password for deploy from 198.51.100.23 port 52093 ssh2
+2026-11-01T03:20:07.821025+00:00 srv-bastion sshd[9067]: Failed password for deploy from 198.51.100.23 port 34869 ssh2
+2026-11-01T03:20:13.122010+00:00 srv-bastion sshd[16853]: Failed password for deploy from 198.51.100.23 port 47726 ssh2
+2026-11-01T03:20:19.544130+00:00 srv-bastion sshd[13376]: Failed password for deploy from 198.51.100.23 port 55395 ssh2
+2026-11-01T03:20:25.271992+00:00 srv-bastion sshd[44999]: Failed password for deploy from 198.51.100.23 port 34696 ssh2
+2026-11-01T03:20:31.360760+00:00 srv-bastion sshd[47932]: Failed password for deploy from 198.51.100.23 port 62016 ssh2
+2026-11-01T03:20:37.993024+00:00 srv-bastion sshd[64062]: Failed password for deploy from 198.51.100.23 port 53946 ssh2
+2026-11-01T03:20:50.733804+00:00 srv-bastion sshd[58854]: Accepted password for deploy from 198.51.100.23 port 51522 ssh2
+2026-11-01T03:20:50.991807+00:00 srv-bastion sshd[58854]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-01T03:22:50.546901+00:00 srv-bastion sudo[47036]: deploy : TTY=pts/2 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+2026-11-01T03:22:50.171515+00:00 srv-bastion sudo[11331]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T03:23:30.119624+00:00 srv-bastion sudo[7617]: deploy : TTY=pts/2 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+2026-11-01T03:23:30.140242+00:00 srv-bastion sudo[30560]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T03:24:50.085747+00:00 srv-bastion sudo[11472]: deploy : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash svc-backup
+2026-11-01T03:24:50.075644+00:00 srv-bastion sudo[57316]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T03:24:50.477672+00:00 srv-bastion useradd[25309]: new group: name=svc-backup, GID=1004
+2026-11-01T03:24:50.071303+00:00 srv-bastion useradd[32184]: new user: name=svc-backup, UID=1004, GID=1004, home=/home/svc-backup, shell=/bin/bash, from=/dev/pts/2
+2026-11-01T03:25:15.048647+00:00 srv-bastion sudo[47183]: deploy : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo svc-backup
+2026-11-01T03:25:15.115002+00:00 srv-bastion sudo[39427]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T03:25:15.111785+00:00 srv-bastion usermod[45703]: add 'svc-backup' to group 'sudo'
+2026-11-01T03:25:15.420123+00:00 srv-bastion usermod[45703]: add 'svc-backup' to shadow group 'sudo'
+2026-11-01T03:31:15.471974+00:00 srv-bastion sshd[4091]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T04:05:24.462061+00:00 srv-bastion sshd[54488]: Accepted publickey for deploy from 10.0.0.12 port 35625 ssh2: ED25519 SHA256:TAD7U269B7YIScMUeONL8ccG0cBXMGTD4eUTeHIJJBa
+2026-11-01T04:05:24.483350+00:00 srv-bastion sshd[54488]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T04:05:44.844298+00:00 srv-bastion sudo[27810]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T04:05:44.705931+00:00 srv-bastion sudo[21313]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T04:07:24.747204+00:00 srv-bastion sshd[54488]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T04:17:00.665713+00:00 srv-bastion CRON[26346]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T04:17:01.827969+00:00 srv-bastion CRON[26346]: pam_unix(cron:session): session closed for user root
+2026-11-01T04:56:01.580664+00:00 srv-bastion sshd[8724]: Failed password for root from 185.239.162.59 port 53470 ssh2
+2026-11-01T05:17:00.966500+00:00 srv-bastion CRON[24782]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T05:17:01.322576+00:00 srv-bastion CRON[24782]: pam_unix(cron:session): session closed for user root
+2026-11-01T06:05:48.434448+00:00 srv-bastion sshd[21701]: Accepted publickey for deploy from 10.0.0.12 port 31642 ssh2: ED25519 SHA256:dOa0DAMbIcEGaQZ65ScR3TfDCbFLPA16KW7388V6G63
+2026-11-01T06:05:48.313932+00:00 srv-bastion sshd[21701]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T06:06:08.389630+00:00 srv-bastion sudo[3734]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T06:06:08.804622+00:00 srv-bastion sudo[44730]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T06:07:48.509827+00:00 srv-bastion sshd[21701]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T06:17:00.730983+00:00 srv-bastion CRON[26860]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T06:17:01.214901+00:00 srv-bastion CRON[26860]: pam_unix(cron:session): session closed for user root
+2026-11-01T07:08:00.725833+00:00 srv-bastion sshd[19614]: Invalid user user from 45.15.149.76 port 42559
+2026-11-01T07:08:01.781007+00:00 srv-bastion sshd[19614]: Failed password for invalid user user from 45.15.149.76 port 42559 ssh2
+2026-11-01T07:11:01.134707+00:00 srv-bastion sshd[2983]: Failed password for root from 45.15.149.76 port 46102 ssh2
+2026-11-01T07:14:01.460418+00:00 srv-bastion sshd[5446]: Failed password for ubuntu from 45.15.149.76 port 36205 ssh2
+2026-11-01T07:17:00.688156+00:00 srv-bastion CRON[51108]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T07:17:01.905791+00:00 srv-bastion CRON[51108]: pam_unix(cron:session): session closed for user root
+2026-11-01T08:05:20.040293+00:00 srv-bastion sshd[2044]: Accepted publickey for deploy from 10.0.0.12 port 33707 ssh2: ED25519 SHA256:D12PSRTA83HRDXV1R538VSR7WMdaL94P9BPY6J5B7QW
+2026-11-01T08:05:20.839775+00:00 srv-bastion sshd[2044]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T08:05:40.000127+00:00 srv-bastion sudo[43406]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T08:05:40.042868+00:00 srv-bastion sudo[45655]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T08:07:20.418372+00:00 srv-bastion sshd[2044]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T08:09:06.627542+00:00 srv-bastion sshd[29673]: Accepted publickey for bob from 10.0.0.34 port 60551 ssh2: ED25519 SHA256:CWDPA5CYQJRbKWNTH4fGSJ9WEBfF41XVEJSf7e3PH4c
+2026-11-01T08:09:06.954004+00:00 srv-bastion sshd[29673]: pam_unix(sshd:session): session opened for user bob(uid=1000) by (uid=0)
+2026-11-01T08:12:06.280673+00:00 srv-bastion sudo[53230]: bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+2026-11-01T08:12:06.223209+00:00 srv-bastion sudo[20856]: pam_unix(sudo:session): session opened for user root(uid=0) by bob(uid=1000)
+2026-11-01T08:17:00.382597+00:00 srv-bastion CRON[60988]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T08:17:01.114597+00:00 srv-bastion CRON[60988]: pam_unix(cron:session): session closed for user root
+2026-11-01T08:25:06.150335+00:00 srv-bastion sshd[29673]: pam_unix(sshd:session): session closed for user bob
+2026-11-01T08:40:09.915181+00:00 srv-bastion sshd[61284]: Accepted publickey for alice from 10.0.0.21 port 63298 ssh2: ED25519 SHA256:I1H93PHIAYO4Y1OEM4M3TUNMJFMRA761eOaUeEOOJR6
+2026-11-01T08:40:09.552689+00:00 srv-bastion sshd[61284]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+2026-11-01T08:43:09.089552+00:00 srv-bastion sudo[60728]: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-01T08:43:09.124926+00:00 srv-bastion sudo[42059]: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1000)
+2026-11-01T08:49:00.700630+00:00 srv-bastion sshd[17941]: Invalid user test from 45.142.70.241 port 53408
+2026-11-01T08:49:01.766969+00:00 srv-bastion sshd[17941]: Failed password for invalid user test from 45.142.70.241 port 53408 ssh2
+2026-11-01T08:52:00.843603+00:00 srv-bastion sshd[19440]: Invalid user user from 45.142.70.241 port 33424
+2026-11-01T08:52:01.271388+00:00 srv-bastion sshd[19440]: Failed password for invalid user user from 45.142.70.241 port 33424 ssh2
+2026-11-01T08:55:01.583342+00:00 srv-bastion sshd[2051]: Failed password for ubuntu from 45.142.70.241 port 61002 ssh2
+2026-11-01T08:55:09.688099+00:00 srv-bastion sshd[61284]: pam_unix(sshd:session): session closed for user alice
+2026-11-01T09:17:00.860291+00:00 srv-bastion CRON[29084]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T09:17:01.666052+00:00 srv-bastion CRON[29084]: pam_unix(cron:session): session closed for user root
+2026-11-01T09:28:01.790166+00:00 srv-bastion sshd[13346]: Failed password for root from 61.248.151.78 port 30863 ssh2
+2026-11-01T09:31:01.044697+00:00 srv-bastion sshd[62801]: Failed password for ubuntu from 61.248.151.78 port 49743 ssh2
+2026-11-01T09:34:00.460914+00:00 srv-bastion sshd[25925]: Invalid user admin from 61.248.151.78 port 43842
+2026-11-01T09:34:01.238017+00:00 srv-bastion sshd[25925]: Failed password for invalid user admin from 61.248.151.78 port 43842 ssh2
+2026-11-01T10:00:01.274250+00:00 srv-bastion sshd[21175]: Failed password for root from 61.161.48.29 port 40931 ssh2
+2026-11-01T10:03:00.231092+00:00 srv-bastion sshd[36202]: Invalid user test from 61.161.48.29 port 64897
+2026-11-01T10:03:01.391497+00:00 srv-bastion sshd[36202]: Failed password for invalid user test from 61.161.48.29 port 64897 ssh2
+2026-11-01T10:05:39.651660+00:00 srv-bastion sshd[64765]: Accepted publickey for deploy from 10.0.0.12 port 58444 ssh2: ED25519 SHA256:eDNVSVITY3PPGE1RFbLUCZGZT11cLKe04GdGbC1FICV
+2026-11-01T10:05:39.550608+00:00 srv-bastion sshd[64765]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T10:05:59.967957+00:00 srv-bastion sudo[26006]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T10:05:59.765987+00:00 srv-bastion sudo[63662]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T10:06:00.900600+00:00 srv-bastion sshd[32380]: Invalid user test from 61.161.48.29 port 60213
+2026-11-01T10:06:01.978531+00:00 srv-bastion sshd[32380]: Failed password for invalid user test from 61.161.48.29 port 60213 ssh2
+2026-11-01T10:07:39.600058+00:00 srv-bastion sshd[64765]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T10:12:21.833105+00:00 srv-bastion sshd[43276]: Accepted publickey for bob from 10.0.0.34 port 50714 ssh2: ED25519 SHA256:b7SC86KbLQI4J89J0CI2aT3AZ6LS937J28FV3YfbeU1
+2026-11-01T10:12:21.392394+00:00 srv-bastion sshd[43276]: pam_unix(sshd:session): session opened for user bob(uid=1000) by (uid=0)
+2026-11-01T10:13:16.920982+00:00 srv-bastion sshd[54766]: Failed password for alice from 10.0.0.21 port 56075 ssh2
+2026-11-01T10:13:30.429886+00:00 srv-bastion sshd[57751]: Accepted publickey for alice from 10.0.0.21 port 51254 ssh2: ED25519 SHA256:K11DUZ3AEIaVaVRWX8A0WNfDUKXXdJND4JWW887FG4I
+2026-11-01T10:13:30.775184+00:00 srv-bastion sshd[57751]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+2026-11-01T10:15:21.027477+00:00 srv-bastion sudo[40201]: bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+2026-11-01T10:15:21.681511+00:00 srv-bastion sudo[18852]: pam_unix(sudo:session): session opened for user root(uid=0) by bob(uid=1000)
+2026-11-01T10:16:01.964069+00:00 srv-bastion sshd[22080]: Failed password for root from 103.196.158.162 port 54721 ssh2
+2026-11-01T10:16:30.832527+00:00 srv-bastion sudo[61316]: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-01T10:16:30.791676+00:00 srv-bastion sudo[45647]: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1000)
+2026-11-01T10:17:00.943851+00:00 srv-bastion CRON[27331]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T10:17:01.068517+00:00 srv-bastion CRON[27331]: pam_unix(cron:session): session closed for user root
+2026-11-01T10:20:00.031828+00:00 srv-bastion sshd[55626]: Invalid user admin from 193.159.108.162 port 36241
+2026-11-01T10:20:01.076939+00:00 srv-bastion sshd[55626]: Failed password for invalid user admin from 193.159.108.162 port 36241 ssh2
+2026-11-01T10:23:00.821260+00:00 srv-bastion sshd[14492]: Invalid user user from 193.159.108.162 port 36187
+2026-11-01T10:23:01.774791+00:00 srv-bastion sshd[14492]: Failed password for invalid user user from 193.159.108.162 port 36187 ssh2
+2026-11-01T10:26:00.564392+00:00 srv-bastion sshd[63403]: Invalid user test from 103.181.36.177 port 32916
+2026-11-01T10:26:01.898828+00:00 srv-bastion sshd[63403]: Failed password for invalid user test from 103.181.36.177 port 32916 ssh2
+2026-11-01T10:29:00.801503+00:00 srv-bastion sshd[53863]: Invalid user admin from 103.181.36.177 port 46202
+2026-11-01T10:29:01.722330+00:00 srv-bastion sshd[53863]: Failed password for invalid user admin from 103.181.36.177 port 46202 ssh2
+2026-11-01T10:30:21.369728+00:00 srv-bastion sshd[43276]: pam_unix(sshd:session): session closed for user bob
+2026-11-01T10:32:00.551003+00:00 srv-bastion sshd[54174]: Invalid user test from 103.181.36.177 port 55983
+2026-11-01T10:32:01.211526+00:00 srv-bastion sshd[54174]: Failed password for invalid user test from 103.181.36.177 port 55983 ssh2
+2026-11-01T10:51:30.908141+00:00 srv-bastion sshd[57751]: pam_unix(sshd:session): session closed for user alice
+2026-11-01T11:17:00.733173+00:00 srv-bastion CRON[34321]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T11:17:01.700576+00:00 srv-bastion CRON[34321]: pam_unix(cron:session): session closed for user root
+ log rotation interrupted -- partial write
+2026-11-01T12:05:25.620772+00:00 srv-bastion sshd[7138]: Accepted publickey for deploy from 10.0.0.12 port 43080 ssh2: ED25519 SHA256:2ePJd96eKMNNMBROD5fLL45CFUU1OZ8bSY4WeIWcZX9
+2026-11-01T12:05:25.133918+00:00 srv-bastion sshd[7138]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T12:05:45.396956+00:00 srv-bastion sudo[50099]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T12:05:45.406988+00:00 srv-bastion sudo[12900]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T12:07:25.410490+00:00 srv-bastion sshd[7138]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T12:17:00.931482+00:00 srv-bastion CRON[24013]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T12:17:01.423192+00:00 srv-bastion CRON[24013]: pam_unix(cron:session): session closed for user root
+2026-11-01T13:09:00.996238+00:00 srv-bastion sshd[62826]: Invalid user user from 45.31.57.9 port 61292
+2026-11-01T13:09:01.328560+00:00 srv-bastion sshd[62826]: Failed password for invalid user user from 45.31.57.9 port 61292 ssh2
+2026-11-01T13:12:01.760564+00:00 srv-bastion sshd[44979]: Failed password for root from 45.31.57.9 port 63319 ssh2
+2026-11-01T13:17:00.840551+00:00 srv-bastion CRON[27635]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T13:17:01.773371+00:00 srv-bastion CRON[27635]: pam_unix(cron:session): session closed for user root
+2026-11-01T13:43:24.957453+00:00 srv-bastion sshd[17157]: Accepted publickey for alice from 10.0.0.21 port 44530 ssh2: ED25519 SHA256:8JNPJaT1438dD9B09X0eaXRLcJNOd9fUJK3M2GLUB44
+2026-11-01T13:43:24.936997+00:00 srv-bastion sshd[17157]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+2026-11-01T13:43:39.797763+00:00 srv-bastion sshd[34321]: Accepted publickey for bob from 10.0.0.34 port 48419 ssh2: ED25519 SHA256:3adZQFCbEK1YROHZIfMMO3B8Ce1MKKJcYWM8d7E9QVQ
+2026-11-01T13:43:39.138092+00:00 srv-bastion sshd[34321]: pam_unix(sshd:session): session opened for user bob(uid=1000) by (uid=0)
+2026-11-01T13:46:24.833326+00:00 srv-bastion sudo[15756]: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-01T13:46:24.015753+00:00 srv-bastion sudo[17475]: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1000)
+2026-11-01T13:46:39.926601+00:00 srv-bastion sudo[53301]: bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/nginx/error.log
+2026-11-01T13:46:39.784875+00:00 srv-bastion sudo[12963]: pam_unix(sudo:session): session opened for user root(uid=0) by bob(uid=1000)
+2026-11-01T14:00:24.743995+00:00 srv-bastion sshd[17157]: pam_unix(sshd:session): session closed for user alice
+2026-11-01T14:05:04.322835+00:00 srv-bastion sshd[18342]: Accepted publickey for deploy from 10.0.0.12 port 51675 ssh2: ED25519 SHA256:FbLVEaFcFFGQ8OSA7DeaTBCX0JCB9969YVBdNG2KYMO
+2026-11-01T14:05:04.640826+00:00 srv-bastion sshd[18342]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T14:05:12.786549+00:00 srv-bastion sshd[9396]: Accepted publickey for bob from 10.8.0.50 port 42504 ssh2: ED25519 SHA256:fAULaYWIHA2GV6075GCbPI0NeY9ea63a9f4ZV2E5MdF
+2026-11-01T14:05:12.920883+00:00 srv-bastion sshd[9396]: pam_unix(sshd:session): session opened for user bob(uid=1000) by (uid=0)
+2026-11-01T14:05:24.848474+00:00 srv-bastion sudo[51085]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T14:05:24.354939+00:00 srv-bastion sudo[48016]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T14:07:04.414205+00:00 srv-bastion sshd[18342]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T14:15:39.478100+00:00 srv-bastion sshd[34321]: pam_unix(sshd:session): session closed for user bob
+2026-11-01T14:17:00.325949+00:00 srv-bastion CRON[53633]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T14:17:01.695991+00:00 srv-bastion CRON[53633]: pam_unix(cron:session): session closed for user root
+2026-11-01T14:25:12.504850+00:00 srv-bastion sshd[9396]: pam_unix(sshd:session): session closed for user bob
+2026-11-01T15:17:00.872946+00:00 srv-bastion CRON[2368]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T15:17:01.370325+00:00 srv-bastion CRON[2368]: pam_unix(cron:session): session closed for user root
+2026-11-01T15:45:01.076996+00:00 srv-bastion sshd[11198]: Failed password for ubuntu from 193.179.62.60 port 61923 ssh2
+2026-11-01T15:48:00.041819+00:00 srv-bastion sshd[26152]: Invalid user user from 193.179.62.60 port 44239
+2026-11-01T15:48:01.375362+00:00 srv-bastion sshd[26152]: Failed password for invalid user user from 193.179.62.60 port 44239 ssh2
+2026-11-01T15:51:00.654474+00:00 srv-bastion sshd[19962]: Invalid user test from 193.179.62.60 port 43429
+2026-11-01T15:51:01.449475+00:00 srv-bastion sshd[19962]: Failed password for invalid user test from 193.179.62.60 port 43429 ssh2
+2026-11-01T16:05:11.502657+00:00 srv-bastion sshd[3277]: Accepted publickey for deploy from 10.0.0.12 port 64896 ssh2: ED25519 SHA256:Z46SQSaJdVQfYKHAaNBMJUECAJZYLSVBcNTZY3a16aW
+2026-11-01T16:05:11.895252+00:00 srv-bastion sshd[3277]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T16:05:31.997178+00:00 srv-bastion sudo[19291]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T16:05:31.311938+00:00 srv-bastion sudo[38938]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T16:07:11.768449+00:00 srv-bastion sshd[3277]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T16:17:00.124295+00:00 srv-bastion CRON[40158]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T16:17:01.483323+00:00 srv-bastion CRON[40158]: pam_unix(cron:session): session closed for user root
+2026-11-01T16:24:02.211391+00:00 srv-bastion sshd[46718]: Accepted publickey for alice from 10.0.0.21 port 40683 ssh2: ED25519 SHA256:d25cK2IC0Nd757BZSNE1MDL2LaLB549I3cEa6KKHdd3
+2026-11-01T16:24:02.464384+00:00 srv-bastion sshd[46718]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)
+2026-11-01T16:27:02.853311+00:00 srv-bastion sudo[58461]: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-11-01T16:27:02.141481+00:00 srv-bastion sudo[6467]: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1000)
+2026-11-01T16:31:00.557831+00:00 srv-bastion sshd[13707]: Invalid user admin from 91.244.83.202 port 31215
+2026-11-01T16:31:01.102075+00:00 srv-bastion sshd[13707]: Failed password for invalid user admin from 91.244.83.202 port 31215 ssh2
+2026-11-01T16:39:01.976560+00:00 srv-bastion sshd[41298]: Failed password for ubuntu from 45.83.243.186 port 60405 ssh2
+2026-11-01T16:42:00.050197+00:00 srv-bastion sshd[19028]: Invalid user test from 45.83.243.186 port 45843
+2026-11-01T16:42:01.642154+00:00 srv-bastion sshd[19028]: Failed password for invalid user test from 45.83.243.186 port 45843 ssh2
+2026-11-01T16:43:45.043868+00:00 srv-bastion sshd[16715]: Accepted publickey for bob from 10.0.0.34 port 53050 ssh2: ED25519 SHA256:GB4MWWW8aL03NEHV3dbYNA8CdREIRYc111VITEVNR75
+2026-11-01T16:43:45.833237+00:00 srv-bastion sshd[16715]: pam_unix(sshd:session): session opened for user bob(uid=1000) by (uid=0)
+2026-11-01T16:45:00.975092+00:00 srv-bastion sshd[49999]: Invalid user test from 45.83.243.186 port 58242
+2026-11-01T16:45:01.866182+00:00 srv-bastion sshd[49999]: Failed password for invalid user test from 45.83.243.186 port 58242 ssh2
+2026-11-01T16:46:45.942034+00:00 srv-bastion sudo[12523]: bob : TTY=pts/0 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/nginx/error.log
+2026-11-01T16:46:45.045074+00:00 srv-bastion sudo[18047]: pam_unix(sudo:session): session opened for user root(uid=0) by bob(uid=1000)
+2026-11-01T16:48:02.581563+00:00 srv-bastion sshd[46718]: pam_unix(sshd:session): session closed for user alice
+2026-11-01T16:55:45.506393+00:00 srv-bastion sshd[16715]: pam_unix(sshd:session): session closed for user bob
+2026-11-01T17:17:00.179534+00:00 srv-bastion CRON[17346]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T17:17:01.834373+00:00 srv-bastion CRON[17346]: pam_unix(cron:session): session closed for user root
+2026-11-01T18:05:10.052894+00:00 srv-bastion sshd[59221]: Accepted publickey for deploy from 10.0.0.12 port 60862 ssh2: ED25519 SHA256:WMQT9WSGc9ZO307JLa63ENaXEc5I1YR9447BAcXAX3V
+2026-11-01T18:05:10.209886+00:00 srv-bastion sshd[59221]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T18:05:30.541780+00:00 srv-bastion sudo[22503]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T18:05:30.872707+00:00 srv-bastion sudo[34028]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T18:07:10.070941+00:00 srv-bastion sshd[59221]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T18:17:00.328967+00:00 srv-bastion CRON[57026]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T18:17:01.712258+00:00 srv-bastion CRON[57026]: pam_unix(cron:session): session closed for user root
+2026-11-01T19:14:01.295442+00:00 srv-bastion sshd[7621]: Failed password for root from 91.198.1.226 port 53179 ssh2
+2026-11-01T19:17:00.966550+00:00 srv-bastion CRON[46455]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T19:17:01.959551+00:00 srv-bastion CRON[46455]: pam_unix(cron:session): session closed for user root
+2026-11-01T19:45:01.281807+00:00 srv-bastion sshd[59355]: Failed password for ubuntu from 45.182.62.75 port 38146 ssh2
+2026-11-01T20:05:08.872827+00:00 srv-bastion sshd[23391]: Accepted publickey for deploy from 10.0.0.12 port 47784 ssh2: ED25519 SHA256:N2T7SEB79deDcJeHWPafHLVKBdI6Uc26cEX9K2NW6U2
+2026-11-01T20:05:08.479313+00:00 srv-bastion sshd[23391]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T20:05:28.453564+00:00 srv-bastion sudo[50086]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T20:05:28.294329+00:00 srv-bastion sudo[29951]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T20:07:08.135388+00:00 srv-bastion sshd[23391]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T20:17:00.479364+00:00 srv-bastion CRON[40822]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T20:17:01.632725+00:00 srv-bastion CRON[40822]: pam_unix(cron:session): session closed for user root
+2026-11-01T21:17:00.843045+00:00 srv-bastion CRON[18557]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T21:17:01.210744+00:00 srv-bastion CRON[18557]: pam_unix(cron:session): session closed for user root
+2026-11-01T22:05:43.335420+00:00 srv-bastion sshd[43769]: Accepted publickey for deploy from 10.0.0.12 port 38623 ssh2: ED25519 SHA256:VPCYNfLZf3013Lfe2OONZfSJ0W7URFJO4GMXUR0KMNH
+2026-11-01T22:05:43.807793+00:00 srv-bastion sshd[43769]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)
+2026-11-01T22:06:03.930139+00:00 srv-bastion sudo[22659]: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-11-01T22:06:03.751366+00:00 srv-bastion sudo[4611]: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1000)
+2026-11-01T22:07:43.126379+00:00 srv-bastion sshd[43769]: pam_unix(sshd:session): session closed for user deploy
+2026-11-01T22:15:00.779985+00:00 srv-bastion sshd[36238]: Invalid user test from 91.116.125.152 port 53218
+2026-11-01T22:15:01.756567+00:00 srv-bastion sshd[36238]: Failed password for invalid user test from 91.116.125.152 port 53218 ssh2
+2026-11-01T22:17:00.070569+00:00 srv-bastion CRON[37097]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T22:17:01.669358+00:00 srv-bastion CRON[37097]: pam_unix(cron:session): session closed for user root
+2026-11-01T22:18:01.622411+00:00 srv-bastion sshd[21648]: Failed password for ubuntu from 91.116.125.152 port 39942 ssh2
+2026-11-01T23:15:00.328666+00:00 srv-bastion sshd[37892]: Invalid user user from 91.211.227.1 port 58370
+2026-11-01T23:15:01.323092+00:00 srv-bastion sshd[37892]: Failed password for invalid user user from 91.211.227.1 port 58370 ssh2
+2026-11-01T23:17:00.648725+00:00 srv-bastion CRON[35635]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-01T23:17:01.605340+00:00 srv-bastion CRON[35635]: pam_unix(cron:session): session closed for user root

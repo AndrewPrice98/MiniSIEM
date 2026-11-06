@@ -1,0 +1,26 @@
+id: MSIEM-003
+title: Suspicious command run with sudo
+description: >
+  sudo was used to spawn a root shell, read credential files, edit sudoers,
+  set the setuid bit, or run networking/decoding tools often used after a
+  compromise.
+severity: medium
+attack:
+  technique: T1548.003
+  name: "Abuse Elevation Control Mechanism: Sudo and Sudo Caching"
+  tactics: [Privilege Escalation, Defense Evasion]
+logsource:
+  source_type: auth
+detection:
+  type: match
+  selection:
+    event_action: sudo_command
+    process|re:
+      - '(^|/)(ba|z|da)?sh( -i)?$'
+      - '(^|/)su( -)?$'
+      - '/etc/(shadow|gshadow|sudoers)'
+      - 'chmod (u\+s|[0-7]?4[0-7]{3})'
+      - '(^|/)(nc|ncat|netcat|socat)( |$)'
+      - 'base64 (-d|--decode)'
+      - 'passwd root'
+summary: "{user_name} ran via sudo on {host}: {process}"

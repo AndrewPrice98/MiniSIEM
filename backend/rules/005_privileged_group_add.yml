@@ -1,0 +1,18 @@
+id: MSIEM-005
+title: User added to a privileged group
+description: >
+  An account was added to a group that grants administrative rights
+  (sudo, wheel, admin, root, adm).
+severity: high
+attack:
+  technique: T1098
+  name: Account Manipulation
+  tactics: [Persistence, Privilege Escalation]
+logsource:
+  source_type: auth
+detection:
+  type: match
+  selection:
+    event_action: group_member_added
+    group_name: [sudo, wheel, admin, root, adm]
+summary: "'{user_name}' added to privileged group '{group_name}' on {host}"

@@ -1,0 +1,25 @@
+id: MSIEM-002
+title: SSH login succeeded after repeated failures
+description: >
+  A source IP failed to log in several times and then succeeded. The brute
+  force may have worked; treat the account as possibly compromised.
+severity: critical
+attack:
+  technique: T1078
+  name: Valid Accounts
+  tactics: [Initial Access, Persistence, Privilege Escalation, Defense Evasion]
+logsource:
+  source_type: auth
+detection:
+  type: sequence
+  group_by: [source_ip]
+  timeframe: 15m
+  steps:
+    - selection:
+        event_action: ssh_login
+        event_outcome: failure
+      min_count: 5
+    - selection:
+        event_action: ssh_login
+        event_outcome: success
+summary: "{user_name} logged in from {source_ip} after {first_step_count} failed attempts"

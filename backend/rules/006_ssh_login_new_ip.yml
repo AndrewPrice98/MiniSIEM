@@ -1,0 +1,21 @@
+id: MSIEM-006
+title: SSH login from a new IP for this user
+description: >
+  A user logged in successfully from an IP address never seen for them
+  before. Legitimate travel or new devices trigger this too, so it is low
+  severity on its own but useful context next to other alerts.
+severity: low
+attack:
+  technique: T1078
+  name: Valid Accounts
+  tactics: [Initial Access, Persistence, Privilege Escalation, Defense Evasion]
+logsource:
+  source_type: auth
+detection:
+  type: first_seen
+  selection:
+    event_action: ssh_login
+    event_outcome: success
+  group_by: [user_name]
+  field: source_ip
+summary: "{user_name} logged in from new IP {new_value}"

@@ -1,0 +1,24 @@
+id: MSIEM-008
+title: Web application attack attempt
+description: >
+  A request URL contains a common SQL injection, path traversal, XSS or
+  command injection payload. The URL is decoded before matching.
+severity: high
+attack:
+  technique: T1190
+  name: Exploit Public-Facing Application
+  tactics: [Initial Access]
+logsource:
+  source_type: web
+detection:
+  type: match
+  selection:
+    url_path|re:
+      - 'union(\s|\+|/\*.*?\*/)+(all\s+)?select'
+      - '''\s*(or|and)\s+''?\d+''?\s*=\s*''?\d+'
+      - '\.\./'
+      - '/etc/(passwd|shadow)'
+      - '<\s*script'
+      - 'javascript:'
+      - ';\s*(cat|id|whoami|uname|wget|curl)\b'
+summary: "Attack payload from {source_ip}: {http_method} {url_path}"

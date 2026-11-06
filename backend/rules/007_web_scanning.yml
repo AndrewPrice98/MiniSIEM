@@ -1,0 +1,20 @@
+id: MSIEM-007
+title: Web directory enumeration
+description: >
+  One client triggered many 404 responses in a short time. Typical of
+  automated content discovery tools (gobuster, dirb, ffuf, nikto).
+severity: medium
+attack:
+  technique: T1595.003
+  name: "Active Scanning: Wordlist Scanning"
+  tactics: [Reconnaissance]
+logsource:
+  source_type: web
+detection:
+  type: threshold
+  selection:
+    http_status: 404
+  group_by: [source_ip]
+  threshold: 20
+  timeframe: 1m
+summary: "{count} 404 responses to {source_ip} within {timeframe}"

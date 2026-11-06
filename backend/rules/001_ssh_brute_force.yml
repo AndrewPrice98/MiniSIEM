@@ -1,0 +1,21 @@
+id: MSIEM-001
+title: SSH brute force
+description: >
+  Many failed SSH logins from one source IP in a short window. Typical of
+  password guessing or credential stuffing against an exposed SSH server.
+severity: high
+attack:
+  technique: T1110
+  name: Brute Force
+  tactics: [Credential Access]
+logsource:
+  source_type: auth
+detection:
+  type: threshold
+  selection:
+    event_action: ssh_login
+    event_outcome: failure
+  group_by: [source_ip]
+  threshold: 5
+  timeframe: 5m
+summary: "{count} failed SSH logins from {source_ip} within {timeframe}"

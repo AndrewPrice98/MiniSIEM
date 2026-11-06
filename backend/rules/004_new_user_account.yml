@@ -1,0 +1,17 @@
+id: MSIEM-004
+title: New local user account created
+description: >
+  A local account was created. Attackers add accounts to keep access after
+  the initial compromise. Verify the account against a change request.
+severity: medium
+attack:
+  technique: T1136.001
+  name: "Create Account: Local Account"
+  tactics: [Persistence]
+logsource:
+  source_type: auth
+detection:
+  type: match
+  selection:
+    event_action: user_created
+summary: "New user '{user_name}' created on {host}"
