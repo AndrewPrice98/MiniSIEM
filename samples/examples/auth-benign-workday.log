@@ -1,0 +1,188 @@
+2026-10-01T00:02:00.196585+00:00 bastion-a sshd[13589]: Invalid user admin from 193.234.102.247 port 50634
+2026-10-01T00:02:01.973118+00:00 bastion-a sshd[13589]: Failed password for invalid user admin from 193.234.102.247 port 50634 ssh2
+2026-10-01T00:04:28.249990+00:00 bastion-a sshd[16078]: Accepted publickey for ci-deploy from 10.1.0.5 port 50773 ssh2: ED25519 SHA256:wNcjDIXbeOBCXmNmNAg9u5W/i0ZMG4Q53xWe7X/chGp
+2026-10-01T00:04:28.376925+00:00 bastion-a sshd[16078]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T00:04:43.034224+00:00 bastion-a sudo[43138]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T00:04:43.381410+00:00 bastion-a sudo[19797]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T00:06:00.553198+00:00 bastion-a sshd[63545]: Invalid user test from 193.234.102.247 port 33404
+2026-10-01T00:06:01.587917+00:00 bastion-a sshd[63545]: Failed password for invalid user test from 193.234.102.247 port 33404 ssh2
+2026-10-01T00:06:28.078801+00:00 bastion-a sshd[16078]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T00:10:00.719217+00:00 bastion-a sshd[14024]: Invalid user admin from 193.234.102.247 port 63862
+2026-10-01T00:10:01.099129+00:00 bastion-a sshd[14024]: Failed password for invalid user admin from 193.234.102.247 port 63862 ssh2
+2026-10-01T00:17:00.050678+00:00 bastion-a CRON[43413]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T00:17:01.092632+00:00 bastion-a CRON[43413]: pam_unix(cron:session): session closed for user root
+2026-10-01T01:17:00.246499+00:00 bastion-a CRON[9654]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T01:17:01.008007+00:00 bastion-a CRON[9654]: pam_unix(cron:session): session closed for user root
+2026-10-01T02:04:29.435858+00:00 bastion-a sshd[26896]: Accepted publickey for ci-deploy from 10.1.0.5 port 60676 ssh2: ED25519 SHA256:secZuPNkvjaKUpxxFzOqOquu+vgxH0BX679rTSrxe6Q
+2026-10-01T02:04:29.496184+00:00 bastion-a sshd[26896]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T02:04:44.855620+00:00 bastion-a sudo[9930]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T02:04:44.524154+00:00 bastion-a sudo[19295]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T02:06:29.586641+00:00 bastion-a sshd[26896]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T02:17:00.890966+00:00 bastion-a CRON[41370]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T02:17:01.340860+00:00 bastion-a CRON[41370]: pam_unix(cron:session): session closed for user root
+2026-10-01T03:09:01.311729+00:00 bastion-a sshd[21979]: Failed password for root from 185.194.47.234 port 62800 ssh2
+2026-10-01T03:13:00.198034+00:00 bastion-a sshd[14857]: Invalid user test from 185.194.47.234 port 43063
+2026-10-01T03:13:01.099204+00:00 bastion-a sshd[14857]: Failed password for invalid user test from 185.194.47.234 port 43063 ssh2
+2026-10-01T03:17:00.292073+00:00 bastion-a CRON[27497]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T03:17:01.924383+00:00 bastion-a CRON[27497]: pam_unix(cron:session): session closed for user root
+2026-10-01T04:04:26.239056+00:00 bastion-a sshd[53156]: Accepted publickey for ci-deploy from 10.1.0.5 port 50963 ssh2: ED25519 SHA256:dLdvyo8SsX7wIDtTXzUu/nSPMfoTIooSAOcFYKImtc+
+2026-10-01T04:04:26.493898+00:00 bastion-a sshd[53156]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T04:04:41.740042+00:00 bastion-a sudo[44657]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T04:04:41.812976+00:00 bastion-a sudo[33733]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T04:06:26.176593+00:00 bastion-a sshd[53156]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T04:17:00.012168+00:00 bastion-a CRON[44806]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T04:17:01.680439+00:00 bastion-a CRON[44806]: pam_unix(cron:session): session closed for user root
+2026-10-01T05:17:00.949176+00:00 bastion-a CRON[2532]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T05:17:01.118677+00:00 bastion-a CRON[2532]: pam_unix(cron:session): session closed for user root
+2026-10-01T06:04:15.729065+00:00 bastion-a sshd[16444]: Accepted publickey for ci-deploy from 10.1.0.5 port 40918 ssh2: ED25519 SHA256:mWdc6s7TYZyZ81JobxuXvlRdquXJsZxyAsMyarnGRCx
+2026-10-01T06:04:15.389596+00:00 bastion-a sshd[16444]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T06:04:30.542910+00:00 bastion-a sudo[7505]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T06:04:30.373753+00:00 bastion-a sudo[34127]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T06:06:15.167257+00:00 bastion-a sshd[16444]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T06:17:00.285880+00:00 bastion-a CRON[14994]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T06:17:01.994152+00:00 bastion-a CRON[14994]: pam_unix(cron:session): session closed for user root
+2026-10-01T07:17:00.179595+00:00 bastion-a CRON[9897]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T07:17:01.324190+00:00 bastion-a CRON[9897]: pam_unix(cron:session): session closed for user root
+2026-10-01T08:04:37.939672+00:00 bastion-a sshd[22541]: Accepted publickey for ci-deploy from 10.1.0.5 port 39675 ssh2: ED25519 SHA256:2LXV9dJf6C/awRamnb5P2LFBHWXSdaisavq3fN7QrSO
+2026-10-01T08:04:37.927521+00:00 bastion-a sshd[22541]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T08:04:52.305501+00:00 bastion-a sudo[62844]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T08:04:52.573729+00:00 bastion-a sudo[59693]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T08:06:37.763643+00:00 bastion-a sshd[22541]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T08:17:00.139856+00:00 bastion-a CRON[38819]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T08:17:01.355441+00:00 bastion-a CRON[38819]: pam_unix(cron:session): session closed for user root
+2026-10-01T08:26:50.824987+00:00 bastion-a sshd[39022]: Accepted publickey for priya from 10.1.0.34 port 61343 ssh2: ED25519 SHA256:cI2PTuXR304w8LJHPlKPMwscsPhiQoT68csf3Wv2avL
+2026-10-01T08:26:50.750110+00:00 bastion-a sshd[39022]: pam_unix(sshd:session): session opened for user priya(uid=1000) by (uid=0)
+2026-10-01T08:28:50.656532+00:00 bastion-a sudo[15639]: priya : TTY=pts/0 ; PWD=/home/priya ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-01T08:28:50.399844+00:00 bastion-a sudo[21097]: pam_unix(sudo:session): session opened for user root(uid=0) by priya(uid=1000)
+2026-10-01T09:05:50.981736+00:00 bastion-a sshd[39022]: pam_unix(sshd:session): session closed for user priya
+2026-10-01T09:17:00.712728+00:00 bastion-a CRON[59237]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T09:17:01.002668+00:00 bastion-a CRON[59237]: pam_unix(cron:session): session closed for user root
+2026-10-01T10:04:19.767329+00:00 bastion-a sshd[23226]: Accepted publickey for ci-deploy from 10.1.0.5 port 34621 ssh2: ED25519 SHA256:yO9SBxcCRg2iX3HeSHeXthEHTgL3fKrvXwj6JPVas8H
+2026-10-01T10:04:19.688906+00:00 bastion-a sshd[23226]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T10:04:34.088856+00:00 bastion-a sudo[40320]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T10:04:34.353126+00:00 bastion-a sudo[33357]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T10:06:19.468873+00:00 bastion-a sshd[23226]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T10:17:00.748671+00:00 bastion-a CRON[16771]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T10:17:01.811115+00:00 bastion-a CRON[16771]: pam_unix(cron:session): session closed for user root
+2026-10-01T10:39:16.567821+00:00 bastion-a sshd[47534]: Accepted publickey for priya from 10.1.0.34 port 43967 ssh2: ED25519 SHA256:9amemszEpba0w1BM9SYMpKO4q/USrW4PfNboesbzw+a
+2026-10-01T10:39:16.798499+00:00 bastion-a sshd[47534]: pam_unix(sshd:session): session opened for user priya(uid=1000) by (uid=0)
+2026-10-01T10:41:16.745130+00:00 bastion-a sudo[34452]: priya : TTY=pts/0 ; PWD=/home/priya ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-01T10:41:16.320619+00:00 bastion-a sudo[4664]: pam_unix(sudo:session): session opened for user root(uid=0) by priya(uid=1000)
+2026-10-01T11:14:01.246501+00:00 bastion-a sshd[59622]: Failed password for ubuntu from 141.155.129.143 port 32072 ssh2
+2026-10-01T11:14:16.264675+00:00 bastion-a sshd[47534]: pam_unix(sshd:session): session closed for user priya
+2026-10-01T11:17:00.530767+00:00 bastion-a CRON[46387]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T11:17:01.005632+00:00 bastion-a CRON[46387]: pam_unix(cron:session): session closed for user root
+2026-10-01T11:18:00.701260+00:00 bastion-a sshd[23386]: Invalid user admin from 141.155.129.143 port 50253
+2026-10-01T11:18:01.452964+00:00 bastion-a sshd[23386]: Failed password for invalid user admin from 141.155.129.143 port 50253 ssh2
+2026-10-01T11:19:41.160685+00:00 bastion-a sshd[16910]: Accepted publickey for mchen from 10.1.0.21 port 34176 ssh2: ED25519 SHA256:X2HIgcaASiHCl/q2/q5DDMPwr8X5z48SdsnvZhZZOFx
+2026-10-01T11:19:41.987095+00:00 bastion-a sshd[16910]: pam_unix(sshd:session): session opened for user mchen(uid=1000) by (uid=0)
+2026-10-01T11:21:41.269270+00:00 bastion-a sudo[35005]: mchen : TTY=pts/0 ; PWD=/home/mchen ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+2026-10-01T11:21:41.167509+00:00 bastion-a sudo[28395]: pam_unix(sudo:session): session opened for user root(uid=0) by mchen(uid=1000)
+2026-10-01T11:22:01.222106+00:00 bastion-a sshd[63718]: Failed password for ubuntu from 141.155.129.143 port 49598 ssh2
+2026-10-01T11:53:41.819611+00:00 bastion-a sshd[16910]: pam_unix(sshd:session): session closed for user mchen
+2026-10-01T11:54:37.158184+00:00 bastion-a sshd[11513]: Accepted publickey for okafor from 10.1.0.40 port 40521 ssh2: ED25519 SHA256:24FuvtlJbeDWW95YGkHS73jrp1ZGVR5V+OfFNcRsm3B
+2026-10-01T11:54:37.107709+00:00 bastion-a sshd[11513]: pam_unix(sshd:session): session opened for user okafor(uid=1000) by (uid=0)
+2026-10-01T11:56:37.289893+00:00 bastion-a sudo[38631]: okafor : TTY=pts/0 ; PWD=/home/okafor ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-01T11:56:37.376143+00:00 bastion-a sudo[11186]: pam_unix(sudo:session): session opened for user root(uid=0) by okafor(uid=1000)
+2026-10-01T12:04:12.132358+00:00 bastion-a sshd[7318]: Accepted publickey for ci-deploy from 10.1.0.5 port 30151 ssh2: ED25519 SHA256:veWP+ZwQRWa3mVfuIs3Easiplpl7NERYyd9yQ9LZmBi
+2026-10-01T12:04:12.099785+00:00 bastion-a sshd[7318]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T12:04:27.270166+00:00 bastion-a sudo[55468]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T12:04:27.178545+00:00 bastion-a sudo[50914]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T12:06:12.122201+00:00 bastion-a sshd[7318]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T12:17:00.601707+00:00 bastion-a CRON[5984]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T12:17:01.955523+00:00 bastion-a CRON[5984]: pam_unix(cron:session): session closed for user root
+2026-10-01T12:26:37.409735+00:00 bastion-a sshd[11513]: pam_unix(sshd:session): session closed for user okafor
+2026-10-01T13:17:00.527002+00:00 bastion-a CRON[64229]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T13:17:01.874606+00:00 bastion-a CRON[64229]: pam_unix(cron:session): session closed for user root
+2026-10-01T13:18:52.759779+00:00 bastion-a sshd[17086]: Accepted publickey for okafor from 10.1.0.40 port 38992 ssh2: ED25519 SHA256:L0aVZPDPtucUEqqpCPJhsfXlsqx0Q/od9NbCK5abZTC
+2026-10-01T13:18:52.064984+00:00 bastion-a sshd[17086]: pam_unix(sshd:session): session opened for user okafor(uid=1000) by (uid=0)
+2026-10-01T13:20:52.525833+00:00 bastion-a sudo[42217]: okafor : TTY=pts/0 ; PWD=/home/okafor ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-01T13:20:52.953138+00:00 bastion-a sudo[2867]: pam_unix(sudo:session): session opened for user root(uid=0) by okafor(uid=1000)
+2026-10-01T13:43:52.296974+00:00 bastion-a sshd[17086]: pam_unix(sshd:session): session closed for user okafor
+2026-10-01T13:46:05.002651+00:00 bastion-a sshd[12726]: Accepted publickey for mchen from 10.1.0.21 port 33916 ssh2: ED25519 SHA256:Qjp8WumXaMQefSXu9prKYpJyAWS0BQpyDs7bqo85xGZ
+2026-10-01T13:46:05.292893+00:00 bastion-a sshd[12726]: pam_unix(sshd:session): session opened for user mchen(uid=1000) by (uid=0)
+2026-10-01T13:48:05.630317+00:00 bastion-a sudo[39456]: mchen : TTY=pts/0 ; PWD=/home/mchen ; USER=root ; COMMAND=/usr/bin/apt list --upgradable
+2026-10-01T13:48:05.761825+00:00 bastion-a sudo[7261]: pam_unix(sudo:session): session opened for user root(uid=0) by mchen(uid=1000)
+2026-10-01T13:51:05.505658+00:00 bastion-a sshd[12726]: pam_unix(sshd:session): session closed for user mchen
+2026-10-01T13:52:26.925279+00:00 bastion-a sshd[30671]: Accepted publickey for priya from 10.1.0.34 port 42100 ssh2: ED25519 SHA256:/UCWMC7vEvNsNxy9sw33a1kEJCJKqGLMaWZGz1g2dbm
+2026-10-01T13:52:26.795937+00:00 bastion-a sshd[30671]: pam_unix(sshd:session): session opened for user priya(uid=1000) by (uid=0)
+2026-10-01T13:54:26.043642+00:00 bastion-a sudo[52500]: priya : TTY=pts/0 ; PWD=/home/priya ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+2026-10-01T13:54:26.516167+00:00 bastion-a sudo[56131]: pam_unix(sudo:session): session opened for user root(uid=0) by priya(uid=1000)
+2026-10-01T14:04:44.569692+00:00 bastion-a sshd[37542]: Accepted publickey for ci-deploy from 10.1.0.5 port 47825 ssh2: ED25519 SHA256:pcVR4vUYf0FYP05J8YYJ+h1LBy1WbgfrDkK+GXTcAnv
+2026-10-01T14:04:44.750936+00:00 bastion-a sshd[37542]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T14:04:59.126264+00:00 bastion-a sudo[25826]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T14:04:59.390933+00:00 bastion-a sudo[22681]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T14:06:44.403602+00:00 bastion-a sshd[37542]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T14:17:00.504346+00:00 bastion-a CRON[48753]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T14:17:01.833927+00:00 bastion-a CRON[48753]: pam_unix(cron:session): session closed for user root
+2026-10-01T14:24:26.335173+00:00 bastion-a sshd[30671]: pam_unix(sshd:session): session closed for user priya
+2026-10-01T14:33:00.486128+00:00 bastion-a sshd[7783]: Invalid user admin from 141.57.205.227 port 42190
+2026-10-01T14:33:01.037517+00:00 bastion-a sshd[7783]: Failed password for invalid user admin from 141.57.205.227 port 42190 ssh2
+2026-10-01T14:57:00.472503+00:00 bastion-a sshd[36009]: Invalid user admin from 61.167.185.167 port 46886
+2026-10-01T14:57:01.693274+00:00 bastion-a sshd[36009]: Failed password for invalid user admin from 61.167.185.167 port 46886 ssh2
+2026-10-01T15:01:00.298787+00:00 bastion-a sshd[59263]: Invalid user test from 61.167.185.167 port 31774
+2026-10-01T15:01:01.850831+00:00 bastion-a sshd[59263]: Failed password for invalid user test from 61.167.185.167 port 31774 ssh2
+2026-10-01T15:17:00.243201+00:00 bastion-a CRON[34716]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T15:17:01.726726+00:00 bastion-a CRON[34716]: pam_unix(cron:session): session closed for user root
+2026-10-01T16:04:01.867485+00:00 bastion-a sshd[24018]: Accepted publickey for ci-deploy from 10.1.0.5 port 44462 ssh2: ED25519 SHA256:f59tVKhM9Bu3LscCA6X+xGE3HI6Krdgb/tdf7TaDi1a
+2026-10-01T16:04:01.215701+00:00 bastion-a sshd[24018]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T16:04:16.956330+00:00 bastion-a sudo[32461]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T16:04:16.133211+00:00 bastion-a sudo[52186]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T16:06:01.006265+00:00 bastion-a sshd[24018]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T16:17:00.988858+00:00 bastion-a CRON[14076]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T16:17:01.074793+00:00 bastion-a CRON[14076]: pam_unix(cron:session): session closed for user root
+2026-10-01T17:17:00.381512+00:00 bastion-a CRON[58487]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T17:17:01.752507+00:00 bastion-a CRON[58487]: pam_unix(cron:session): session closed for user root
+2026-10-01T17:22:02.358539+00:00 bastion-a sshd[15455]: Accepted publickey for okafor from 10.1.0.40 port 30984 ssh2: ED25519 SHA256:IBo4BxiBmrdB38k/8wZ5V05RkYec6nKUjSEeZA1VHCj
+2026-10-01T17:22:02.927520+00:00 bastion-a sshd[15455]: pam_unix(sshd:session): session opened for user okafor(uid=1000) by (uid=0)
+2026-10-01T17:24:02.412133+00:00 bastion-a sudo[60096]: okafor : TTY=pts/0 ; PWD=/home/okafor ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-01T17:24:02.858345+00:00 bastion-a sudo[11424]: pam_unix(sudo:session): session opened for user root(uid=0) by okafor(uid=1000)
+2026-10-01T17:55:02.594524+00:00 bastion-a sshd[15455]: pam_unix(sshd:session): session closed for user okafor
+2026-10-01T17:55:54.645426+00:00 bastion-a sshd[21408]: Accepted publickey for mchen from 10.1.0.21 port 59063 ssh2: ED25519 SHA256:6dzbhytMEvl1qX+St+quvw8FyV5WOIcRSgvPWJMAI/N
+2026-10-01T17:55:54.216576+00:00 bastion-a sshd[21408]: pam_unix(sshd:session): session opened for user mchen(uid=1000) by (uid=0)
+2026-10-01T17:57:54.988204+00:00 bastion-a sudo[22541]: mchen : TTY=pts/0 ; PWD=/home/mchen ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+2026-10-01T17:57:54.770480+00:00 bastion-a sudo[28531]: pam_unix(sudo:session): session opened for user root(uid=0) by mchen(uid=1000)
+2026-10-01T18:04:39.153960+00:00 bastion-a sshd[15460]: Accepted publickey for ci-deploy from 10.1.0.5 port 36141 ssh2: ED25519 SHA256:g2S0RIi6wHwIWVkzg2QinjCNMJCziqii3u8xQqltt7I
+2026-10-01T18:04:39.930700+00:00 bastion-a sshd[15460]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T18:04:54.352883+00:00 bastion-a sudo[16550]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T18:04:54.576606+00:00 bastion-a sudo[19365]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T18:06:39.813327+00:00 bastion-a sshd[15460]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T18:17:00.571711+00:00 bastion-a CRON[28258]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T18:17:01.451922+00:00 bastion-a CRON[28258]: pam_unix(cron:session): session closed for user root
+2026-10-01T18:20:00.969401+00:00 bastion-a sshd[32266]: Invalid user test from 5.40.198.215 port 49745
+2026-10-01T18:20:01.966958+00:00 bastion-a sshd[32266]: Failed password for invalid user test from 5.40.198.215 port 49745 ssh2
+2026-10-01T18:23:54.469547+00:00 bastion-a sshd[21408]: pam_unix(sshd:session): session closed for user mchen
+2026-10-01T18:43:00.939304+00:00 bastion-a sshd[36162]: Invalid user user from 159.201.64.221 port 35282
+2026-10-01T18:43:01.678362+00:00 bastion-a sshd[36162]: Failed password for invalid user user from 159.201.64.221 port 35282 ssh2
+2026-10-01T18:47:00.473581+00:00 bastion-a sshd[37106]: Invalid user user from 159.201.64.221 port 46777
+2026-10-01T18:47:01.292629+00:00 bastion-a sshd[37106]: Failed password for invalid user user from 159.201.64.221 port 46777 ssh2
+2026-10-01T18:59:00.472324+00:00 bastion-a sshd[51281]: Invalid user oracle from 5.203.32.206 port 58737
+2026-10-01T18:59:01.356556+00:00 bastion-a sshd[51281]: Failed password for invalid user oracle from 5.203.32.206 port 58737 ssh2
+2026-10-01T19:03:00.522001+00:00 bastion-a sshd[32711]: Invalid user user from 5.203.32.206 port 34002
+2026-10-01T19:03:01.687372+00:00 bastion-a sshd[32711]: Failed password for invalid user user from 5.203.32.206 port 34002 ssh2
+2026-10-01T19:17:00.081236+00:00 bastion-a CRON[48851]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T19:17:01.166409+00:00 bastion-a CRON[48851]: pam_unix(cron:session): session closed for user root
+2026-10-01T19:29:01.001795+00:00 bastion-a sshd[52979]: Failed password for root from 91.219.202.114 port 34179 ssh2
+2026-10-01T20:04:48.445565+00:00 bastion-a sshd[46579]: Accepted publickey for ci-deploy from 10.1.0.5 port 30004 ssh2: ED25519 SHA256:IqNBvz2UlQYaFI5mE4PsOkgA5Qugb8IteFrw807v/8u
+2026-10-01T20:04:48.093867+00:00 bastion-a sshd[46579]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T20:05:03.410564+00:00 bastion-a sudo[41015]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T20:05:03.825546+00:00 bastion-a sudo[19782]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T20:06:48.377937+00:00 bastion-a sshd[46579]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T20:17:00.817217+00:00 bastion-a CRON[52231]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T20:17:01.434271+00:00 bastion-a CRON[52231]: pam_unix(cron:session): session closed for user root
+2026-10-01T20:21:00.155651+00:00 bastion-a sshd[23386]: Invalid user user from 185.126.201.164 port 43790
+2026-10-01T20:21:01.092474+00:00 bastion-a sshd[23386]: Failed password for invalid user user from 185.126.201.164 port 43790 ssh2
+2026-10-01T20:25:00.023052+00:00 bastion-a sshd[64380]: Invalid user user from 185.126.201.164 port 46216
+2026-10-01T20:25:01.995696+00:00 bastion-a sshd[64380]: Failed password for invalid user user from 185.126.201.164 port 46216 ssh2
+2026-10-01T20:29:01.527989+00:00 bastion-a sshd[35313]: Failed password for root from 185.126.201.164 port 37421 ssh2
+2026-10-01T21:17:00.593939+00:00 bastion-a CRON[6765]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T21:17:01.295415+00:00 bastion-a CRON[6765]: pam_unix(cron:session): session closed for user root
+2026-10-01T22:04:30.268134+00:00 bastion-a sshd[62233]: Accepted publickey for ci-deploy from 10.1.0.5 port 37551 ssh2: ED25519 SHA256:5NjiLBWTZpch557u0h+1kDNcCiOTBlzEzACYNz0YePP
+2026-10-01T22:04:30.460707+00:00 bastion-a sshd[62233]: pam_unix(sshd:session): session opened for user ci-deploy(uid=1001) by (uid=0)
+2026-10-01T22:04:45.272774+00:00 bastion-a sudo[60922]: ci-deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-01T22:04:45.223116+00:00 bastion-a sudo[40339]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-deploy(uid=1000)
+2026-10-01T22:06:30.009588+00:00 bastion-a sshd[62233]: pam_unix(sshd:session): session closed for user ci-deploy
+2026-10-01T22:17:00.183528+00:00 bastion-a CRON[50917]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T22:17:01.733244+00:00 bastion-a CRON[50917]: pam_unix(cron:session): session closed for user root
+2026-10-01T23:17:00.456423+00:00 bastion-a CRON[26599]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-01T23:17:01.219296+00:00 bastion-a CRON[26599]: pam_unix(cron:session): session closed for user root

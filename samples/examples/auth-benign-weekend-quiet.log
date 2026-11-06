@@ -1,0 +1,57 @@
+2026-10-04T00:17:00.526129+00:00 bastion-b CRON[36230]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T00:17:01.445100+00:00 bastion-b CRON[36230]: pam_unix(cron:session): session closed for user root
+2026-10-04T01:17:00.380595+00:00 bastion-b CRON[31896]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T01:17:01.947396+00:00 bastion-b CRON[31896]: pam_unix(cron:session): session closed for user root
+2026-10-04T01:50:01.439550+00:00 bastion-b sshd[54390]: Failed password for root from 61.14.44.251 port 49447 ssh2
+2026-10-04T02:17:00.629867+00:00 bastion-b CRON[13894]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T02:17:01.166941+00:00 bastion-b CRON[13894]: pam_unix(cron:session): session closed for user root
+2026-10-04T03:17:00.396823+00:00 bastion-b CRON[2126]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T03:17:01.282409+00:00 bastion-b CRON[2126]: pam_unix(cron:session): session closed for user root
+2026-10-04T04:17:00.340421+00:00 bastion-b CRON[22757]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T04:17:01.710372+00:00 bastion-b CRON[22757]: pam_unix(cron:session): session closed for user root
+2026-10-04T05:17:00.722933+00:00 bastion-b CRON[1966]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T05:17:01.581271+00:00 bastion-b CRON[1966]: pam_unix(cron:session): session closed for user root
+2026-10-04T06:17:00.702782+00:00 bastion-b CRON[30071]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T06:17:01.648025+00:00 bastion-b CRON[30071]: pam_unix(cron:session): session closed for user root
+2026-10-04T07:07:01.920088+00:00 bastion-b sshd[30017]: Failed password for root from 185.142.101.136 port 31059 ssh2
+2026-10-04T07:17:00.799105+00:00 bastion-b CRON[52758]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T07:17:01.848821+00:00 bastion-b CRON[52758]: pam_unix(cron:session): session closed for user root
+2026-10-04T08:17:00.618038+00:00 bastion-b CRON[54730]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T08:17:01.515904+00:00 bastion-b CRON[54730]: pam_unix(cron:session): session closed for user root
+2026-10-04T09:17:00.446503+00:00 bastion-b CRON[42869]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T09:17:01.693202+00:00 bastion-b CRON[42869]: pam_unix(cron:session): session closed for user root
+2026-10-04T09:30:01.438115+00:00 bastion-b sshd[13960]: Failed password for root from 176.182.164.5 port 39648 ssh2
+2026-10-04T10:17:00.415412+00:00 bastion-b CRON[2988]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T10:17:01.334189+00:00 bastion-b CRON[2988]: pam_unix(cron:session): session closed for user root
+2026-10-04T11:02:00.329324+00:00 bastion-b sshd[40046]: Accepted publickey for oncall-jr from 10.2.0.15 port 61562 ssh2: ED25519 SHA256:xlzWE13RE7ij2nDmEP9IGnw5/UQHFBhAt+eJ5z/384x
+2026-10-04T11:02:00.090320+00:00 bastion-b sshd[40046]: pam_unix(sshd:session): session opened for user oncall-jr(uid=1000) by (uid=0)
+2026-10-04T11:03:00.930306+00:00 bastion-b sudo[3764]: oncall-jr : TTY=pts/0 ; PWD=/home/oncall-jr ; USER=root ; COMMAND=/usr/bin/df -h
+2026-10-04T11:03:00.019771+00:00 bastion-b sudo[12972]: pam_unix(sudo:session): session opened for user root(uid=0) by oncall-jr(uid=1000)
+2026-10-04T11:08:00.645363+00:00 bastion-b sshd[40046]: pam_unix(sshd:session): session closed for user oncall-jr
+2026-10-04T11:17:00.419843+00:00 bastion-b CRON[1668]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T11:17:01.779001+00:00 bastion-b CRON[1668]: pam_unix(cron:session): session closed for user root
+2026-10-04T12:17:00.955576+00:00 bastion-b CRON[36694]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T12:17:01.327938+00:00 bastion-b CRON[36694]: pam_unix(cron:session): session closed for user root
+2026-10-04T13:17:00.481796+00:00 bastion-b CRON[1731]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T13:17:01.882436+00:00 bastion-b CRON[1731]: pam_unix(cron:session): session closed for user root
+2026-10-04T14:17:00.586998+00:00 bastion-b CRON[44116]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T14:17:01.736229+00:00 bastion-b CRON[44116]: pam_unix(cron:session): session closed for user root
+2026-10-04T15:17:00.202679+00:00 bastion-b CRON[62920]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T15:17:01.029574+00:00 bastion-b CRON[62920]: pam_unix(cron:session): session closed for user root
+2026-10-04T16:17:00.514110+00:00 bastion-b CRON[39194]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T16:17:01.447761+00:00 bastion-b CRON[39194]: pam_unix(cron:session): session closed for user root
+2026-10-04T17:17:00.086142+00:00 bastion-b CRON[25536]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T17:17:01.741215+00:00 bastion-b CRON[25536]: pam_unix(cron:session): session closed for user root
+2026-10-04T18:17:00.760078+00:00 bastion-b CRON[26945]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T18:17:01.645789+00:00 bastion-b CRON[26945]: pam_unix(cron:session): session closed for user root
+2026-10-04T18:37:01.235079+00:00 bastion-b sshd[11644]: Failed password for root from 159.219.14.187 port 32139 ssh2
+2026-10-04T19:17:00.285993+00:00 bastion-b CRON[41451]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T19:17:01.792556+00:00 bastion-b CRON[41451]: pam_unix(cron:session): session closed for user root
+2026-10-04T20:17:00.802074+00:00 bastion-b CRON[63681]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T20:17:01.340433+00:00 bastion-b CRON[63681]: pam_unix(cron:session): session closed for user root
+2026-10-04T21:17:00.968078+00:00 bastion-b CRON[9793]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T21:17:01.700537+00:00 bastion-b CRON[9793]: pam_unix(cron:session): session closed for user root
+2026-10-04T22:17:00.414006+00:00 bastion-b CRON[44328]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T22:17:01.307831+00:00 bastion-b CRON[44328]: pam_unix(cron:session): session closed for user root
+2026-10-04T23:17:00.040815+00:00 bastion-b CRON[18815]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-04T23:17:01.055848+00:00 bastion-b CRON[18815]: pam_unix(cron:session): session closed for user root

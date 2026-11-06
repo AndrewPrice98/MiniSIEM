@@ -1,0 +1,95 @@
+2026-10-15T00:17:00.657935+00:00 build-01 CRON[4279]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T00:17:01.582243+00:00 build-01 CRON[4279]: pam_unix(cron:session): session closed for user root
+2026-10-15T01:17:00.510810+00:00 build-01 CRON[61955]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T01:17:01.649536+00:00 build-01 CRON[61955]: pam_unix(cron:session): session closed for user root
+2026-10-15T02:17:00.338969+00:00 build-01 CRON[33896]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T02:17:01.965486+00:00 build-01 CRON[33896]: pam_unix(cron:session): session closed for user root
+2026-10-15T02:51:00.210803+00:00 build-01 sshd[27457]: Invalid user test from 45.121.92.13 port 30315
+2026-10-15T02:51:01.958428+00:00 build-01 sshd[27457]: Failed password for invalid user test from 45.121.92.13 port 30315 ssh2
+2026-10-15T03:17:00.454944+00:00 build-01 CRON[23594]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T03:17:01.506041+00:00 build-01 CRON[23594]: pam_unix(cron:session): session closed for user root
+2026-10-15T04:17:00.688044+00:00 build-01 CRON[57725]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T04:17:01.218773+00:00 build-01 CRON[57725]: pam_unix(cron:session): session closed for user root
+2026-10-15T04:56:00.039064+00:00 build-01 sshd[3158]: Invalid user user from 176.54.198.90 port 32974
+2026-10-15T04:56:01.921527+00:00 build-01 sshd[3158]: Failed password for invalid user user from 176.54.198.90 port 32974 ssh2
+2026-10-15T05:00:00.424076+00:00 build-01 sshd[54206]: Invalid user admin from 176.54.198.90 port 33783
+2026-10-15T05:00:01.276727+00:00 build-01 sshd[54206]: Failed password for invalid user admin from 176.54.198.90 port 33783 ssh2
+2026-10-15T05:17:00.873812+00:00 build-01 CRON[9172]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T05:17:01.282448+00:00 build-01 CRON[9172]: pam_unix(cron:session): session closed for user root
+2026-10-15T05:25:00.786796+00:00 build-01 sshd[49607]: Invalid user admin from 176.47.168.27 port 58737
+2026-10-15T05:25:01.679912+00:00 build-01 sshd[49607]: Failed password for invalid user admin from 176.47.168.27 port 58737 ssh2
+2026-10-15T05:29:00.926794+00:00 build-01 sshd[51841]: Invalid user user from 176.47.168.27 port 42977
+2026-10-15T05:29:01.539455+00:00 build-01 sshd[51841]: Failed password for invalid user user from 176.47.168.27 port 42977 ssh2
+2026-10-15T06:17:00.325940+00:00 build-01 CRON[55225]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T06:17:01.940029+00:00 build-01 CRON[55225]: pam_unix(cron:session): session closed for user root
+2026-10-15T07:17:00.347534+00:00 build-01 CRON[2944]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T07:17:01.895289+00:00 build-01 CRON[2944]: pam_unix(cron:session): session closed for user root
+2026-10-15T08:17:00.190622+00:00 build-01 CRON[13108]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T08:17:01.206813+00:00 build-01 CRON[13108]: pam_unix(cron:session): session closed for user root
+2026-10-15T09:17:00.673506+00:00 build-01 CRON[58995]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T09:17:01.439233+00:00 build-01 CRON[58995]: pam_unix(cron:session): session closed for user root
+2026-10-15T10:05:00.981621+00:00 build-01 useradd[2346]: new group: name=intern01, GID=1010
+2026-10-15T10:05:00.928096+00:00 build-01 useradd[2346]: new user: name=intern01, UID=1010, GID=1010, home=/home/intern01, shell=/bin/bash, from=/dev/pts/0
+2026-10-15T10:06:00.676475+00:00 build-01 usermod[21994]: add 'intern01' to group 'developers'
+2026-10-15T10:06:00.059974+00:00 build-01 usermod[21994]: add 'intern01' to shadow group 'developers'
+2026-10-15T10:17:00.405524+00:00 build-01 CRON[54892]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T10:17:01.059192+00:00 build-01 CRON[54892]: pam_unix(cron:session): session closed for user root
+2026-10-15T10:28:49.344153+00:00 build-01 sshd[23408]: Accepted publickey for hwong from 10.9.0.21 port 48717 ssh2: ED25519 SHA256:hGfqJaIxOuv8hy9W+SRI+5SL8jT95+PMulf4X9Te5ov
+2026-10-15T10:28:49.459040+00:00 build-01 sshd[23408]: pam_unix(sshd:session): session opened for user hwong(uid=1000) by (uid=0)
+2026-10-15T10:30:49.236768+00:00 build-01 sudo[25009]: hwong : TTY=pts/0 ; PWD=/home/hwong ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+2026-10-15T10:30:49.832781+00:00 build-01 sudo[8084]: pam_unix(sudo:session): session opened for user root(uid=0) by hwong(uid=1000)
+2026-10-15T10:53:49.254895+00:00 build-01 sshd[23408]: pam_unix(sshd:session): session closed for user hwong
+2026-10-15T11:00:00.829935+00:00 build-01 sshd[31379]: Invalid user test from 61.89.193.70 port 64191
+2026-10-15T11:00:01.528533+00:00 build-01 sshd[31379]: Failed password for invalid user test from 61.89.193.70 port 64191 ssh2
+2026-10-15T11:04:00.441973+00:00 build-01 sshd[11925]: Invalid user user from 61.89.193.70 port 40553
+2026-10-15T11:04:01.340648+00:00 build-01 sshd[11925]: Failed password for invalid user user from 61.89.193.70 port 40553 ssh2
+2026-10-15T11:08:01.998127+00:00 build-01 sshd[19388]: Failed password for ubuntu from 61.89.193.70 port 59138 ssh2
+2026-10-15T11:17:00.866799+00:00 build-01 CRON[10032]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T11:17:01.427604+00:00 build-01 CRON[10032]: pam_unix(cron:session): session closed for user root
+2026-10-15T12:17:00.267792+00:00 build-01 CRON[44813]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T12:17:01.708554+00:00 build-01 CRON[44813]: pam_unix(cron:session): session closed for user root
+2026-10-15T13:17:00.382674+00:00 build-01 CRON[28727]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T13:17:01.806850+00:00 build-01 CRON[28727]: pam_unix(cron:session): session closed for user root
+2026-10-15T13:43:51.137159+00:00 build-01 sshd[16286]: Accepted publickey for hwong from 10.9.0.21 port 32545 ssh2: ED25519 SHA256:dS/2T6XgIkOIcgL+it8XMuqWfcuW4panxjSk5TVG105
+2026-10-15T13:43:51.111776+00:00 build-01 sshd[16286]: pam_unix(sshd:session): session opened for user hwong(uid=1000) by (uid=0)
+2026-10-15T13:45:51.379865+00:00 build-01 sudo[7441]: hwong : TTY=pts/0 ; PWD=/home/hwong ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-15T13:45:51.170850+00:00 build-01 sudo[35978]: pam_unix(sudo:session): session opened for user root(uid=0) by hwong(uid=1000)
+2026-10-15T14:11:51.751866+00:00 build-01 sshd[16286]: pam_unix(sshd:session): session closed for user hwong
+2026-10-15T14:17:00.995257+00:00 build-01 CRON[60082]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T14:17:01.098366+00:00 build-01 CRON[60082]: pam_unix(cron:session): session closed for user root
+2026-10-15T15:02:05.353489+00:00 build-01 sshd[8566]: Accepted publickey for hwong from 10.9.0.21 port 48869 ssh2: ED25519 SHA256:YGRx5QS/WBqTeLzCEQWWBRVVNy+L2sHI37FcKMmf8Wo
+2026-10-15T15:02:05.565868+00:00 build-01 sshd[8566]: pam_unix(sshd:session): session opened for user hwong(uid=1000) by (uid=0)
+2026-10-15T15:04:05.107985+00:00 build-01 sudo[39890]: hwong : TTY=pts/0 ; PWD=/home/hwong ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-15T15:04:05.532090+00:00 build-01 sudo[37785]: pam_unix(sudo:session): session opened for user root(uid=0) by hwong(uid=1000)
+2026-10-15T15:17:00.359340+00:00 build-01 CRON[52886]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T15:17:01.348769+00:00 build-01 CRON[52886]: pam_unix(cron:session): session closed for user root
+2026-10-15T15:18:05.129893+00:00 build-01 sshd[8566]: pam_unix(sshd:session): session closed for user hwong
+2026-10-15T16:17:00.896863+00:00 build-01 CRON[9506]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T16:17:01.162577+00:00 build-01 CRON[9506]: pam_unix(cron:session): session closed for user root
+2026-10-15T17:17:00.116902+00:00 build-01 CRON[17359]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T17:17:01.110563+00:00 build-01 CRON[17359]: pam_unix(cron:session): session closed for user root
+2026-10-15T18:17:00.828237+00:00 build-01 CRON[18778]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T18:17:01.986236+00:00 build-01 CRON[18778]: pam_unix(cron:session): session closed for user root
+2026-10-15T18:59:00.043917+00:00 build-01 sshd[55088]: Invalid user oracle from 185.247.127.30 port 43360
+2026-10-15T18:59:01.592701+00:00 build-01 sshd[55088]: Failed password for invalid user oracle from 185.247.127.30 port 43360 ssh2
+2026-10-15T19:03:01.626360+00:00 build-01 sshd[1147]: Failed password for root from 185.247.127.30 port 44471 ssh2
+2026-10-15T19:17:00.808537+00:00 build-01 CRON[60492]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T19:17:01.029188+00:00 build-01 CRON[60492]: pam_unix(cron:session): session closed for user root
+2026-10-15T20:17:00.859379+00:00 build-01 CRON[44666]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T20:17:01.980729+00:00 build-01 CRON[44666]: pam_unix(cron:session): session closed for user root
+2026-10-15T21:17:00.465896+00:00 build-01 CRON[2300]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T21:17:01.723801+00:00 build-01 CRON[2300]: pam_unix(cron:session): session closed for user root
+2026-10-15T22:17:00.660711+00:00 build-01 CRON[38974]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T22:17:01.909513+00:00 build-01 CRON[38974]: pam_unix(cron:session): session closed for user root
+2026-10-15T22:40:01.191946+00:00 build-01 sshd[16082]: Failed password for root from 77.131.107.98 port 46251 ssh2
+2026-10-15T22:44:00.583826+00:00 build-01 sshd[29675]: Invalid user oracle from 77.131.107.98 port 33506
+2026-10-15T22:44:01.607716+00:00 build-01 sshd[29675]: Failed password for invalid user oracle from 77.131.107.98 port 33506 ssh2
+2026-10-15T23:17:00.725439+00:00 build-01 CRON[6032]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-15T23:17:01.000598+00:00 build-01 CRON[6032]: pam_unix(cron:session): session closed for user root
+2026-10-15T23:41:00.653478+00:00 build-01 useradd[61555]: new group: name=svc-monitor, GID=1011
+2026-10-15T23:41:00.718115+00:00 build-01 useradd[61555]: new user: name=svc-monitor, UID=1011, GID=1011, home=/home/svc-monitor, shell=/bin/bash, from=/dev/pts/0
+2026-10-15T23:42:00.717286+00:00 build-01 gpasswd[11871]: user svc-monitor added by root to group wheel
+2026-10-15T23:44:00.963448+00:00 build-01 useradd[63321]: new group: name=backup, GID=1012
+2026-10-15T23:44:00.821315+00:00 build-01 useradd[63321]: new user: name=backup, UID=1012, GID=1012, home=/home/backup, shell=/bin/bash, from=/dev/pts/0
+2026-10-15T23:45:00.795922+00:00 build-01 usermod[49400]: add 'backup' to group 'sudo'
+2026-10-15T23:45:00.835129+00:00 build-01 usermod[49400]: add 'backup' to shadow group 'sudo'

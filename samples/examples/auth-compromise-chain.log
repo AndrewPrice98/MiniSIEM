@@ -1,0 +1,163 @@
+2026-10-11T00:04:47.774087+00:00 bastion-f sshd[3820]: Accepted publickey for ci-runner from 10.6.0.5 port 56721 ssh2: ED25519 SHA256:DTrugeea/HZTuSFewd5srFORUYmkAhXhvKRKpvoxPYd
+2026-10-11T00:04:47.637528+00:00 bastion-f sshd[3820]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T00:05:02.358532+00:00 bastion-f sudo[6218]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T00:05:02.272228+00:00 bastion-f sudo[4554]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T00:06:47.293406+00:00 bastion-f sshd[3820]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T00:17:00.998079+00:00 bastion-f CRON[12436]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T00:17:01.517741+00:00 bastion-f CRON[12436]: pam_unix(cron:session): session closed for user root
+2026-10-11T01:17:00.702059+00:00 bastion-f CRON[20336]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T01:17:01.439017+00:00 bastion-f CRON[20336]: pam_unix(cron:session): session closed for user root
+2026-10-11T01:33:01.361246+00:00 bastion-f sshd[30116]: Failed password for ci-runner from 192.0.2.150 port 48897 ssh2
+2026-10-11T01:33:06.029363+00:00 bastion-f sshd[49088]: Failed password for ci-runner from 192.0.2.150 port 61417 ssh2
+2026-10-11T01:33:11.412101+00:00 bastion-f sshd[42706]: Failed password for ci-runner from 192.0.2.150 port 33097 ssh2
+2026-10-11T01:33:16.648783+00:00 bastion-f sshd[2834]: Failed password for ci-runner from 192.0.2.150 port 36428 ssh2
+2026-10-11T01:33:21.522679+00:00 bastion-f sshd[24685]: Failed password for ci-runner from 192.0.2.150 port 51317 ssh2
+2026-10-11T01:33:26.177753+00:00 bastion-f sshd[17736]: Failed password for ci-runner from 192.0.2.150 port 39541 ssh2
+2026-10-11T01:33:31.230847+00:00 bastion-f sshd[33649]: Failed password for ci-runner from 192.0.2.150 port 39882 ssh2
+2026-10-11T01:33:36.207880+00:00 bastion-f sshd[1973]: Failed password for ci-runner from 192.0.2.150 port 64886 ssh2
+2026-10-11T01:33:41.746147+00:00 bastion-f sshd[45117]: Failed password for ci-runner from 192.0.2.150 port 31268 ssh2
+2026-10-11T01:33:55.666910+00:00 bastion-f sshd[2583]: Accepted password for ci-runner from 192.0.2.150 port 51804 ssh2
+2026-10-11T01:33:55.745243+00:00 bastion-f sshd[2583]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T01:34:55.671229+00:00 bastion-f sudo[9244]: ci-runner : TTY=pts/3 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+2026-10-11T01:34:55.624820+00:00 bastion-f sudo[39504]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T01:35:25.345181+00:00 bastion-f sudo[31609]: ci-runner : TTY=pts/3 ; PWD=/srv/app ; USER=root ; COMMAND=/bin/bash
+2026-10-11T01:35:25.293481+00:00 bastion-f sudo[46669]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T01:36:55.185873+00:00 bastion-f sudo[29411]: ci-runner : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash svc-sync
+2026-10-11T01:36:55.573721+00:00 bastion-f sudo[30942]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T01:36:55.677754+00:00 bastion-f useradd[15700]: new group: name=svc-sync, GID=1007
+2026-10-11T01:36:55.145552+00:00 bastion-f useradd[15700]: new user: name=svc-sync, UID=1007, GID=1007, home=/home/svc-sync, shell=/bin/bash, from=/dev/pts/0
+2026-10-11T01:37:55.159352+00:00 bastion-f sudo[4192]: ci-runner : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo svc-sync
+2026-10-11T01:37:55.393418+00:00 bastion-f sudo[61998]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T01:37:55.028403+00:00 bastion-f usermod[2739]: add 'svc-sync' to group 'sudo'
+2026-10-11T01:37:55.615357+00:00 bastion-f usermod[2739]: add 'svc-sync' to shadow group 'sudo'
+2026-10-11T01:42:55.120596+00:00 bastion-f sshd[2583]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T02:02:01.497307+00:00 bastion-f sshd[44896]: Failed password for ubuntu from 103.78.86.56 port 53781 ssh2
+2026-10-11T02:04:13.053546+00:00 bastion-f sshd[26200]: Accepted publickey for ci-runner from 10.6.0.5 port 42800 ssh2: ED25519 SHA256:wdGpFGCuBnWXuduTRYQC49DXoDtPGqe/8YgTIef1ouf
+2026-10-11T02:04:13.538705+00:00 bastion-f sshd[26200]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T02:04:28.501223+00:00 bastion-f sudo[18297]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T02:04:28.265792+00:00 bastion-f sudo[46461]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T02:06:13.464727+00:00 bastion-f sshd[26200]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T02:17:00.132596+00:00 bastion-f CRON[56605]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T02:17:01.731108+00:00 bastion-f CRON[56605]: pam_unix(cron:session): session closed for user root
+2026-10-11T03:17:00.411286+00:00 bastion-f CRON[48759]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T03:17:01.921460+00:00 bastion-f CRON[48759]: pam_unix(cron:session): session closed for user root
+2026-10-11T04:04:15.833591+00:00 bastion-f sshd[44362]: Accepted publickey for ci-runner from 10.6.0.5 port 30696 ssh2: ED25519 SHA256:4qlIl4p3uD1Tg+vFuoZt/NWFRCzmHY/eiYfR5074vIl
+2026-10-11T04:04:15.007634+00:00 bastion-f sshd[44362]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T04:04:30.937577+00:00 bastion-f sudo[911]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T04:04:30.427110+00:00 bastion-f sudo[35476]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T04:06:15.430361+00:00 bastion-f sshd[44362]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T04:17:00.745473+00:00 bastion-f CRON[57549]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T04:17:01.008531+00:00 bastion-f CRON[57549]: pam_unix(cron:session): session closed for user root
+2026-10-11T05:17:00.950451+00:00 bastion-f CRON[25319]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T05:17:01.805929+00:00 bastion-f CRON[25319]: pam_unix(cron:session): session closed for user root
+2026-10-11T06:04:20.634010+00:00 bastion-f sshd[6154]: Accepted publickey for ci-runner from 10.6.0.5 port 53350 ssh2: ED25519 SHA256:B8dS+yMglkveuRj5B12K7uWjQI9htHkjt0EkLhR93TE
+2026-10-11T06:04:20.061921+00:00 bastion-f sshd[6154]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T06:04:35.866449+00:00 bastion-f sudo[51682]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T06:04:35.148121+00:00 bastion-f sudo[53899]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T06:06:20.226270+00:00 bastion-f sshd[6154]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T06:17:00.274450+00:00 bastion-f CRON[36549]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T06:17:01.856955+00:00 bastion-f CRON[36549]: pam_unix(cron:session): session closed for user root
+2026-10-11T07:17:00.800368+00:00 bastion-f CRON[11415]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T07:17:01.189571+00:00 bastion-f CRON[11415]: pam_unix(cron:session): session closed for user root
+2026-10-11T08:04:14.744017+00:00 bastion-f sshd[50936]: Accepted publickey for ci-runner from 10.6.0.5 port 62074 ssh2: ED25519 SHA256:2c6ARdEsA2CKFAa0oOQpaVLozipMlycQBf4lIaQtIUi
+2026-10-11T08:04:14.285285+00:00 bastion-f sshd[50936]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T08:04:29.862012+00:00 bastion-f sudo[33487]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T08:04:29.431076+00:00 bastion-f sudo[31680]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T08:06:14.302044+00:00 bastion-f sshd[50936]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T08:17:00.996478+00:00 bastion-f CRON[14883]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T08:17:01.893335+00:00 bastion-f CRON[14883]: pam_unix(cron:session): session closed for user root
+2026-10-11T09:06:56.865686+00:00 bastion-f sshd[35126]: Accepted publickey for dlopez from 10.6.0.21 port 54967 ssh2: ED25519 SHA256:oX9ZbgJCL+Oqv96hZzesZPQwVJ7wmA8msJENZEIMfWG
+2026-10-11T09:06:56.215301+00:00 bastion-f sshd[35126]: pam_unix(sshd:session): session opened for user dlopez(uid=1000) by (uid=0)
+2026-10-11T09:08:56.076401+00:00 bastion-f sudo[48044]: dlopez : TTY=pts/0 ; PWD=/home/dlopez ; USER=root ; COMMAND=/usr/bin/journalctl -u app -n 200
+2026-10-11T09:08:56.232998+00:00 bastion-f sudo[24446]: pam_unix(sudo:session): session opened for user root(uid=0) by dlopez(uid=1000)
+2026-10-11T09:17:00.476744+00:00 bastion-f CRON[36737]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T09:17:01.465217+00:00 bastion-f CRON[36737]: pam_unix(cron:session): session closed for user root
+2026-10-11T09:20:56.831683+00:00 bastion-f sshd[35126]: pam_unix(sshd:session): session closed for user dlopez
+2026-10-11T10:04:07.488622+00:00 bastion-f sshd[45073]: Accepted publickey for ci-runner from 10.6.0.5 port 33852 ssh2: ED25519 SHA256:6vUlpmMBfT8oX93IAUk85a7RUqv1X80Vzhm4XFaipsQ
+2026-10-11T10:04:07.379011+00:00 bastion-f sshd[45073]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T10:04:22.846065+00:00 bastion-f sudo[26396]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T10:04:22.237423+00:00 bastion-f sudo[33877]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T10:06:07.058738+00:00 bastion-f sshd[45073]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T10:17:00.098141+00:00 bastion-f CRON[38978]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T10:17:01.833020+00:00 bastion-f CRON[38978]: pam_unix(cron:session): session closed for user root
+2026-10-11T11:17:00.604032+00:00 bastion-f CRON[41272]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T11:17:01.970162+00:00 bastion-f CRON[41272]: pam_unix(cron:session): session closed for user root
+2026-10-11T11:40:34.984710+00:00 bastion-f sshd[49914]: Accepted publickey for dlopez from 10.6.0.21 port 38917 ssh2: ED25519 SHA256:M0PpVKT4KcNCRXU2IyfhgUuZpITasqe99p6p7jGf3qd
+2026-10-11T11:40:34.796678+00:00 bastion-f sshd[49914]: pam_unix(sshd:session): session opened for user dlopez(uid=1000) by (uid=0)
+2026-10-11T11:42:34.945806+00:00 bastion-f sudo[28386]: dlopez : TTY=pts/0 ; PWD=/home/dlopez ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-11T11:42:34.287289+00:00 bastion-f sudo[1116]: pam_unix(sudo:session): session opened for user root(uid=0) by dlopez(uid=1000)
+2026-10-11T11:54:34.216465+00:00 bastion-f sshd[49914]: pam_unix(sshd:session): session closed for user dlopez
+2026-10-11T12:04:16.010670+00:00 bastion-f sshd[37455]: Accepted publickey for ci-runner from 10.6.0.5 port 55946 ssh2: ED25519 SHA256:+Mkd5FHXu9vpc+KG4OnJLBegd+hKUVkCqTI6bl9Qr4u
+2026-10-11T12:04:16.537624+00:00 bastion-f sshd[37455]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T12:04:31.921904+00:00 bastion-f sudo[49074]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T12:04:31.061201+00:00 bastion-f sudo[20765]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T12:06:16.712423+00:00 bastion-f sshd[37455]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T12:17:00.339669+00:00 bastion-f CRON[3122]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T12:17:01.436796+00:00 bastion-f CRON[3122]: pam_unix(cron:session): session closed for user root
+2026-10-11T12:57:01.258231+00:00 bastion-f sshd[21112]: Failed password for root from 185.77.55.149 port 54405 ssh2
+2026-10-11T13:01:01.054606+00:00 bastion-f sshd[57740]: Failed password for root from 185.77.55.149 port 42809 ssh2
+2026-10-11T13:17:00.303254+00:00 bastion-f CRON[19088]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T13:17:01.836357+00:00 bastion-f CRON[19088]: pam_unix(cron:session): session closed for user root
+2026-10-11T13:33:14.349135+00:00 bastion-f sshd[60048]: Accepted publickey for dlopez from 10.6.0.21 port 59077 ssh2: ED25519 SHA256:eHgB6VjiJYyOuzJk3P5tQctbAzHRmqaZeiyeY4DO4wh
+2026-10-11T13:33:14.164019+00:00 bastion-f sshd[60048]: pam_unix(sshd:session): session opened for user dlopez(uid=1000) by (uid=0)
+2026-10-11T13:35:14.186419+00:00 bastion-f sudo[32140]: dlopez : TTY=pts/0 ; PWD=/home/dlopez ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-11T13:35:14.088964+00:00 bastion-f sudo[38377]: pam_unix(sudo:session): session opened for user root(uid=0) by dlopez(uid=1000)
+2026-10-11T13:46:14.305220+00:00 bastion-f sshd[60048]: pam_unix(sshd:session): session closed for user dlopez
+2026-10-11T14:04:06.900783+00:00 bastion-f sshd[3394]: Accepted publickey for ci-runner from 10.6.0.5 port 53712 ssh2: ED25519 SHA256:uRYObzxCWG7caxgY9p6o505/2kmSiF2CchCihPGB/gO
+2026-10-11T14:04:06.323411+00:00 bastion-f sshd[3394]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T14:04:21.630181+00:00 bastion-f sudo[45090]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T14:04:21.634508+00:00 bastion-f sudo[21788]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T14:06:06.428145+00:00 bastion-f sshd[3394]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T14:17:00.684067+00:00 bastion-f CRON[32793]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T14:17:01.341647+00:00 bastion-f CRON[32793]: pam_unix(cron:session): session closed for user root
+2026-10-11T14:33:00.275198+00:00 bastion-f sshd[46889]: Invalid user user from 176.90.202.13 port 56003
+2026-10-11T14:33:01.044859+00:00 bastion-f sshd[46889]: Failed password for invalid user user from 176.90.202.13 port 56003 ssh2
+2026-10-11T15:17:00.104361+00:00 bastion-f CRON[52244]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T15:17:01.444970+00:00 bastion-f CRON[52244]: pam_unix(cron:session): session closed for user root
+2026-10-11T16:03:01.285118+00:00 bastion-f sshd[63728]: Failed password for ubuntu from 45.127.222.9 port 51270 ssh2
+2026-10-11T16:04:32.471212+00:00 bastion-f sshd[35051]: Accepted publickey for ci-runner from 10.6.0.5 port 40572 ssh2: ED25519 SHA256:qzvgWazZDICYdrMwIzUC36QaSaJ8AkBDKOjknpYFSPa
+2026-10-11T16:04:32.987600+00:00 bastion-f sshd[35051]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T16:04:47.716420+00:00 bastion-f sudo[54345]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T16:04:47.843909+00:00 bastion-f sudo[6846]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T16:06:32.746696+00:00 bastion-f sshd[35051]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T16:07:00.514849+00:00 bastion-f sshd[958]: Invalid user oracle from 45.127.222.9 port 46880
+2026-10-11T16:07:01.100602+00:00 bastion-f sshd[958]: Failed password for invalid user oracle from 45.127.222.9 port 46880 ssh2
+2026-10-11T16:17:00.567317+00:00 bastion-f CRON[50604]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T16:17:01.577992+00:00 bastion-f CRON[50604]: pam_unix(cron:session): session closed for user root
+2026-10-11T17:17:00.646641+00:00 bastion-f CRON[11099]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T17:17:01.002478+00:00 bastion-f CRON[11099]: pam_unix(cron:session): session closed for user root
+2026-10-11T18:04:02.742411+00:00 bastion-f sshd[56520]: Accepted publickey for ci-runner from 10.6.0.5 port 47759 ssh2: ED25519 SHA256:Qzg9xdUSeAthaKURc6+SvMmPQ//rt5T/LQNpUqjt0HO
+2026-10-11T18:04:02.589129+00:00 bastion-f sshd[56520]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T18:04:17.539612+00:00 bastion-f sudo[24296]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T18:04:17.076379+00:00 bastion-f sudo[16131]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T18:06:02.892794+00:00 bastion-f sshd[56520]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T18:17:00.504648+00:00 bastion-f CRON[3781]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T18:17:01.015800+00:00 bastion-f CRON[3781]: pam_unix(cron:session): session closed for user root
+2026-10-11T18:25:00.708517+00:00 bastion-f sshd[15224]: Invalid user oracle from 159.109.125.160 port 41396
+2026-10-11T18:25:01.815738+00:00 bastion-f sshd[15224]: Failed password for invalid user oracle from 159.109.125.160 port 41396 ssh2
+2026-10-11T18:29:00.626267+00:00 bastion-f sshd[1332]: Invalid user user from 159.109.125.160 port 54958
+2026-10-11T18:29:01.100370+00:00 bastion-f sshd[1332]: Failed password for invalid user user from 159.109.125.160 port 54958 ssh2
+2026-10-11T19:17:00.449514+00:00 bastion-f CRON[5784]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T19:17:01.244357+00:00 bastion-f CRON[5784]: pam_unix(cron:session): session closed for user root
+2026-10-11T20:04:22.659303+00:00 bastion-f sshd[11370]: Accepted publickey for ci-runner from 10.6.0.5 port 58002 ssh2: ED25519 SHA256:Xl0ukM218uqSvuJDEl+g7QzhEmyfSLYYO3nib6+DeMP
+2026-10-11T20:04:22.678561+00:00 bastion-f sshd[11370]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T20:04:37.149517+00:00 bastion-f sudo[15837]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T20:04:37.648181+00:00 bastion-f sudo[14766]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T20:06:22.202237+00:00 bastion-f sshd[11370]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T20:17:00.943685+00:00 bastion-f CRON[12746]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T20:17:01.597150+00:00 bastion-f CRON[12746]: pam_unix(cron:session): session closed for user root
+2026-10-11T21:17:00.909643+00:00 bastion-f CRON[39395]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T21:17:01.222811+00:00 bastion-f CRON[39395]: pam_unix(cron:session): session closed for user root
+2026-10-11T21:18:00.059173+00:00 bastion-f sshd[10774]: Invalid user admin from 45.52.4.153 port 59673
+2026-10-11T21:18:01.642307+00:00 bastion-f sshd[10774]: Failed password for invalid user admin from 45.52.4.153 port 59673 ssh2
+2026-10-11T21:22:01.065740+00:00 bastion-f sshd[56108]: Failed password for root from 45.52.4.153 port 57936 ssh2
+2026-10-11T21:26:01.044768+00:00 bastion-f sshd[26981]: Failed password for root from 45.52.4.153 port 62017 ssh2
+2026-10-11T22:04:17.002708+00:00 bastion-f sshd[25032]: Accepted publickey for ci-runner from 10.6.0.5 port 36069 ssh2: ED25519 SHA256:RJpUhoQXlgRdmmYQya3NOnz2IPZu8u11sNgbaKZpUAk
+2026-10-11T22:04:17.891045+00:00 bastion-f sshd[25032]: pam_unix(sshd:session): session opened for user ci-runner(uid=1001) by (uid=0)
+2026-10-11T22:04:32.787395+00:00 bastion-f sudo[54993]: ci-runner : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+2026-10-11T22:04:32.324998+00:00 bastion-f sudo[39215]: pam_unix(sudo:session): session opened for user root(uid=0) by ci-runner(uid=1000)
+2026-10-11T22:06:17.223407+00:00 bastion-f sshd[25032]: pam_unix(sshd:session): session closed for user ci-runner
+2026-10-11T22:17:00.633455+00:00 bastion-f CRON[47949]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T22:17:01.892388+00:00 bastion-f CRON[47949]: pam_unix(cron:session): session closed for user root
+2026-10-11T23:17:00.800638+00:00 bastion-f CRON[30134]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-11T23:17:01.197196+00:00 bastion-f CRON[30134]: pam_unix(cron:session): session closed for user root

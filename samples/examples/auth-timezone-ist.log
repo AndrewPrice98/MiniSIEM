@@ -1,0 +1,82 @@
+2026-10-19T05:47:00.667784+05:30 bastion-in CRON[43315]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T05:47:01.018497+05:30 bastion-in CRON[43315]: pam_unix(cron:session): session closed for user root
+2026-10-19T06:47:00.242694+05:30 bastion-in CRON[64372]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T06:47:01.712235+05:30 bastion-in CRON[64372]: pam_unix(cron:session): session closed for user root
+2026-10-19T07:47:00.088129+05:30 bastion-in CRON[50826]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T07:47:01.183616+05:30 bastion-in CRON[50826]: pam_unix(cron:session): session closed for user root
+2026-10-19T08:47:00.495930+05:30 bastion-in CRON[62661]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T08:47:01.706288+05:30 bastion-in CRON[62661]: pam_unix(cron:session): session closed for user root
+2026-10-19T09:47:00.415687+05:30 bastion-in CRON[61962]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T09:47:01.573599+05:30 bastion-in CRON[61962]: pam_unix(cron:session): session closed for user root
+2026-10-19T10:47:00.900004+05:30 bastion-in CRON[12867]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T10:47:01.641471+05:30 bastion-in CRON[12867]: pam_unix(cron:session): session closed for user root
+2026-10-19T11:20:00.516373+05:30 bastion-in sshd[25669]: Invalid user user from 103.246.165.198 port 63130
+2026-10-19T11:20:01.367550+05:30 bastion-in sshd[25669]: Failed password for invalid user user from 103.246.165.198 port 63130 ssh2
+2026-10-19T11:47:00.970828+05:30 bastion-in CRON[33830]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T11:47:01.158286+05:30 bastion-in CRON[33830]: pam_unix(cron:session): session closed for user root
+2026-10-19T12:47:00.844115+05:30 bastion-in CRON[49611]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T12:47:01.885259+05:30 bastion-in CRON[49611]: pam_unix(cron:session): session closed for user root
+2026-10-19T12:48:01.874451+05:30 bastion-in sshd[20566]: Failed password for ubuntu from 103.73.43.225 port 60928 ssh2
+2026-10-19T12:52:00.743781+05:30 bastion-in sshd[26770]: Invalid user admin from 103.73.43.225 port 42048
+2026-10-19T12:52:01.317211+05:30 bastion-in sshd[26770]: Failed password for invalid user admin from 103.73.43.225 port 42048 ssh2
+2026-10-19T13:47:00.066161+05:30 bastion-in CRON[5911]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T13:47:01.152289+05:30 bastion-in CRON[5911]: pam_unix(cron:session): session closed for user root
+2026-10-19T13:56:16.529738+05:30 bastion-in sshd[22936]: Accepted publickey for anair from 10.12.0.21 port 57070 ssh2: ED25519 SHA256:QwKKdKxj22hmtAmyYvUCJmrzkkXIma0VKvcLHsvppqM
+2026-10-19T13:56:16.753049+05:30 bastion-in sshd[22936]: pam_unix(sshd:session): session opened for user anair(uid=1000) by (uid=0)
+2026-10-19T13:58:16.766861+05:30 bastion-in sudo[60677]: anair : TTY=pts/0 ; PWD=/home/anair ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+2026-10-19T13:58:16.691052+05:30 bastion-in sudo[46449]: pam_unix(sudo:session): session opened for user root(uid=0) by anair(uid=1000)
+2026-10-19T14:30:16.104476+05:30 bastion-in sshd[22936]: pam_unix(sshd:session): session closed for user anair
+2026-10-19T14:47:00.869971+05:30 bastion-in CRON[16759]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T14:47:01.339894+05:30 bastion-in CRON[16759]: pam_unix(cron:session): session closed for user root
+2026-10-19T15:47:00.995439+05:30 bastion-in CRON[28794]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T15:47:01.023483+05:30 bastion-in CRON[28794]: pam_unix(cron:session): session closed for user root
+2026-10-19T16:25:55.164007+05:30 bastion-in sshd[34500]: Accepted publickey for anair from 10.12.0.21 port 40585 ssh2: ED25519 SHA256:3nKJNBINPOUGqRapvYD90wUMJk3OUvgEv00Rxs54EDQ
+2026-10-19T16:25:55.265410+05:30 bastion-in sshd[34500]: pam_unix(sshd:session): session opened for user anair(uid=1000) by (uid=0)
+2026-10-19T16:27:55.447305+05:30 bastion-in sudo[59438]: anair : TTY=pts/0 ; PWD=/home/anair ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-19T16:27:55.664944+05:30 bastion-in sudo[10287]: pam_unix(sudo:session): session opened for user root(uid=0) by anair(uid=1000)
+2026-10-19T16:30:55.030502+05:30 bastion-in sshd[34500]: pam_unix(sshd:session): session closed for user anair
+2026-10-19T16:47:00.776933+05:30 bastion-in CRON[49617]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T16:47:01.128736+05:30 bastion-in CRON[49617]: pam_unix(cron:session): session closed for user root
+2026-10-19T17:47:00.099226+05:30 bastion-in CRON[53249]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T17:47:01.168616+05:30 bastion-in CRON[53249]: pam_unix(cron:session): session closed for user root
+2026-10-19T18:47:00.614776+05:30 bastion-in CRON[37819]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T18:47:01.711811+05:30 bastion-in CRON[37819]: pam_unix(cron:session): session closed for user root
+2026-10-19T19:47:00.964281+05:30 bastion-in CRON[19600]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T19:47:01.772611+05:30 bastion-in CRON[19600]: pam_unix(cron:session): session closed for user root
+2026-10-19T20:47:00.901159+05:30 bastion-in CRON[44505]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T20:47:01.357044+05:30 bastion-in CRON[44505]: pam_unix(cron:session): session closed for user root
+2026-10-19T21:23:01.251228+05:30 bastion-in sshd[26886]: Accepted publickey for anair from 10.12.0.21 port 38283 ssh2: ED25519 SHA256:lxnDpSpfSrNu4D6LT5zecDquXrMLgG2xNfh3JWRsKCo
+2026-10-19T21:23:01.044180+05:30 bastion-in sshd[26886]: pam_unix(sshd:session): session opened for user anair(uid=1000) by (uid=0)
+2026-10-19T21:25:01.423722+05:30 bastion-in sudo[38975]: anair : TTY=pts/0 ; PWD=/home/anair ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+2026-10-19T21:25:01.471006+05:30 bastion-in sudo[19976]: pam_unix(sudo:session): session opened for user root(uid=0) by anair(uid=1000)
+2026-10-19T21:38:01.938331+05:30 bastion-in sshd[26886]: pam_unix(sshd:session): session closed for user anair
+2026-10-19T21:47:00.110958+05:30 bastion-in CRON[15124]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T21:47:01.722861+05:30 bastion-in CRON[15124]: pam_unix(cron:session): session closed for user root
+2026-10-19T22:47:00.063782+05:30 bastion-in CRON[54756]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T22:47:01.321882+05:30 bastion-in CRON[54756]: pam_unix(cron:session): session closed for user root
+2026-10-19T23:47:00.119757+05:30 bastion-in CRON[11185]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-19T23:47:01.928084+05:30 bastion-in CRON[11185]: pam_unix(cron:session): session closed for user root
+2026-10-20T00:47:00.700944+05:30 bastion-in CRON[52866]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-20T00:47:01.128664+05:30 bastion-in CRON[52866]: pam_unix(cron:session): session closed for user root
+2026-10-20T01:47:00.426982+05:30 bastion-in CRON[17753]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-20T01:47:01.395345+05:30 bastion-in CRON[17753]: pam_unix(cron:session): session closed for user root
+2026-10-20T02:47:00.924472+05:30 bastion-in CRON[944]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-20T02:47:01.723933+05:30 bastion-in CRON[944]: pam_unix(cron:session): session closed for user root
+2026-10-20T03:47:00.568369+05:30 bastion-in CRON[34745]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-20T03:47:01.057229+05:30 bastion-in CRON[34745]: pam_unix(cron:session): session closed for user root
+2026-10-20T04:47:00.867995+05:30 bastion-in CRON[37707]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-20T04:47:01.585973+05:30 bastion-in CRON[37707]: pam_unix(cron:session): session closed for user root
+2026-10-20T05:28:00.024972+05:30 bastion-in sshd[53078]: Invalid user admin from 45.155.205.233 port 53236
+2026-10-20T05:28:01.334605+05:30 bastion-in sshd[53078]: Failed password for invalid user admin from 45.155.205.233 port 53236 ssh2
+2026-10-20T05:28:09.159359+05:30 bastion-in sshd[21375]: Invalid user admin from 45.155.205.233 port 31514
+2026-10-20T05:28:10.407607+05:30 bastion-in sshd[21375]: Failed password for invalid user admin from 45.155.205.233 port 31514 ssh2
+2026-10-20T05:28:18.586169+05:30 bastion-in sshd[50119]: Invalid user admin from 45.155.205.233 port 30466
+2026-10-20T05:28:19.475791+05:30 bastion-in sshd[50119]: Failed password for invalid user admin from 45.155.205.233 port 30466 ssh2
+2026-10-20T05:28:27.627898+05:30 bastion-in sshd[63697]: Invalid user admin from 45.155.205.233 port 35069
+2026-10-20T05:28:28.380227+05:30 bastion-in sshd[63697]: Failed password for invalid user admin from 45.155.205.233 port 35069 ssh2
+2026-10-20T05:28:36.735290+05:30 bastion-in sshd[16159]: Invalid user admin from 45.155.205.233 port 30394
+2026-10-20T05:28:37.244646+05:30 bastion-in sshd[16159]: Failed password for invalid user admin from 45.155.205.233 port 30394 ssh2
+2026-10-20T05:28:45.363184+05:30 bastion-in sshd[29975]: Invalid user admin from 45.155.205.233 port 47859
+2026-10-20T05:28:46.244250+05:30 bastion-in sshd[29975]: Failed password for invalid user admin from 45.155.205.233 port 47859 ssh2
+2026-10-20T05:28:54.362512+05:30 bastion-in sshd[24891]: Invalid user admin from 45.155.205.233 port 32819
+2026-10-20T05:28:55.918741+05:30 bastion-in sshd[24891]: Failed password for invalid user admin from 45.155.205.233 port 32819 ssh2

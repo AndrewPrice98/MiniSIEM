@@ -10,6 +10,7 @@ from pathlib import Path
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 REPO_DIR = BACKEND_DIR.parent
 SAMPLES_DIR = REPO_DIR / "samples"
+EXAMPLES_DIR = SAMPLES_DIR / "examples"
 
 
 def db_path() -> Path:

@@ -1,0 +1,98 @@
+Oct 17 00:17:00 rhel-web-02 CRON[64631]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 00:17:01 rhel-web-02 CRON[64631]: pam_unix(cron:session): session closed for user root
+Oct 17 00:45:00 rhel-web-02 sshd[62267]: Invalid user oracle from 176.196.83.141 port 59098
+Oct 17 00:45:01 rhel-web-02 sshd[62267]: Failed password for invalid user oracle from 176.196.83.141 port 59098 ssh2
+Oct 17 01:17:00 rhel-web-02 CRON[27278]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 01:17:01 rhel-web-02 CRON[27278]: pam_unix(cron:session): session closed for user root
+Oct 17 02:17:00 rhel-web-02 CRON[20471]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 02:17:01 rhel-web-02 CRON[20471]: pam_unix(cron:session): session closed for user root
+Oct 17 03:12:00 rhel-web-02 sshd[18373]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:02 rhel-web-02 sshd[40414]: Failed password for root from 203.0.113.200 port 40144 ssh2
+Oct 17 03:12:06 rhel-web-02 sshd[54391]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:08 rhel-web-02 sshd[38609]: Failed password for root from 203.0.113.200 port 36040 ssh2
+Oct 17 03:12:12 rhel-web-02 sshd[12068]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:14 rhel-web-02 sshd[58721]: Failed password for root from 203.0.113.200 port 44145 ssh2
+Oct 17 03:12:18 rhel-web-02 sshd[22092]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:20 rhel-web-02 sshd[31203]: Failed password for root from 203.0.113.200 port 48501 ssh2
+Oct 17 03:12:24 rhel-web-02 sshd[13342]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:26 rhel-web-02 sshd[16563]: Failed password for root from 203.0.113.200 port 35447 ssh2
+Oct 17 03:12:30 rhel-web-02 sshd[4673]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:32 rhel-web-02 sshd[28644]: Failed password for root from 203.0.113.200 port 58869 ssh2
+Oct 17 03:12:36 rhel-web-02 sshd[32297]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:38 rhel-web-02 sshd[28239]: Failed password for root from 203.0.113.200 port 49500 ssh2
+Oct 17 03:12:42 rhel-web-02 sshd[16333]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.200  user=root
+Oct 17 03:12:44 rhel-web-02 sshd[18114]: Failed password for root from 203.0.113.200 port 31127 ssh2
+Oct 17 03:17:00 rhel-web-02 CRON[12589]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 03:17:01 rhel-web-02 CRON[12589]: pam_unix(cron:session): session closed for user root
+Oct 17 03:37:00 rhel-web-02 sshd[19640]: Invalid user test from 193.216.57.156 port 55740
+Oct 17 03:37:01 rhel-web-02 sshd[19640]: Failed password for invalid user test from 193.216.57.156 port 55740 ssh2
+Oct 17 03:41:01 rhel-web-02 sshd[59999]: Failed password for ubuntu from 193.216.57.156 port 54984 ssh2
+Oct 17 03:51:00 rhel-web-02 sshd[27142]: Invalid user user from 212.88.186.203 port 45481
+Oct 17 03:51:01 rhel-web-02 sshd[27142]: Failed password for invalid user user from 212.88.186.203 port 45481 ssh2
+Oct 17 04:17:00 rhel-web-02 CRON[43192]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 04:17:01 rhel-web-02 CRON[43192]: pam_unix(cron:session): session closed for user root
+Oct 17 05:17:00 rhel-web-02 CRON[54693]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 05:17:01 rhel-web-02 CRON[54693]: pam_unix(cron:session): session closed for user root
+Oct 17 06:17:00 rhel-web-02 CRON[14231]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 06:17:01 rhel-web-02 CRON[14231]: pam_unix(cron:session): session closed for user root
+Oct 17 06:44:00 rhel-web-02 sshd[25319]: Invalid user user from 176.45.126.104 port 42717
+Oct 17 06:44:01 rhel-web-02 sshd[25319]: Failed password for invalid user user from 176.45.126.104 port 42717 ssh2
+Oct 17 07:17:00 rhel-web-02 CRON[57403]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 07:17:01 rhel-web-02 CRON[57403]: pam_unix(cron:session): session closed for user root
+Oct 17 08:17:00 rhel-web-02 CRON[40212]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 08:17:01 rhel-web-02 CRON[40212]: pam_unix(cron:session): session closed for user root
+Oct 17 09:17:00 rhel-web-02 CRON[11257]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 09:17:01 rhel-web-02 CRON[11257]: pam_unix(cron:session): session closed for user root
+Oct 17 10:01:26 rhel-web-02 sshd[2694]: Accepted publickey for sgupta from 10.10.0.21 port 59265 ssh2: ED25519 SHA256:AxjmXHA/unNx0Ye7p4Ykdt5FePM+aqIuq+V6XXkOeGv
+Oct 17 10:01:26 rhel-web-02 sshd[2694]: pam_unix(sshd:session): session opened for user sgupta(uid=1000) by (uid=0)
+Oct 17 10:03:26 rhel-web-02 sudo[43267]: sgupta : TTY=pts/0 ; PWD=/home/sgupta ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 17 10:03:26 rhel-web-02 sudo[32231]: pam_unix(sudo:session): session opened for user root(uid=0) by sgupta(uid=1000)
+Oct 17 10:17:00 rhel-web-02 CRON[57994]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 10:17:01 rhel-web-02 CRON[57994]: pam_unix(cron:session): session closed for user root
+Oct 17 10:25:26 rhel-web-02 sshd[2694]: pam_unix(sshd:session): session closed for user sgupta
+Oct 17 11:17:00 rhel-web-02 CRON[25061]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 11:17:01 rhel-web-02 CRON[25061]: pam_unix(cron:session): session closed for user root
+Oct 17 12:17:00 rhel-web-02 CRON[1915]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 12:17:01 rhel-web-02 CRON[1915]: pam_unix(cron:session): session closed for user root
+Oct 17 13:07:05 rhel-web-02 sshd[59752]: Accepted publickey for sgupta from 10.10.0.21 port 55736 ssh2: ED25519 SHA256:InqKizcJ5yMjXhKGDSIfCQfaNKKIWL+WjrsDFM5ZOhh
+Oct 17 13:07:05 rhel-web-02 sshd[59752]: pam_unix(sshd:session): session opened for user sgupta(uid=1000) by (uid=0)
+Oct 17 13:09:05 rhel-web-02 sudo[26080]: sgupta : TTY=pts/0 ; PWD=/home/sgupta ; USER=root ; COMMAND=/usr/bin/apt list --upgradable
+Oct 17 13:09:05 rhel-web-02 sudo[25873]: pam_unix(sudo:session): session opened for user root(uid=0) by sgupta(uid=1000)
+Oct 17 13:17:00 rhel-web-02 CRON[19544]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 13:17:01 rhel-web-02 CRON[19544]: pam_unix(cron:session): session closed for user root
+Oct 17 13:36:05 rhel-web-02 sshd[59752]: pam_unix(sshd:session): session closed for user sgupta
+Oct 17 13:55:01 rhel-web-02 sshd[37892]: Failed password for root from 176.126.69.152 port 59334 ssh2
+Oct 17 13:59:00 rhel-web-02 sshd[62733]: Invalid user oracle from 176.126.69.152 port 40579
+Oct 17 13:59:01 rhel-web-02 sshd[62733]: Failed password for invalid user oracle from 176.126.69.152 port 40579 ssh2
+Oct 17 14:03:00 rhel-web-02 sshd[9901]: Invalid user user from 176.126.69.152 port 61553
+Oct 17 14:03:01 rhel-web-02 sshd[9901]: Failed password for invalid user user from 176.126.69.152 port 61553 ssh2
+Oct 17 14:17:00 rhel-web-02 CRON[45961]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 14:17:01 rhel-web-02 CRON[45961]: pam_unix(cron:session): session closed for user root
+Oct 17 15:17:00 rhel-web-02 CRON[1505]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 15:17:01 rhel-web-02 CRON[1505]: pam_unix(cron:session): session closed for user root
+Oct 17 16:17:00 rhel-web-02 CRON[64283]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 16:17:01 rhel-web-02 CRON[64283]: pam_unix(cron:session): session closed for user root
+Oct 17 17:17:00 rhel-web-02 CRON[31919]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 17:17:01 rhel-web-02 CRON[31919]: pam_unix(cron:session): session closed for user root
+Oct 17 17:51:16 rhel-web-02 sshd[57490]: Accepted publickey for sgupta from 10.10.0.21 port 50286 ssh2: ED25519 SHA256:qRkUu5A/RbL7KXzCKZkd0aEyUi3mCuD5zFeBFSTiReL
+Oct 17 17:51:16 rhel-web-02 sshd[57490]: pam_unix(sshd:session): session opened for user sgupta(uid=1000) by (uid=0)
+Oct 17 17:53:16 rhel-web-02 sudo[11519]: sgupta : TTY=pts/0 ; PWD=/home/sgupta ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 17 17:53:16 rhel-web-02 sudo[2275]: pam_unix(sudo:session): session opened for user root(uid=0) by sgupta(uid=1000)
+Oct 17 18:01:16 rhel-web-02 sshd[57490]: pam_unix(sshd:session): session closed for user sgupta
+Oct 17 18:17:00 rhel-web-02 CRON[23958]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 18:17:01 rhel-web-02 CRON[23958]: pam_unix(cron:session): session closed for user root
+Oct 17 19:17:00 rhel-web-02 CRON[53791]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 19:17:01 rhel-web-02 CRON[53791]: pam_unix(cron:session): session closed for user root
+Oct 17 20:17:00 rhel-web-02 CRON[33975]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 20:17:01 rhel-web-02 CRON[33975]: pam_unix(cron:session): session closed for user root
+Oct 17 20:32:00 rhel-web-02 sshd[58692]: Invalid user user from 109.50.165.145 port 62321
+Oct 17 20:32:01 rhel-web-02 sshd[58692]: Failed password for invalid user user from 109.50.165.145 port 62321 ssh2
+Oct 17 20:36:01 rhel-web-02 sshd[31380]: Failed password for ubuntu from 109.50.165.145 port 54698 ssh2
+Oct 17 20:40:00 rhel-web-02 sshd[57638]: Invalid user user from 109.50.165.145 port 53918
+Oct 17 20:40:01 rhel-web-02 sshd[57638]: Failed password for invalid user user from 109.50.165.145 port 53918 ssh2
+Oct 17 21:17:00 rhel-web-02 CRON[38049]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 21:17:01 rhel-web-02 CRON[38049]: pam_unix(cron:session): session closed for user root
+Oct 17 22:17:00 rhel-web-02 CRON[5087]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 22:17:01 rhel-web-02 CRON[5087]: pam_unix(cron:session): session closed for user root
+Oct 17 23:17:00 rhel-web-02 CRON[22535]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 17 23:17:01 rhel-web-02 CRON[22535]: pam_unix(cron:session): session closed for user root

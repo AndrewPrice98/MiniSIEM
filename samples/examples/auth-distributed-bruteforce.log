@@ -1,0 +1,223 @@
+2026-10-25T00:17:00.842341+00:00 bastion-h CRON[10067]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T00:17:01.944051+00:00 bastion-h CRON[10067]: pam_unix(cron:session): session closed for user root
+2026-10-25T01:00:01.041521+00:00 bastion-h sshd[36264]: Failed password for root from 185.218.251.142 port 31790 ssh2
+2026-10-25T01:00:31.814282+00:00 bastion-h sshd[49416]: Failed password for root from 185.112.225.90 port 34670 ssh2
+2026-10-25T01:01:01.315169+00:00 bastion-h sshd[23209]: Failed password for root from 185.175.249.144 port 43916 ssh2
+2026-10-25T01:01:31.769119+00:00 bastion-h sshd[24931]: Failed password for root from 185.252.160.129 port 55930 ssh2
+2026-10-25T01:02:01.794458+00:00 bastion-h sshd[17350]: Failed password for root from 185.103.147.151 port 56444 ssh2
+2026-10-25T01:02:31.570888+00:00 bastion-h sshd[21073]: Failed password for root from 185.101.147.103 port 51328 ssh2
+2026-10-25T01:03:01.049496+00:00 bastion-h sshd[37742]: Failed password for root from 185.40.73.40 port 52789 ssh2
+2026-10-25T01:03:31.039881+00:00 bastion-h sshd[49554]: Failed password for root from 185.170.221.166 port 39364 ssh2
+2026-10-25T01:04:01.355548+00:00 bastion-h sshd[8455]: Failed password for root from 185.228.142.79 port 33617 ssh2
+2026-10-25T01:04:31.409818+00:00 bastion-h sshd[36004]: Failed password for root from 185.167.176.86 port 60748 ssh2
+2026-10-25T01:05:01.068208+00:00 bastion-h sshd[53440]: Failed password for root from 185.43.240.159 port 35624 ssh2
+2026-10-25T01:05:31.677289+00:00 bastion-h sshd[24076]: Failed password for root from 185.150.40.72 port 30907 ssh2
+2026-10-25T01:06:01.804865+00:00 bastion-h sshd[59649]: Failed password for root from 185.108.199.225 port 32536 ssh2
+2026-10-25T01:06:31.371693+00:00 bastion-h sshd[17442]: Failed password for root from 185.138.100.134 port 31654 ssh2
+2026-10-25T01:07:01.674659+00:00 bastion-h sshd[11015]: Failed password for root from 185.218.251.142 port 64164 ssh2
+2026-10-25T01:07:01.477686+00:00 bastion-h sshd[58555]: Failed password for root from 185.38.64.124 port 45670 ssh2
+2026-10-25T01:07:31.921927+00:00 bastion-h sshd[28902]: Failed password for root from 185.112.225.90 port 32660 ssh2
+2026-10-25T01:07:31.981680+00:00 bastion-h sshd[59813]: Failed password for root from 185.213.114.173 port 35888 ssh2
+2026-10-25T01:08:01.728972+00:00 bastion-h sshd[15864]: Failed password for root from 185.175.249.144 port 55534 ssh2
+2026-10-25T01:08:01.038233+00:00 bastion-h sshd[27347]: Failed password for root from 185.250.37.238 port 35964 ssh2
+2026-10-25T01:08:31.336481+00:00 bastion-h sshd[29016]: Failed password for root from 185.252.160.129 port 60883 ssh2
+2026-10-25T01:08:31.924252+00:00 bastion-h sshd[39620]: Failed password for root from 185.109.186.77 port 61178 ssh2
+2026-10-25T01:09:01.885523+00:00 bastion-h sshd[52575]: Failed password for root from 185.103.147.151 port 60774 ssh2
+2026-10-25T01:09:01.170247+00:00 bastion-h sshd[63973]: Failed password for root from 185.241.208.201 port 58077 ssh2
+2026-10-25T01:09:31.230225+00:00 bastion-h sshd[33240]: Failed password for root from 185.101.147.103 port 56033 ssh2
+2026-10-25T01:09:31.343757+00:00 bastion-h sshd[16987]: Failed password for root from 185.76.104.127 port 33285 ssh2
+2026-10-25T01:10:01.903015+00:00 bastion-h sshd[44256]: Failed password for root from 185.40.73.40 port 40540 ssh2
+2026-10-25T01:10:01.603607+00:00 bastion-h sshd[37050]: Failed password for root from 185.240.217.136 port 42498 ssh2
+2026-10-25T01:10:31.720110+00:00 bastion-h sshd[30232]: Failed password for root from 185.170.221.166 port 45508 ssh2
+2026-10-25T01:10:31.718316+00:00 bastion-h sshd[63417]: Failed password for root from 185.77.4.33 port 59229 ssh2
+2026-10-25T01:11:01.495020+00:00 bastion-h sshd[51768]: Failed password for root from 185.228.142.79 port 41108 ssh2
+2026-10-25T01:11:01.503491+00:00 bastion-h sshd[22789]: Failed password for root from 185.220.151.234 port 49255 ssh2
+2026-10-25T01:11:31.131448+00:00 bastion-h sshd[60447]: Failed password for root from 185.167.176.86 port 64286 ssh2
+2026-10-25T01:11:31.125782+00:00 bastion-h sshd[43363]: Failed password for root from 185.157.38.197 port 30588 ssh2
+2026-10-25T01:12:01.306233+00:00 bastion-h sshd[57762]: Failed password for root from 185.43.240.159 port 54442 ssh2
+2026-10-25T01:12:01.077836+00:00 bastion-h sshd[32794]: Failed password for root from 185.230.50.18 port 61861 ssh2
+2026-10-25T01:12:31.260663+00:00 bastion-h sshd[30889]: Failed password for root from 185.150.40.72 port 63339 ssh2
+2026-10-25T01:12:31.166785+00:00 bastion-h sshd[47647]: Failed password for root from 185.52.68.147 port 41150 ssh2
+2026-10-25T01:13:01.835214+00:00 bastion-h sshd[1133]: Failed password for root from 185.108.199.225 port 54546 ssh2
+2026-10-25T01:13:01.216924+00:00 bastion-h sshd[51064]: Failed password for root from 185.56.158.87 port 64912 ssh2
+2026-10-25T01:13:31.889417+00:00 bastion-h sshd[57065]: Failed password for root from 185.138.100.134 port 59821 ssh2
+2026-10-25T01:13:31.306745+00:00 bastion-h sshd[59296]: Failed password for root from 185.20.25.39 port 57136 ssh2
+2026-10-25T01:14:01.095372+00:00 bastion-h sshd[29497]: Failed password for root from 185.38.64.124 port 37214 ssh2
+2026-10-25T01:14:01.221067+00:00 bastion-h sshd[15783]: Failed password for root from 185.42.149.62 port 47530 ssh2
+2026-10-25T01:14:31.364760+00:00 bastion-h sshd[17177]: Failed password for root from 185.213.114.173 port 40813 ssh2
+2026-10-25T01:14:31.521886+00:00 bastion-h sshd[28407]: Failed password for root from 185.240.31.83 port 49789 ssh2
+2026-10-25T01:15:01.434914+00:00 bastion-h sshd[57123]: Failed password for root from 185.250.37.238 port 53243 ssh2
+2026-10-25T01:15:01.546715+00:00 bastion-h sshd[8356]: Failed password for root from 185.210.111.161 port 56932 ssh2
+2026-10-25T01:15:31.620629+00:00 bastion-h sshd[29621]: Failed password for root from 185.109.186.77 port 38293 ssh2
+2026-10-25T01:15:31.942797+00:00 bastion-h sshd[34256]: Failed password for root from 185.223.56.42 port 53949 ssh2
+2026-10-25T01:16:01.837479+00:00 bastion-h sshd[24485]: Failed password for root from 185.241.208.201 port 53311 ssh2
+2026-10-25T01:16:01.800771+00:00 bastion-h sshd[48143]: Failed password for root from 185.12.3.205 port 55650 ssh2
+2026-10-25T01:16:31.018652+00:00 bastion-h sshd[15564]: Failed password for root from 185.76.104.127 port 47932 ssh2
+2026-10-25T01:16:31.848306+00:00 bastion-h sshd[22476]: Failed password for root from 185.52.71.109 port 35971 ssh2
+2026-10-25T01:17:00.119941+00:00 bastion-h CRON[49787]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T01:17:01.214654+00:00 bastion-h CRON[49787]: pam_unix(cron:session): session closed for user root
+2026-10-25T01:17:01.553356+00:00 bastion-h sshd[2395]: Failed password for root from 185.240.217.136 port 56158 ssh2
+2026-10-25T01:17:01.839658+00:00 bastion-h sshd[28407]: Failed password for root from 185.51.244.13 port 32412 ssh2
+2026-10-25T01:17:31.034673+00:00 bastion-h sshd[53168]: Failed password for root from 185.77.4.33 port 60181 ssh2
+2026-10-25T01:17:31.596140+00:00 bastion-h sshd[24817]: Failed password for root from 185.240.114.36 port 48766 ssh2
+2026-10-25T01:18:01.719589+00:00 bastion-h sshd[14367]: Failed password for root from 185.220.151.234 port 43142 ssh2
+2026-10-25T01:18:01.782306+00:00 bastion-h sshd[940]: Failed password for root from 185.143.16.143 port 42558 ssh2
+2026-10-25T01:18:31.078727+00:00 bastion-h sshd[23607]: Failed password for root from 185.157.38.197 port 63013 ssh2
+2026-10-25T01:18:31.009257+00:00 bastion-h sshd[20843]: Failed password for root from 185.214.44.11 port 40828 ssh2
+2026-10-25T01:19:01.593449+00:00 bastion-h sshd[16433]: Failed password for root from 185.230.50.18 port 36338 ssh2
+2026-10-25T01:19:01.173945+00:00 bastion-h sshd[24130]: Failed password for root from 185.37.110.115 port 39992 ssh2
+2026-10-25T01:19:31.333443+00:00 bastion-h sshd[42875]: Failed password for root from 185.52.68.147 port 63985 ssh2
+2026-10-25T01:19:31.195136+00:00 bastion-h sshd[64000]: Failed password for root from 185.160.171.3 port 59592 ssh2
+2026-10-25T01:20:01.041987+00:00 bastion-h sshd[62570]: Failed password for root from 185.56.158.87 port 58488 ssh2
+2026-10-25T01:20:01.030927+00:00 bastion-h sshd[16997]: Failed password for root from 185.120.42.18 port 42184 ssh2
+2026-10-25T01:20:31.730835+00:00 bastion-h sshd[39057]: Failed password for root from 185.20.25.39 port 40668 ssh2
+2026-10-25T01:20:31.709987+00:00 bastion-h sshd[21020]: Failed password for root from 185.132.23.105 port 61884 ssh2
+2026-10-25T01:21:01.226618+00:00 bastion-h sshd[43228]: Failed password for root from 185.42.149.62 port 39586 ssh2
+2026-10-25T01:21:01.199072+00:00 bastion-h sshd[10116]: Failed password for root from 185.190.78.130 port 58848 ssh2
+2026-10-25T01:21:31.348164+00:00 bastion-h sshd[63252]: Failed password for root from 185.240.31.83 port 56173 ssh2
+2026-10-25T01:21:31.131106+00:00 bastion-h sshd[33969]: Failed password for root from 185.165.179.22 port 41056 ssh2
+2026-10-25T01:22:01.309855+00:00 bastion-h sshd[30406]: Failed password for root from 185.210.111.161 port 60759 ssh2
+2026-10-25T01:22:01.467974+00:00 bastion-h sshd[57603]: Failed password for root from 185.84.25.72 port 61021 ssh2
+2026-10-25T01:22:31.693531+00:00 bastion-h sshd[46800]: Failed password for root from 185.223.56.42 port 51764 ssh2
+2026-10-25T01:22:31.993884+00:00 bastion-h sshd[42056]: Failed password for root from 185.101.177.223 port 40375 ssh2
+2026-10-25T01:23:01.738340+00:00 bastion-h sshd[30817]: Failed password for root from 185.12.3.205 port 54092 ssh2
+2026-10-25T01:23:01.609686+00:00 bastion-h sshd[53244]: Failed password for root from 185.51.126.217 port 43681 ssh2
+2026-10-25T01:23:31.829202+00:00 bastion-h sshd[9411]: Failed password for root from 185.52.71.109 port 61660 ssh2
+2026-10-25T01:23:31.947477+00:00 bastion-h sshd[4230]: Failed password for root from 185.42.135.141 port 63763 ssh2
+2026-10-25T01:24:01.991908+00:00 bastion-h sshd[42794]: Failed password for root from 185.51.244.13 port 45366 ssh2
+2026-10-25T01:24:01.121880+00:00 bastion-h sshd[27951]: Failed password for root from 185.187.199.234 port 42311 ssh2
+2026-10-25T01:24:31.800417+00:00 bastion-h sshd[37830]: Failed password for root from 185.240.114.36 port 39478 ssh2
+2026-10-25T01:24:31.629743+00:00 bastion-h sshd[49805]: Failed password for root from 185.147.214.248 port 64256 ssh2
+2026-10-25T01:25:01.979963+00:00 bastion-h sshd[23054]: Failed password for root from 185.143.16.143 port 42046 ssh2
+2026-10-25T01:25:01.817135+00:00 bastion-h sshd[61161]: Failed password for root from 185.107.80.138 port 59955 ssh2
+2026-10-25T01:25:31.231387+00:00 bastion-h sshd[54512]: Failed password for root from 185.214.44.11 port 37028 ssh2
+2026-10-25T01:25:31.654718+00:00 bastion-h sshd[4696]: Failed password for root from 185.176.52.146 port 63762 ssh2
+2026-10-25T01:26:01.107428+00:00 bastion-h sshd[2353]: Failed password for root from 185.37.110.115 port 46229 ssh2
+2026-10-25T01:26:01.140397+00:00 bastion-h sshd[42898]: Failed password for root from 185.19.165.141 port 52748 ssh2
+2026-10-25T01:26:31.528957+00:00 bastion-h sshd[50326]: Failed password for root from 185.160.171.3 port 36939 ssh2
+2026-10-25T01:26:31.488435+00:00 bastion-h sshd[36999]: Failed password for root from 185.117.88.187 port 55292 ssh2
+2026-10-25T01:27:01.878723+00:00 bastion-h sshd[21748]: Failed password for root from 185.120.42.18 port 56424 ssh2
+2026-10-25T01:27:01.807540+00:00 bastion-h sshd[51901]: Failed password for root from 185.156.32.41 port 41224 ssh2
+2026-10-25T01:27:31.744531+00:00 bastion-h sshd[61862]: Failed password for root from 185.132.23.105 port 59731 ssh2
+2026-10-25T01:27:31.140662+00:00 bastion-h sshd[38370]: Failed password for root from 185.30.22.238 port 59619 ssh2
+2026-10-25T01:28:01.993644+00:00 bastion-h sshd[55858]: Failed password for root from 185.190.78.130 port 43931 ssh2
+2026-10-25T01:28:01.637701+00:00 bastion-h sshd[12059]: Failed password for root from 185.146.115.31 port 30783 ssh2
+2026-10-25T01:28:31.707332+00:00 bastion-h sshd[39569]: Failed password for root from 185.165.179.22 port 61639 ssh2
+2026-10-25T01:28:31.908923+00:00 bastion-h sshd[13294]: Failed password for root from 185.125.223.159 port 34208 ssh2
+2026-10-25T01:29:01.440745+00:00 bastion-h sshd[61172]: Failed password for root from 185.84.25.72 port 61105 ssh2
+2026-10-25T01:29:01.358464+00:00 bastion-h sshd[6220]: Failed password for root from 185.174.210.154 port 47661 ssh2
+2026-10-25T01:29:31.255870+00:00 bastion-h sshd[28451]: Failed password for root from 185.101.177.223 port 60046 ssh2
+2026-10-25T01:29:31.459974+00:00 bastion-h sshd[32409]: Failed password for root from 185.65.170.133 port 37604 ssh2
+2026-10-25T01:30:01.508266+00:00 bastion-h sshd[53890]: Failed password for root from 185.51.126.217 port 38211 ssh2
+2026-10-25T01:30:01.819433+00:00 bastion-h sshd[24123]: Failed password for root from 185.217.236.110 port 61100 ssh2
+2026-10-25T01:30:31.824959+00:00 bastion-h sshd[24101]: Failed password for root from 185.42.135.141 port 55256 ssh2
+2026-10-25T01:30:31.267351+00:00 bastion-h sshd[17877]: Failed password for root from 185.219.45.8 port 57078 ssh2
+2026-10-25T01:31:01.625646+00:00 bastion-h sshd[26240]: Failed password for root from 185.187.199.234 port 46654 ssh2
+2026-10-25T01:31:01.021243+00:00 bastion-h sshd[27660]: Failed password for root from 185.59.164.141 port 56498 ssh2
+2026-10-25T01:31:31.619358+00:00 bastion-h sshd[58400]: Failed password for root from 185.147.214.248 port 55246 ssh2
+2026-10-25T01:31:31.891013+00:00 bastion-h sshd[38347]: Failed password for root from 185.136.163.139 port 35297 ssh2
+2026-10-25T01:32:01.602616+00:00 bastion-h sshd[23675]: Failed password for root from 185.107.80.138 port 61102 ssh2
+2026-10-25T01:32:01.430221+00:00 bastion-h sshd[40850]: Failed password for root from 185.200.240.34 port 30519 ssh2
+2026-10-25T01:32:31.615136+00:00 bastion-h sshd[16941]: Failed password for root from 185.176.52.146 port 58770 ssh2
+2026-10-25T01:32:31.578692+00:00 bastion-h sshd[10957]: Failed password for root from 185.253.73.157 port 45168 ssh2
+2026-10-25T01:33:01.311368+00:00 bastion-h sshd[35325]: Failed password for root from 185.19.165.141 port 31874 ssh2
+2026-10-25T01:33:01.656462+00:00 bastion-h sshd[52450]: Failed password for root from 185.146.228.239 port 35289 ssh2
+2026-10-25T01:33:31.193835+00:00 bastion-h sshd[3648]: Failed password for root from 185.117.88.187 port 43430 ssh2
+2026-10-25T01:33:31.023046+00:00 bastion-h sshd[52821]: Failed password for root from 185.248.23.137 port 50791 ssh2
+2026-10-25T01:34:01.027937+00:00 bastion-h sshd[45923]: Failed password for root from 185.156.32.41 port 57014 ssh2
+2026-10-25T01:34:01.258604+00:00 bastion-h sshd[32986]: Failed password for root from 185.119.154.81 port 60771 ssh2
+2026-10-25T01:34:31.949039+00:00 bastion-h sshd[2286]: Failed password for root from 185.30.22.238 port 60741 ssh2
+2026-10-25T01:34:31.390151+00:00 bastion-h sshd[27116]: Failed password for root from 185.248.217.34 port 45044 ssh2
+2026-10-25T01:35:01.870288+00:00 bastion-h sshd[34404]: Failed password for root from 185.146.115.31 port 47250 ssh2
+2026-10-25T01:35:01.831879+00:00 bastion-h sshd[64185]: Failed password for root from 185.96.169.102 port 61265 ssh2
+2026-10-25T01:35:31.809430+00:00 bastion-h sshd[13876]: Failed password for root from 185.125.223.159 port 40152 ssh2
+2026-10-25T01:35:31.233722+00:00 bastion-h sshd[16343]: Failed password for root from 185.247.148.54 port 51740 ssh2
+2026-10-25T01:36:01.862206+00:00 bastion-h sshd[62526]: Failed password for root from 185.174.210.154 port 56792 ssh2
+2026-10-25T01:36:01.977786+00:00 bastion-h sshd[33013]: Failed password for root from 185.161.203.182 port 49566 ssh2
+2026-10-25T01:36:31.963610+00:00 bastion-h sshd[52344]: Failed password for root from 185.65.170.133 port 36763 ssh2
+2026-10-25T01:36:31.952175+00:00 bastion-h sshd[43750]: Failed password for root from 185.250.146.1 port 60597 ssh2
+2026-10-25T01:37:01.773123+00:00 bastion-h sshd[4192]: Failed password for root from 185.217.236.110 port 40285 ssh2
+2026-10-25T01:37:01.190045+00:00 bastion-h sshd[62748]: Failed password for root from 185.95.211.160 port 52370 ssh2
+2026-10-25T01:37:31.869790+00:00 bastion-h sshd[7114]: Failed password for root from 185.219.45.8 port 51908 ssh2
+2026-10-25T01:37:31.064346+00:00 bastion-h sshd[48661]: Failed password for root from 185.35.129.195 port 57684 ssh2
+2026-10-25T01:38:01.856954+00:00 bastion-h sshd[55641]: Failed password for root from 185.59.164.141 port 36931 ssh2
+2026-10-25T01:38:01.561697+00:00 bastion-h sshd[46531]: Failed password for root from 185.25.225.34 port 30989 ssh2
+2026-10-25T01:38:31.085161+00:00 bastion-h sshd[24381]: Failed password for root from 185.136.163.139 port 57770 ssh2
+2026-10-25T01:38:31.221685+00:00 bastion-h sshd[13813]: Failed password for root from 185.29.170.224 port 46467 ssh2
+2026-10-25T01:39:01.472739+00:00 bastion-h sshd[43951]: Failed password for root from 185.200.240.34 port 55189 ssh2
+2026-10-25T01:39:01.355423+00:00 bastion-h sshd[58345]: Failed password for root from 185.214.40.193 port 30806 ssh2
+2026-10-25T01:39:31.045238+00:00 bastion-h sshd[35716]: Failed password for root from 185.253.73.157 port 58473 ssh2
+2026-10-25T01:39:31.845806+00:00 bastion-h sshd[47885]: Failed password for root from 185.224.16.237 port 34309 ssh2
+2026-10-25T01:40:01.342683+00:00 bastion-h sshd[43606]: Failed password for root from 185.146.228.239 port 54614 ssh2
+2026-10-25T01:40:31.388781+00:00 bastion-h sshd[10706]: Failed password for root from 185.248.23.137 port 33455 ssh2
+2026-10-25T01:41:01.472973+00:00 bastion-h sshd[15035]: Failed password for root from 185.119.154.81 port 38269 ssh2
+2026-10-25T01:41:31.330347+00:00 bastion-h sshd[49282]: Failed password for root from 185.248.217.34 port 37986 ssh2
+2026-10-25T01:42:01.663969+00:00 bastion-h sshd[64491]: Failed password for root from 185.96.169.102 port 46911 ssh2
+2026-10-25T01:42:31.949560+00:00 bastion-h sshd[38417]: Failed password for root from 185.247.148.54 port 56966 ssh2
+2026-10-25T01:43:01.603087+00:00 bastion-h sshd[45649]: Failed password for root from 185.161.203.182 port 36497 ssh2
+2026-10-25T01:43:31.866747+00:00 bastion-h sshd[46280]: Failed password for root from 185.250.146.1 port 36730 ssh2
+2026-10-25T01:44:01.314224+00:00 bastion-h sshd[55065]: Failed password for root from 185.95.211.160 port 53318 ssh2
+2026-10-25T01:44:31.775403+00:00 bastion-h sshd[62327]: Failed password for root from 185.35.129.195 port 54044 ssh2
+2026-10-25T01:45:01.362852+00:00 bastion-h sshd[39976]: Failed password for root from 185.25.225.34 port 50526 ssh2
+2026-10-25T01:45:31.365973+00:00 bastion-h sshd[43736]: Failed password for root from 185.29.170.224 port 54530 ssh2
+2026-10-25T01:46:01.817659+00:00 bastion-h sshd[57732]: Failed password for root from 185.214.40.193 port 44810 ssh2
+2026-10-25T01:46:31.675898+00:00 bastion-h sshd[10539]: Failed password for root from 185.224.16.237 port 59405 ssh2
+2026-10-25T02:17:00.718712+00:00 bastion-h CRON[17241]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T02:17:01.635766+00:00 bastion-h CRON[17241]: pam_unix(cron:session): session closed for user root
+2026-10-25T03:17:00.616661+00:00 bastion-h CRON[44343]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T03:17:01.879055+00:00 bastion-h CRON[44343]: pam_unix(cron:session): session closed for user root
+2026-10-25T04:17:00.430914+00:00 bastion-h CRON[23832]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T04:17:01.295282+00:00 bastion-h CRON[23832]: pam_unix(cron:session): session closed for user root
+2026-10-25T05:17:00.711228+00:00 bastion-h CRON[38699]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T05:17:01.024883+00:00 bastion-h CRON[38699]: pam_unix(cron:session): session closed for user root
+2026-10-25T06:17:00.649719+00:00 bastion-h CRON[23980]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T06:17:01.858598+00:00 bastion-h CRON[23980]: pam_unix(cron:session): session closed for user root
+2026-10-25T07:17:00.923102+00:00 bastion-h CRON[30566]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T07:17:01.801551+00:00 bastion-h CRON[30566]: pam_unix(cron:session): session closed for user root
+2026-10-25T08:17:00.926216+00:00 bastion-h CRON[22781]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T08:17:01.768934+00:00 bastion-h CRON[22781]: pam_unix(cron:session): session closed for user root
+2026-10-25T09:17:00.555408+00:00 bastion-h CRON[37486]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T09:17:01.086339+00:00 bastion-h CRON[37486]: pam_unix(cron:session): session closed for user root
+2026-10-25T10:17:00.777923+00:00 bastion-h CRON[56669]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T10:17:01.971185+00:00 bastion-h CRON[56669]: pam_unix(cron:session): session closed for user root
+2026-10-25T10:28:23.235139+00:00 bastion-h sshd[6192]: Accepted publickey for mgarcia from 10.15.0.21 port 46988 ssh2: ED25519 SHA256:JgFFNp+Pgkl/gHLNyZB0Dtt8aicbelXi/28rpt1G/qS
+2026-10-25T10:28:23.700588+00:00 bastion-h sshd[6192]: pam_unix(sshd:session): session opened for user mgarcia(uid=1000) by (uid=0)
+2026-10-25T10:30:23.024827+00:00 bastion-h sudo[14624]: mgarcia : TTY=pts/0 ; PWD=/home/mgarcia ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-25T10:30:23.906597+00:00 bastion-h sudo[22445]: pam_unix(sudo:session): session opened for user root(uid=0) by mgarcia(uid=1000)
+2026-10-25T11:08:23.445065+00:00 bastion-h sshd[6192]: pam_unix(sshd:session): session closed for user mgarcia
+2026-10-25T11:17:00.716626+00:00 bastion-h CRON[5481]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T11:17:01.291781+00:00 bastion-h CRON[5481]: pam_unix(cron:session): session closed for user root
+2026-10-25T12:17:00.958098+00:00 bastion-h CRON[33824]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T12:17:01.731950+00:00 bastion-h CRON[33824]: pam_unix(cron:session): session closed for user root
+2026-10-25T13:17:00.677788+00:00 bastion-h CRON[35604]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T13:17:01.120142+00:00 bastion-h CRON[35604]: pam_unix(cron:session): session closed for user root
+2026-10-25T13:54:34.565515+00:00 bastion-h sshd[26058]: Accepted publickey for mgarcia from 10.15.0.21 port 45673 ssh2: ED25519 SHA256:cNYSA0fzZIpabfgUVfp9Vb1kH/7HxZ08Bt/wok2TUil
+2026-10-25T13:54:34.431923+00:00 bastion-h sshd[26058]: pam_unix(sshd:session): session opened for user mgarcia(uid=1000) by (uid=0)
+2026-10-25T13:56:34.407173+00:00 bastion-h sudo[29160]: mgarcia : TTY=pts/0 ; PWD=/home/mgarcia ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-25T13:56:34.416347+00:00 bastion-h sudo[44909]: pam_unix(sudo:session): session opened for user root(uid=0) by mgarcia(uid=1000)
+2026-10-25T14:17:00.973865+00:00 bastion-h CRON[13502]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T14:17:01.393269+00:00 bastion-h CRON[13502]: pam_unix(cron:session): session closed for user root
+2026-10-25T14:25:34.510309+00:00 bastion-h sshd[26058]: pam_unix(sshd:session): session closed for user mgarcia
+2026-10-25T15:17:00.533293+00:00 bastion-h CRON[7870]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T15:17:01.859157+00:00 bastion-h CRON[7870]: pam_unix(cron:session): session closed for user root
+2026-10-25T16:12:18.551097+00:00 bastion-h sshd[21509]: Accepted publickey for mgarcia from 10.15.0.21 port 31450 ssh2: ED25519 SHA256:OkUkdMQZ33WXEFerrEK/Y0U7DwcfoeZG90xkpMp+6og
+2026-10-25T16:12:18.628424+00:00 bastion-h sshd[21509]: pam_unix(sshd:session): session opened for user mgarcia(uid=1000) by (uid=0)
+2026-10-25T16:14:18.201020+00:00 bastion-h sudo[44520]: mgarcia : TTY=pts/0 ; PWD=/home/mgarcia ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-25T16:14:18.457659+00:00 bastion-h sudo[25866]: pam_unix(sudo:session): session opened for user root(uid=0) by mgarcia(uid=1000)
+2026-10-25T16:17:00.803440+00:00 bastion-h CRON[38057]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T16:17:01.766392+00:00 bastion-h CRON[38057]: pam_unix(cron:session): session closed for user root
+2026-10-25T16:25:18.283669+00:00 bastion-h sshd[21509]: pam_unix(sshd:session): session closed for user mgarcia
+2026-10-25T17:17:00.025526+00:00 bastion-h CRON[38199]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T17:17:01.570796+00:00 bastion-h CRON[38199]: pam_unix(cron:session): session closed for user root
+2026-10-25T18:17:00.986059+00:00 bastion-h CRON[17022]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T18:17:01.832368+00:00 bastion-h CRON[17022]: pam_unix(cron:session): session closed for user root
+2026-10-25T19:17:00.786025+00:00 bastion-h CRON[22659]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T19:17:01.010797+00:00 bastion-h CRON[22659]: pam_unix(cron:session): session closed for user root
+2026-10-25T20:17:00.376426+00:00 bastion-h CRON[38038]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T20:17:01.335978+00:00 bastion-h CRON[38038]: pam_unix(cron:session): session closed for user root
+2026-10-25T21:17:00.319424+00:00 bastion-h CRON[7476]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T21:17:01.488081+00:00 bastion-h CRON[7476]: pam_unix(cron:session): session closed for user root
+2026-10-25T22:17:00.709526+00:00 bastion-h CRON[24778]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T22:17:01.704066+00:00 bastion-h CRON[24778]: pam_unix(cron:session): session closed for user root
+2026-10-25T23:17:00.137151+00:00 bastion-h CRON[20318]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-25T23:17:01.533232+00:00 bastion-h CRON[20318]: pam_unix(cron:session): session closed for user root

@@ -1,0 +1,82 @@
+2026-10-27T00:17:00.645729+00:00 app-02 CRON[39717]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T00:17:01.671857+00:00 app-02 CRON[39717]: pam_unix(cron:session): session closed for user root
+2026-10-27T01:17:00.047531+00:00 app-02 CRON[21461]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T01:17:01.892318+00:00 app-02 CRON[21461]: pam_unix(cron:session): session closed for user root
+2026-10-27T02:17:00.116377+00:00 app-02 CRON[59529]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T02:17:01.025362+00:00 app-02 CRON[59529]: pam_unix(cron:session): session closed for user root
+2026-10-27T03:17:00.842108+00:00 app-02 CRON[35017]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T03:17:01.705073+00:00 app-02 CRON[35017]: pam_unix(cron:session): session closed for user root
+2026-10-27T03:19:01.754695+00:00 app-02 sshd[22158]: Failed password for ubuntu from 91.214.163.10 port 50872 ssh2
+2026-10-27T03:23:00.004115+00:00 app-02 sshd[36851]: Invalid user test from 91.214.163.10 port 63880
+2026-10-27T03:23:01.210493+00:00 app-02 sshd[36851]: Failed password for invalid user test from 91.214.163.10 port 63880 ssh2
+2026-10-27T04:17:00.636948+00:00 app-02 CRON[64006]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T04:17:01.744847+00:00 app-02 CRON[64006]: pam_unix(cron:session): session closed for user root
+2026-10-27T05:17:00.516776+00:00 app-02 CRON[42844]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T05:17:01.201334+00:00 app-02 CRON[42844]: pam_unix(cron:session): session closed for user root
+2026-10-27T06:17:00.556968+00:00 app-02 CRON[55408]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T06:17:01.389741+00:00 app-02 CRON[55408]: pam_unix(cron:session): session closed for user root
+2026-10-27T07:17:00.455585+00:00 app-02 CRON[8644]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T07:17:01.637536+00:00 app-02 CRON[8644]: pam_unix(cron:session): session closed for user root
+2026-10-27T08:17:00.771941+00:00 app-02 CRON[61813]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T08:17:01.296918+00:00 app-02 CRON[61813]: pam_unix(cron:session): session closed for user root
+2026-10-27T09:17:00.178159+00:00 app-02 CRON[10707]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T09:17:01.552248+00:00 app-02 CRON[10707]: pam_unix(cron:session): session closed for user root
+2026-10-27T09:54:47.994613+00:00 app-02 sshd[39821]: Accepted publickey for tlee from 10.16.0.21 port 43484 ssh2: ED25519 SHA256:G1SNtCy2XyLJYk6S3CxwcK4qThwMfY+GvgkltqSyGf+
+2026-10-27T09:54:47.352062+00:00 app-02 sshd[39821]: pam_unix(sshd:session): session opened for user tlee(uid=1000) by (uid=0)
+2026-10-27T09:56:47.109873+00:00 app-02 sudo[43494]: tlee : TTY=pts/0 ; PWD=/home/tlee ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-27T09:56:47.719831+00:00 app-02 sudo[47304]: pam_unix(sudo:session): session opened for user root(uid=0) by tlee(uid=1000)
+2026-10-27T10:11:47.257806+00:00 app-02 sshd[39821]: pam_unix(sshd:session): session closed for user tlee
+2026-10-27T10:17:00.385257+00:00 app-02 CRON[48770]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T10:17:01.993178+00:00 app-02 CRON[48770]: pam_unix(cron:session): session closed for user root
+2026-10-27T11:17:00.482559+00:00 app-02 CRON[64996]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T11:17:01.184975+00:00 app-02 CRON[64996]: pam_unix(cron:session): session closed for user root
+2026-10-27T11:41:25.580039+00:00 app-02 sshd[34412]: Accepted publickey for tlee from 10.16.0.21 port 37473 ssh2: ED25519 SHA256:hZGqoDV7gNhCM44mgE63QyrrymU1+2D9U8Rj2ikN9rL
+2026-10-27T11:41:25.014661+00:00 app-02 sshd[34412]: pam_unix(sshd:session): session opened for user tlee(uid=1000) by (uid=0)
+2026-10-27T11:43:25.982999+00:00 app-02 sudo[26892]: tlee : TTY=pts/0 ; PWD=/home/tlee ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-27T11:43:25.495018+00:00 app-02 sudo[55360]: pam_unix(sudo:session): session opened for user root(uid=0) by tlee(uid=1000)
+2026-10-27T12:14:25.711369+00:00 app-02 sshd[34412]: pam_unix(sshd:session): session closed for user tlee
+2026-10-27T12:17:00.548106+00:00 app-02 CRON[39177]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T12:17:01.748569+00:00 app-02 CRON[39177]: pam_unix(cron:session): session closed for user root
+2026-10-27T13:17:00.180097+00:00 app-02 CRON[22796]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T13:17:01.153981+00:00 app-02 CRON[22796]: pam_unix(cron:session): session closed for user root
+2026-10-27T14:17:00.018806+00:00 app-02 CRON[23618]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T14:17:01.117550+00:00 app-02 CRON[23618]: pam_unix(cron:session): session closed for user root
+2026-10-27T15:00:00.990323+00:00 app-02 sshd[13568]: Accepted publickey for summer-intern from 10.16.0.88 port 57379 ssh2: ED25519 SHA256:K5c6fgoOsxrYqQ7f1AmsmjXpxJ3QNLJBvqY8NUKnTA/
+2026-10-27T15:00:00.275994+00:00 app-02 sshd[13568]: pam_unix(sshd:session): session opened for user summer-intern(uid=1000) by (uid=0)
+2026-10-27T15:01:00.606917+00:00 app-02 sudo[39695]: summer-intern : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/summer-intern ; USER=root ; COMMAND=/usr/bin/apt install nmap
+2026-10-27T15:02:00.417676+00:00 app-02 sudo[42268]: summer-intern : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/summer-intern ; USER=root ; COMMAND=/usr/bin/apt install nmap
+2026-10-27T15:03:00.589828+00:00 app-02 sudo[23282]: summer-intern : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/summer-intern ; USER=root ; COMMAND=/usr/bin/apt install nmap
+2026-10-27T15:04:00.158825+00:00 app-02 sudo[15747]: summer-intern : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/summer-intern ; USER=root ; COMMAND=/usr/bin/systemctl stop auditd
+2026-10-27T15:05:00.654989+00:00 app-02 sudo[50542]: summer-intern : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/summer-intern ; USER=root ; COMMAND=/usr/bin/systemctl stop auditd
+2026-10-27T15:06:00.265254+00:00 app-02 sudo[16306]: summer-intern : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/summer-intern ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2026-10-27T15:12:00.091865+00:00 app-02 sudo[32040]: tlee : 3 incorrect password attempts ; TTY=pts/0 ; PWD=/home/tlee ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+2026-10-27T15:17:00.025649+00:00 app-02 CRON[39047]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T15:17:01.798144+00:00 app-02 CRON[39047]: pam_unix(cron:session): session closed for user root
+2026-10-27T15:30:00.154156+00:00 app-02 sshd[13568]: pam_unix(sshd:session): session closed for user summer-intern
+2026-10-27T16:14:00.998725+00:00 app-02 sshd[32577]: Invalid user test from 212.118.114.243 port 57533
+2026-10-27T16:14:01.249417+00:00 app-02 sshd[32577]: Failed password for invalid user test from 212.118.114.243 port 57533 ssh2
+2026-10-27T16:17:00.674339+00:00 app-02 CRON[55303]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T16:17:01.815094+00:00 app-02 CRON[55303]: pam_unix(cron:session): session closed for user root
+2026-10-27T16:18:00.864668+00:00 app-02 sshd[14598]: Invalid user admin from 212.118.114.243 port 63438
+2026-10-27T16:18:01.459282+00:00 app-02 sshd[14598]: Failed password for invalid user admin from 212.118.114.243 port 63438 ssh2
+2026-10-27T16:22:00.480056+00:00 app-02 sshd[16713]: Invalid user test from 212.118.114.243 port 44707
+2026-10-27T16:22:01.920263+00:00 app-02 sshd[16713]: Failed password for invalid user test from 212.118.114.243 port 44707 ssh2
+2026-10-27T16:31:49.148387+00:00 app-02 sshd[15875]: Accepted publickey for tlee from 10.16.0.21 port 33614 ssh2: ED25519 SHA256:c0I6+6ejv3joSbC6er/G9bCSNfdnKuB0lex54x0iOyU
+2026-10-27T16:31:49.338258+00:00 app-02 sshd[15875]: pam_unix(sshd:session): session opened for user tlee(uid=1000) by (uid=0)
+2026-10-27T16:33:49.498497+00:00 app-02 sudo[30995]: tlee : TTY=pts/0 ; PWD=/home/tlee ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-27T16:33:49.545213+00:00 app-02 sudo[43177]: pam_unix(sudo:session): session opened for user root(uid=0) by tlee(uid=1000)
+2026-10-27T16:37:49.185396+00:00 app-02 sshd[15875]: pam_unix(sshd:session): session closed for user tlee
+2026-10-27T17:17:00.149349+00:00 app-02 CRON[59658]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T17:17:01.455061+00:00 app-02 CRON[59658]: pam_unix(cron:session): session closed for user root
+2026-10-27T18:17:00.088115+00:00 app-02 CRON[17634]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T18:17:01.556741+00:00 app-02 CRON[17634]: pam_unix(cron:session): session closed for user root
+2026-10-27T19:17:00.385520+00:00 app-02 CRON[55774]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T19:17:01.858921+00:00 app-02 CRON[55774]: pam_unix(cron:session): session closed for user root
+2026-10-27T20:17:00.551047+00:00 app-02 CRON[63211]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T20:17:01.650586+00:00 app-02 CRON[63211]: pam_unix(cron:session): session closed for user root
+2026-10-27T21:17:00.599451+00:00 app-02 CRON[51710]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T21:17:01.120581+00:00 app-02 CRON[51710]: pam_unix(cron:session): session closed for user root
+2026-10-27T22:17:00.136594+00:00 app-02 CRON[24003]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T22:17:01.271359+00:00 app-02 CRON[24003]: pam_unix(cron:session): session closed for user root
+2026-10-27T23:17:00.277412+00:00 app-02 CRON[61482]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-27T23:17:01.291158+00:00 app-02 CRON[61482]: pam_unix(cron:session): session closed for user root

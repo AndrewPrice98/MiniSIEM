@@ -1,0 +1,154 @@
+2026-10-08T00:17:00.784994+00:00 bastion-d CRON[50481]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T00:17:01.293690+00:00 bastion-d CRON[50481]: pam_unix(cron:session): session closed for user root
+2026-10-08T01:17:00.389473+00:00 bastion-d CRON[30088]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T01:17:01.636433+00:00 bastion-d CRON[30088]: pam_unix(cron:session): session closed for user root
+2026-10-08T01:40:01.072548+00:00 bastion-d sshd[54590]: Failed password for ubuntu from 109.93.247.99 port 52587 ssh2
+2026-10-08T01:44:00.215271+00:00 bastion-d sshd[23213]: Invalid user user from 109.93.247.99 port 50026
+2026-10-08T01:44:01.021696+00:00 bastion-d sshd[23213]: Failed password for invalid user user from 109.93.247.99 port 50026 ssh2
+2026-10-08T01:48:00.910628+00:00 bastion-d sshd[36341]: Invalid user oracle from 109.93.247.99 port 49770
+2026-10-08T01:48:01.197761+00:00 bastion-d sshd[36341]: Failed password for invalid user oracle from 109.93.247.99 port 49770 ssh2
+2026-10-08T01:58:00.343856+00:00 bastion-d sshd[54832]: Invalid user test from 185.228.242.80 port 63004
+2026-10-08T01:58:01.056523+00:00 bastion-d sshd[54832]: Failed password for invalid user test from 185.228.242.80 port 63004 ssh2
+2026-10-08T02:14:02.801516+00:00 bastion-d sshd[18513]: Invalid user pi from 203.0.113.45 port 62661
+2026-10-08T02:14:03.082829+00:00 bastion-d sshd[18513]: Failed password for invalid user pi from 203.0.113.45 port 62661 ssh2
+2026-10-08T02:14:05.006051+00:00 bastion-d sshd[27997]: Invalid user admin from 203.0.113.45 port 50551
+2026-10-08T02:14:06.030862+00:00 bastion-d sshd[27997]: Failed password for invalid user admin from 203.0.113.45 port 50551 ssh2
+2026-10-08T02:14:10.105820+00:00 bastion-d sshd[11163]: Failed password for ubuntu from 203.0.113.45 port 40818 ssh2
+2026-10-08T02:14:14.482877+00:00 bastion-d sshd[60903]: Invalid user postgres from 203.0.113.45 port 35289
+2026-10-08T02:14:15.311866+00:00 bastion-d sshd[60903]: Failed password for invalid user postgres from 203.0.113.45 port 35289 ssh2
+2026-10-08T02:14:17.196650+00:00 bastion-d sshd[38584]: Invalid user oracle from 203.0.113.45 port 55869
+2026-10-08T02:14:18.712214+00:00 bastion-d sshd[38584]: Failed password for invalid user oracle from 203.0.113.45 port 55869 ssh2
+2026-10-08T02:14:20.140062+00:00 bastion-d sshd[39886]: Invalid user test from 203.0.113.45 port 38558
+2026-10-08T02:14:21.009254+00:00 bastion-d sshd[39886]: Failed password for invalid user test from 203.0.113.45 port 38558 ssh2
+2026-10-08T02:14:24.152124+00:00 bastion-d sshd[28217]: Invalid user git from 203.0.113.45 port 32656
+2026-10-08T02:14:25.813703+00:00 bastion-d sshd[28217]: Failed password for invalid user git from 203.0.113.45 port 32656 ssh2
+2026-10-08T02:14:30.979595+00:00 bastion-d sshd[24751]: Invalid user postgres from 203.0.113.45 port 51279
+2026-10-08T02:14:31.015814+00:00 bastion-d sshd[24751]: Failed password for invalid user postgres from 203.0.113.45 port 51279 ssh2
+2026-10-08T02:14:34.834990+00:00 bastion-d sshd[57674]: Invalid user git from 203.0.113.45 port 31221
+2026-10-08T02:14:35.749383+00:00 bastion-d sshd[57674]: Failed password for invalid user git from 203.0.113.45 port 31221 ssh2
+2026-10-08T02:14:37.329963+00:00 bastion-d sshd[10792]: Invalid user admin from 203.0.113.45 port 54910
+2026-10-08T02:14:38.199524+00:00 bastion-d sshd[10792]: Failed password for invalid user admin from 203.0.113.45 port 54910 ssh2
+2026-10-08T02:14:42.797857+00:00 bastion-d sshd[21465]: Invalid user oracle from 203.0.113.45 port 37217
+2026-10-08T02:14:43.159468+00:00 bastion-d sshd[21465]: Failed password for invalid user oracle from 203.0.113.45 port 37217 ssh2
+2026-10-08T02:14:46.011937+00:00 bastion-d sshd[29756]: Invalid user admin from 203.0.113.45 port 41510
+2026-10-08T02:14:47.425526+00:00 bastion-d sshd[29756]: Failed password for invalid user admin from 203.0.113.45 port 41510 ssh2
+2026-10-08T02:14:51.863306+00:00 bastion-d sshd[24768]: Failed password for ubuntu from 203.0.113.45 port 58084 ssh2
+2026-10-08T02:14:54.480191+00:00 bastion-d sshd[3892]: Failed password for ubuntu from 203.0.113.45 port 41904 ssh2
+2026-10-08T02:14:56.808918+00:00 bastion-d sshd[60050]: Invalid user pi from 203.0.113.45 port 56166
+2026-10-08T02:14:57.993221+00:00 bastion-d sshd[60050]: Failed password for invalid user pi from 203.0.113.45 port 56166 ssh2
+2026-10-08T02:15:02.378124+00:00 bastion-d sshd[41600]: Failed password for ubuntu from 203.0.113.45 port 36565 ssh2
+2026-10-08T02:15:06.751145+00:00 bastion-d sshd[7633]: Failed password for root from 203.0.113.45 port 47624 ssh2
+2026-10-08T02:15:08.756633+00:00 bastion-d sshd[26772]: Invalid user postgres from 203.0.113.45 port 33422
+2026-10-08T02:15:09.368258+00:00 bastion-d sshd[26772]: Failed password for invalid user postgres from 203.0.113.45 port 33422 ssh2
+2026-10-08T02:15:12.663495+00:00 bastion-d sshd[60665]: Invalid user test from 203.0.113.45 port 38971
+2026-10-08T02:15:13.208428+00:00 bastion-d sshd[60665]: Failed password for invalid user test from 203.0.113.45 port 38971 ssh2
+2026-10-08T02:15:17.899342+00:00 bastion-d sshd[5883]: Invalid user oracle from 203.0.113.45 port 31829
+2026-10-08T02:15:18.817993+00:00 bastion-d sshd[5883]: Failed password for invalid user oracle from 203.0.113.45 port 31829 ssh2
+2026-10-08T02:15:22.733199+00:00 bastion-d sshd[51621]: Invalid user postgres from 203.0.113.45 port 59916
+2026-10-08T02:15:23.056943+00:00 bastion-d sshd[51621]: Failed password for invalid user postgres from 203.0.113.45 port 59916 ssh2
+2026-10-08T02:15:24.635996+00:00 bastion-d sshd[21743]: Invalid user pi from 203.0.113.45 port 45987
+2026-10-08T02:15:25.821274+00:00 bastion-d sshd[21743]: Failed password for invalid user pi from 203.0.113.45 port 45987 ssh2
+2026-10-08T02:15:28.587322+00:00 bastion-d sshd[1635]: Invalid user postgres from 203.0.113.45 port 45067
+2026-10-08T02:15:29.916242+00:00 bastion-d sshd[1635]: Failed password for invalid user postgres from 203.0.113.45 port 45067 ssh2
+2026-10-08T02:15:35.760552+00:00 bastion-d sshd[10290]: Failed password for root from 203.0.113.45 port 59774 ssh2
+2026-10-08T02:15:38.696178+00:00 bastion-d sshd[41683]: Failed password for root from 203.0.113.45 port 37850 ssh2
+2026-10-08T02:15:42.497915+00:00 bastion-d sshd[3374]: Failed password for root from 203.0.113.45 port 35616 ssh2
+2026-10-08T02:15:46.785666+00:00 bastion-d sshd[57719]: Failed password for root from 203.0.113.45 port 39168 ssh2
+2026-10-08T02:15:50.645445+00:00 bastion-d sshd[24901]: Invalid user git from 203.0.113.45 port 48163
+2026-10-08T02:15:51.849140+00:00 bastion-d sshd[24901]: Failed password for invalid user git from 203.0.113.45 port 48163 ssh2
+2026-10-08T02:15:54.104508+00:00 bastion-d sshd[49729]: Invalid user pi from 203.0.113.45 port 48923
+2026-10-08T02:15:55.657529+00:00 bastion-d sshd[49729]: Failed password for invalid user pi from 203.0.113.45 port 48923 ssh2
+2026-10-08T02:15:57.651490+00:00 bastion-d sshd[9954]: Invalid user postgres from 203.0.113.45 port 43129
+2026-10-08T02:15:58.045198+00:00 bastion-d sshd[9954]: Failed password for invalid user postgres from 203.0.113.45 port 43129 ssh2
+2026-10-08T02:16:02.883336+00:00 bastion-d sshd[52788]: Invalid user postgres from 203.0.113.45 port 37685
+2026-10-08T02:16:03.068962+00:00 bastion-d sshd[52788]: Failed password for invalid user postgres from 203.0.113.45 port 37685 ssh2
+2026-10-08T02:16:07.657168+00:00 bastion-d sshd[62185]: Failed password for root from 203.0.113.45 port 63585 ssh2
+2026-10-08T02:16:09.838667+00:00 bastion-d sshd[38982]: Invalid user oracle from 203.0.113.45 port 37389
+2026-10-08T02:16:10.115430+00:00 bastion-d sshd[38982]: Failed password for invalid user oracle from 203.0.113.45 port 37389 ssh2
+2026-10-08T02:16:13.849498+00:00 bastion-d sshd[63558]: Invalid user admin from 203.0.113.45 port 41915
+2026-10-08T02:16:14.559114+00:00 bastion-d sshd[63558]: Failed password for invalid user admin from 203.0.113.45 port 41915 ssh2
+2026-10-08T02:16:17.016505+00:00 bastion-d sshd[22304]: Failed password for ubuntu from 203.0.113.45 port 48433 ssh2
+2026-10-08T02:16:22.956781+00:00 bastion-d sshd[40740]: Invalid user oracle from 203.0.113.45 port 31175
+2026-10-08T02:16:23.440757+00:00 bastion-d sshd[40740]: Failed password for invalid user oracle from 203.0.113.45 port 31175 ssh2
+2026-10-08T02:16:24.856616+00:00 bastion-d sshd[63956]: Invalid user postgres from 203.0.113.45 port 39846
+2026-10-08T02:16:25.858056+00:00 bastion-d sshd[63956]: Failed password for invalid user postgres from 203.0.113.45 port 39846 ssh2
+2026-10-08T02:16:30.045583+00:00 bastion-d sshd[32797]: Invalid user pi from 203.0.113.45 port 57782
+2026-10-08T02:16:31.016646+00:00 bastion-d sshd[32797]: Failed password for invalid user pi from 203.0.113.45 port 57782 ssh2
+2026-10-08T02:16:32.072189+00:00 bastion-d sshd[1892]: Invalid user admin from 203.0.113.45 port 35749
+2026-10-08T02:16:33.487289+00:00 bastion-d sshd[1892]: Failed password for invalid user admin from 203.0.113.45 port 35749 ssh2
+2026-10-08T02:16:39.512003+00:00 bastion-d sshd[19733]: Failed password for root from 203.0.113.45 port 52618 ssh2
+2026-10-08T02:17:00.455615+00:00 bastion-d CRON[13710]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T02:17:01.196647+00:00 bastion-d CRON[13710]: pam_unix(cron:session): session closed for user root
+2026-10-08T03:17:00.421103+00:00 bastion-d CRON[39070]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T03:17:01.448602+00:00 bastion-d CRON[39070]: pam_unix(cron:session): session closed for user root
+2026-10-08T04:17:00.334890+00:00 bastion-d CRON[45014]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T04:17:01.095330+00:00 bastion-d CRON[45014]: pam_unix(cron:session): session closed for user root
+2026-10-08T04:23:00.632196+00:00 bastion-d sshd[41664]: Invalid user user from 31.28.227.241 port 55695
+2026-10-08T04:23:01.650198+00:00 bastion-d sshd[41664]: Failed password for invalid user user from 31.28.227.241 port 55695 ssh2
+2026-10-08T04:27:00.873748+00:00 bastion-d sshd[52516]: Invalid user oracle from 31.28.227.241 port 60442
+2026-10-08T04:27:01.265054+00:00 bastion-d sshd[52516]: Failed password for invalid user oracle from 31.28.227.241 port 60442 ssh2
+2026-10-08T04:31:01.224449+00:00 bastion-d sshd[9188]: Failed password for root from 31.28.227.241 port 57675 ssh2
+2026-10-08T05:17:00.052721+00:00 bastion-d CRON[62282]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T05:17:01.613484+00:00 bastion-d CRON[62282]: pam_unix(cron:session): session closed for user root
+2026-10-08T06:17:00.851166+00:00 bastion-d CRON[50589]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T06:17:01.342576+00:00 bastion-d CRON[50589]: pam_unix(cron:session): session closed for user root
+2026-10-08T07:17:00.724188+00:00 bastion-d CRON[19039]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T07:17:01.221022+00:00 bastion-d CRON[19039]: pam_unix(cron:session): session closed for user root
+2026-10-08T08:14:17.837645+00:00 bastion-d sshd[64787]: Accepted publickey for aruiz from 10.4.0.21 port 31336 ssh2: ED25519 SHA256:gAGc/HPJIjEB1/QXyGlXyz6J3UMV7MjyZGQajUO+lXt
+2026-10-08T08:14:17.192388+00:00 bastion-d sshd[64787]: pam_unix(sshd:session): session opened for user aruiz(uid=1000) by (uid=0)
+2026-10-08T08:16:17.546357+00:00 bastion-d sudo[7602]: aruiz : TTY=pts/0 ; PWD=/home/aruiz ; USER=root ; COMMAND=/usr/bin/df -h
+2026-10-08T08:16:17.237190+00:00 bastion-d sudo[13997]: pam_unix(sudo:session): session opened for user root(uid=0) by aruiz(uid=1000)
+2026-10-08T08:17:00.507364+00:00 bastion-d CRON[34451]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T08:17:01.561417+00:00 bastion-d CRON[34451]: pam_unix(cron:session): session closed for user root
+2026-10-08T08:38:17.920436+00:00 bastion-d sshd[64787]: pam_unix(sshd:session): session closed for user aruiz
+2026-10-08T09:17:00.503618+00:00 bastion-d CRON[31188]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T09:17:01.438372+00:00 bastion-d CRON[31188]: pam_unix(cron:session): session closed for user root
+2026-10-08T10:17:00.215427+00:00 bastion-d CRON[29457]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T10:17:01.499673+00:00 bastion-d CRON[29457]: pam_unix(cron:session): session closed for user root
+2026-10-08T11:17:00.576842+00:00 bastion-d CRON[11686]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T11:17:01.671434+00:00 bastion-d CRON[11686]: pam_unix(cron:session): session closed for user root
+2026-10-08T12:17:00.862795+00:00 bastion-d CRON[39665]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T12:17:01.199992+00:00 bastion-d CRON[39665]: pam_unix(cron:session): session closed for user root
+2026-10-08T13:03:36.473017+00:00 bastion-d sshd[41974]: Accepted publickey for aruiz from 10.4.0.21 port 35908 ssh2: ED25519 SHA256:9MJmZYHmoBzNKXJdXPaf7wwur5Z4goudR6ZhI0s2T6h
+2026-10-08T13:03:36.966006+00:00 bastion-d sshd[41974]: pam_unix(sshd:session): session opened for user aruiz(uid=1000) by (uid=0)
+2026-10-08T13:05:36.480604+00:00 bastion-d sudo[30960]: aruiz : TTY=pts/0 ; PWD=/home/aruiz ; USER=root ; COMMAND=/usr/bin/journalctl -u app -n 200
+2026-10-08T13:05:36.231554+00:00 bastion-d sudo[20694]: pam_unix(sudo:session): session opened for user root(uid=0) by aruiz(uid=1000)
+2026-10-08T13:17:00.884552+00:00 bastion-d CRON[36454]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T13:17:01.422589+00:00 bastion-d CRON[36454]: pam_unix(cron:session): session closed for user root
+2026-10-08T13:27:36.573500+00:00 bastion-d sshd[41974]: pam_unix(sshd:session): session closed for user aruiz
+2026-10-08T14:11:53.058420+00:00 bastion-d sshd[63955]: Accepted publickey for aruiz from 10.4.0.21 port 60121 ssh2: ED25519 SHA256:c1F1bUitlXebLb5elY71YEYhgvpXmkVPKVAbWaP8YPy
+2026-10-08T14:11:53.151855+00:00 bastion-d sshd[63955]: pam_unix(sshd:session): session opened for user aruiz(uid=1000) by (uid=0)
+2026-10-08T14:13:53.877904+00:00 bastion-d sudo[19745]: aruiz : TTY=pts/0 ; PWD=/home/aruiz ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-08T14:13:53.162517+00:00 bastion-d sudo[45961]: pam_unix(sudo:session): session opened for user root(uid=0) by aruiz(uid=1000)
+2026-10-08T14:17:00.387012+00:00 bastion-d CRON[21438]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T14:17:01.691325+00:00 bastion-d CRON[21438]: pam_unix(cron:session): session closed for user root
+2026-10-08T14:21:53.311036+00:00 bastion-d sshd[63955]: pam_unix(sshd:session): session closed for user aruiz
+2026-10-08T15:17:00.976068+00:00 bastion-d CRON[27778]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T15:17:01.570003+00:00 bastion-d CRON[27778]: pam_unix(cron:session): session closed for user root
+2026-10-08T16:17:00.770744+00:00 bastion-d CRON[35128]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T16:17:01.761513+00:00 bastion-d CRON[35128]: pam_unix(cron:session): session closed for user root
+2026-10-08T17:17:00.848081+00:00 bastion-d CRON[55005]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T17:17:01.700147+00:00 bastion-d CRON[55005]: pam_unix(cron:session): session closed for user root
+2026-10-08T18:17:00.460334+00:00 bastion-d CRON[2017]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T18:17:01.774907+00:00 bastion-d CRON[2017]: pam_unix(cron:session): session closed for user root
+2026-10-08T18:37:01.640664+00:00 bastion-d sshd[29069]: Failed password for root from 91.49.142.62 port 56592 ssh2
+2026-10-08T18:41:00.497341+00:00 bastion-d sshd[51020]: Invalid user admin from 91.49.142.62 port 61270
+2026-10-08T18:41:01.496890+00:00 bastion-d sshd[51020]: Failed password for invalid user admin from 91.49.142.62 port 61270 ssh2
+2026-10-08T19:17:00.362611+00:00 bastion-d CRON[22462]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T19:17:01.250152+00:00 bastion-d CRON[22462]: pam_unix(cron:session): session closed for user root
+2026-10-08T20:14:00.657019+00:00 bastion-d sshd[63900]: Invalid user oracle from 193.98.225.167 port 30178
+2026-10-08T20:14:01.258355+00:00 bastion-d sshd[63900]: Failed password for invalid user oracle from 193.98.225.167 port 30178 ssh2
+2026-10-08T20:17:00.381928+00:00 bastion-d CRON[3529]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T20:17:01.108301+00:00 bastion-d CRON[3529]: pam_unix(cron:session): session closed for user root
+2026-10-08T20:18:00.696603+00:00 bastion-d sshd[37114]: Invalid user oracle from 193.98.225.167 port 62441
+2026-10-08T20:18:01.114185+00:00 bastion-d sshd[37114]: Failed password for invalid user oracle from 193.98.225.167 port 62441 ssh2
+2026-10-08T20:22:01.083145+00:00 bastion-d sshd[25743]: Failed password for root from 193.98.225.167 port 53702 ssh2
+2026-10-08T20:42:01.735492+00:00 bastion-d sshd[37757]: Failed password for ubuntu from 141.83.72.196 port 36188 ssh2
+2026-10-08T20:46:01.956080+00:00 bastion-d sshd[61285]: Failed password for ubuntu from 141.83.72.196 port 37847 ssh2
+2026-10-08T20:50:01.900862+00:00 bastion-d sshd[13306]: Failed password for root from 141.83.72.196 port 32277 ssh2
+2026-10-08T21:17:00.872373+00:00 bastion-d CRON[34739]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T21:17:01.205788+00:00 bastion-d CRON[34739]: pam_unix(cron:session): session closed for user root
+2026-10-08T22:17:00.642426+00:00 bastion-d CRON[41156]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T22:17:01.050420+00:00 bastion-d CRON[41156]: pam_unix(cron:session): session closed for user root
+2026-10-08T23:17:00.429613+00:00 bastion-d CRON[5727]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-08T23:17:01.731569+00:00 bastion-d CRON[5727]: pam_unix(cron:session): session closed for user root

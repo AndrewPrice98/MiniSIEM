@@ -1,0 +1,366 @@
+[
+  {
+    "file": "auth-benign-workday.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "benign",
+    "title": "Normal workday on a bastion host",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-benign-weekend-quiet.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "benign",
+    "title": "Quiet weekend: cron and a single on-call login",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-new-ip-travel.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "benign",
+    "title": "Staff logging in from new locations (benign)",
+    "expected_alerts": {
+      "MSIEM-006": 3
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-ssh-bruteforce.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "attack",
+    "title": "SSH brute force that fails",
+    "expected_alerts": {
+      "MSIEM-001": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-password-spray.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "attack",
+    "title": "Password spray across many accounts",
+    "expected_alerts": {
+      "MSIEM-001": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-compromise-chain.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "attack",
+    "title": "Full intrusion: brute force to backdoor account",
+    "expected_alerts": {
+      "MSIEM-001": 1,
+      "MSIEM-002": 1,
+      "MSIEM-003": 2,
+      "MSIEM-004": 1,
+      "MSIEM-005": 1,
+      "MSIEM-006": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-insider-privesc.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "attack",
+    "title": "Insider abusing sudo",
+    "expected_alerts": {
+      "MSIEM-003": 6
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-persistence-accounts.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "attack",
+    "title": "New accounts and privileged group changes",
+    "expected_alerts": {
+      "MSIEM-004": 3,
+      "MSIEM-005": 2
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "secure-rhel-classic-syslog.log",
+    "source_type": "auth",
+    "host": null,
+    "year": 2026,
+    "category": "format",
+    "title": "RHEL /var/log/secure with classic syslog timestamps",
+    "expected_alerts": {
+      "MSIEM-001": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-early-month-bsd.log",
+    "source_type": "auth",
+    "host": null,
+    "year": 2026,
+    "category": "format",
+    "title": "Classic syslog on single-digit days",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-timezone-ist.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "format",
+    "title": "Timestamps with a +05:30 offset",
+    "expected_alerts": {
+      "MSIEM-001": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-malformed-lines.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "format",
+    "title": "Corrupted and malformed lines",
+    "expected_alerts": {
+      "MSIEM-001": 1
+    },
+    "expected_unparsed": 12,
+    "gap": null
+  },
+  {
+    "file": "auth.log.1",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "format",
+    "title": "Rotated log file (auth.log.1)",
+    "expected_alerts": {
+      "MSIEM-004": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "auth-distributed-bruteforce.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "gap",
+    "title": "Distributed brute force (low and slow)",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": "Per-IP thresholds miss botnet-style attacks. A per-target-user threshold or a global failure-rate rule would catch this."
+  },
+  {
+    "file": "auth-sudo-denied.log",
+    "source_type": "auth",
+    "host": null,
+    "year": null,
+    "category": "gap",
+    "title": "Repeated sudo denials",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": "No rule watches sudo failures. Repeated 'NOT in sudoers' events are a useful privilege-escalation signal."
+  },
+  {
+    "file": "access-benign-ecommerce.log",
+    "source_type": "web",
+    "host": "shop-web-01",
+    "year": null,
+    "category": "benign",
+    "title": "Normal e-commerce traffic",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-false-positive-urls.log",
+    "source_type": "web",
+    "host": "blog-web-01",
+    "year": null,
+    "category": "benign",
+    "title": "Legitimate URLs that look suspicious",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-gobuster-scan.log",
+    "source_type": "web",
+    "host": "shop-web-02",
+    "year": null,
+    "category": "attack",
+    "title": "Directory brute force with gobuster",
+    "expected_alerts": {
+      "MSIEM-007": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-two-scanners.log",
+    "source_type": "web",
+    "host": "api-web-01",
+    "year": null,
+    "category": "attack",
+    "title": "Two separate scanners",
+    "expected_alerts": {
+      "MSIEM-007": 2
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-sqli-sqlmap.log",
+    "source_type": "web",
+    "host": "shop-web-03",
+    "year": null,
+    "category": "attack",
+    "title": "SQL injection attempts (sqlmap-style)",
+    "expected_alerts": {
+      "MSIEM-008": 8
+    },
+    "expected_unparsed": 0,
+    "gap": "Time-based blind SQLi (SLEEP, WAITFOR DELAY, pg_sleep) is not in the pattern list."
+  },
+  {
+    "file": "access-path-traversal.log",
+    "source_type": "web",
+    "host": "files-web-01",
+    "year": null,
+    "category": "attack",
+    "title": "Path traversal and local file inclusion",
+    "expected_alerts": {
+      "MSIEM-008": 6
+    },
+    "expected_unparsed": 0,
+    "gap": "Double URL-encoding (%252e%252e%252f) is decoded only once, so it evades the traversal pattern."
+  },
+  {
+    "file": "access-xss-probes.log",
+    "source_type": "web",
+    "host": "forum-web-01",
+    "year": null,
+    "category": "attack",
+    "title": "Cross-site scripting probes",
+    "expected_alerts": {
+      "MSIEM-008": 4
+    },
+    "expected_unparsed": 0,
+    "gap": "Event-handler XSS (<img onerror=...>, <svg onload=...>) is not in the pattern list."
+  },
+  {
+    "file": "access-command-injection.log",
+    "source_type": "web",
+    "host": "iot-web-01",
+    "year": null,
+    "category": "attack",
+    "title": "OS command injection",
+    "expected_alerts": {
+      "MSIEM-008": 4
+    },
+    "expected_unparsed": 0,
+    "gap": "Only ';'-chained commands are matched. '|', '&&', backticks and $(...) are missed."
+  },
+  {
+    "file": "access-nikto-full-scan.log",
+    "source_type": "web",
+    "host": "intranet-web-01",
+    "year": null,
+    "category": "attack",
+    "title": "Nikto: enumeration plus attack payloads",
+    "expected_alerts": {
+      "MSIEM-007": 1,
+      "MSIEM-008": 5
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-apache-common-format.log",
+    "source_type": "web",
+    "host": "legacy-apache-01",
+    "year": null,
+    "category": "format",
+    "title": "Apache Common Log Format with a -0700 offset",
+    "expected_alerts": {
+      "MSIEM-008": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-large-volume.log",
+    "source_type": "web",
+    "host": "cdn-edge-01",
+    "year": null,
+    "category": "format",
+    "title": "High-volume day (about 11k requests)",
+    "expected_alerts": {
+      "MSIEM-007": 1
+    },
+    "expected_unparsed": 0,
+    "gap": null
+  },
+  {
+    "file": "access-truncated-lines.log",
+    "source_type": "web",
+    "host": "shop-web-04",
+    "year": null,
+    "category": "format",
+    "title": "Truncated and garbled access log lines",
+    "expected_alerts": {},
+    "expected_unparsed": 6,
+    "gap": null
+  },
+  {
+    "file": "access-slow-scan.log",
+    "source_type": "web",
+    "host": "shop-web-05",
+    "year": null,
+    "category": "gap",
+    "title": "Slow directory scan (rate-limited)",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": "Fixed short windows miss throttled scanners. A long-window rule (e.g. 100 404s in an hour) or a per-IP distinct-path count would catch this."
+  },
+  {
+    "file": "access-login-bruteforce.log",
+    "source_type": "web",
+    "host": "portal-web-01",
+    "year": null,
+    "category": "gap",
+    "title": "Web login brute force",
+    "expected_alerts": {},
+    "expected_unparsed": 0,
+    "gap": "No rule covers web authentication. A threshold on POST /login with 401 per IP, followed by a 302, mirrors MSIEM-001 and MSIEM-002 for SSH."
+  }
+]

@@ -74,6 +74,34 @@ def cmd_demo(args):
         cmd_serve(args)
 
 
+def load_examples(conn) -> list[dict]:
+    """Ingest every file listed in samples/examples/manifest.json. Returns the manifest."""
+    manifest_path = config.EXAMPLES_DIR / "manifest.json"
+    if not manifest_path.exists():
+        sys.exit(f"Missing {manifest_path}. Run: python scripts/generate_examples.py")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    for entry in manifest:
+        ctx = ParseContext.build(year=entry.get("year"), host=entry.get("host"))
+        r = ingest_file(conn, config.EXAMPLES_DIR / entry["file"], entry["source_type"], ctx)
+        print(f"  {entry['file']:<36} {r.inserted:>6} events  {r.unparsed:>3} unparseable")
+    return manifest
+
+
+def cmd_examples(args):
+    db.reset()
+    conn = db.connect()
+    try:
+        print("Loading samples/examples/ ...")
+        manifest = load_examples(conn)
+        result = run_detection(conn)
+        expected = sum(sum(e["expected_alerts"].values()) for e in manifest)
+        print(f"\nDetection raised {result['new_alerts']} alerts (manifest expects {expected}).")
+    finally:
+        conn.close()
+    if args.serve:
+        cmd_serve(args)
+
+
 def cmd_rules(_args):
     for r in load_rules():
         print(f"{r.id}  {r.severity:<8} {r.attack_technique or '-':<10} {r.title}")
@@ -103,12 +131,13 @@ def main(argv=None):
     sub.add_parser("reset", help="delete all events and alerts").set_defaults(func=cmd_reset)
 
     for name, func, help_ in (("serve", cmd_serve, "run the API server"),
-                              ("demo", cmd_demo, "reset and load the sample dataset")):
+                              ("demo", cmd_demo, "reset and load the sample dataset"),
+                              ("examples", cmd_examples, "reset and load every log in samples/examples/")):
         s = sub.add_parser(name, help=help_)
         s.add_argument("--host", dest="host_addr", default="127.0.0.1")
         s.add_argument("--port", type=int, default=8000)
         s.add_argument("--reload", action="store_true")
-        if name == "demo":
+        if name in ("demo", "examples"):
             s.add_argument("--serve", action="store_true", help="start the API afterwards")
         s.set_defaults(func=func)
 

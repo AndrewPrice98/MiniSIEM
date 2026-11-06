@@ -1,0 +1,87 @@
+2026-10-21T00:17:00.584707+00:00 flaky-01 CRON[25491]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T00:17:01.970366+00:00 flaky-01 CRON[25491]: pam_unix(cron:session): session closed for user root
+2026-10-21T01:17:00.451110+00:00 flaky-01 CRON[20840]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T01:17:01.178492+00:00 flaky-01 CRON[20840]: pam_unix(cron:session): session closed for user root
+2026-10-21T02:17:00.276710+00:00 flaky-01 CRON[43838]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T02:17:01.034857+00:00 flaky-01 CRON[43838]: pam_unix(cron:session): session closed for user root
+2026-10-21T03:17:00.278082+00:00 flaky-01 CRON[28824]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T03:17:01.207112+00:00 flaky-01 CRON[28824]: pam_unix(cron:session): session closed for user root
+2026-10-21T04:17:00.112446+00:00 flaky-01 CRON[50824]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T04:17:01.273742+00:00 flaky-01 CRON[50824]: pam_unix(cron:session): session closed for user root
+2026-10-21T04:18:00.982348+00:00 flaky-01 sshd[31318]: Invalid user admin from 91.6.250.230 port 47162
+2026-10-21T04:18:01.813535+00:00 flaky-01 sshd[31318]: Failed password for invalid user admin from 91.6.250.230 port 47162 ssh2
+2026-10-21T04:22:01.748504+00:00 flaky-01 sshd[12251]: Failed password for root from 91.6.250.230 port 41283 ssh2
+2026-10-21T05:17:00.682604+00:00 flaky-01 CRON[7833]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T05:17:01.738552+00:00 flaky-01 CRON[7833]: pam_unix(cron:session): session closed for user root
+2026-10-21T06:00:01.479077+00:00 flaky-01 sshd[39392]: Failed password for root from 91.240.118.172 port 61874 ssh2
+2026-10-21T06:00:
+2026-10-21T06:00:11.972887+00:00 flaky-01 sshd[47551]: Failed password for root from 91.240.118.172 port 46550 ssh2
+Oct 21 06:00:0
+2026-10-21T06:00:21.624139+00:00 flaky-01 sshd[43776]: Failed password for root from 91.240.118.172 port 63395 ssh2
+Feb 30 06:00:00 flaky-01 sshd[1]: impossible date
+2026-10-21T06:00:31.107126+00:00 flaky-01 sshd[59725]: Failed password for root from 91.240.118.172 port 41551 ssh2
+{"ts":"2026-10-21T06:00:00Z","msg":"structured log in the wrong file"}
+2026-10-21T06:00:41.650821+00:00 flaky-01 sshd[41404]: Failed password for root from 91.240.118.172 port 42453 ssh2
+��� binary junk
+2026-10-21T06:00:51.539728+00:00 flaky-01 sshd[7748]: Failed password for root from 91.240.118.172 port 31976 ssh2
+Failed password for root from 1.2.3.4 port 22 ssh2
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/x.py", line 1, in <module>
+-- MARK --
+2026-13-45T99:99:99+00:00 flaky-01 sshd[1]: bad iso date
+flaky-01 sshd[1]: header without a timestamp
+2026-10-21T06:01:00+00:00 flaky-01-message-without-program
+2026-10-21T06:17:00.390290+00:00 flaky-01 CRON[7904]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T06:17:01.064425+00:00 flaky-01 CRON[7904]: pam_unix(cron:session): session closed for user root
+2026-10-21T07:17:00.547388+00:00 flaky-01 CRON[43991]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T07:17:01.179147+00:00 flaky-01 CRON[43991]: pam_unix(cron:session): session closed for user root
+2026-10-21T08:10:17.508860+00:00 flaky-01 sshd[6548]: Accepted publickey for ewhite from 10.13.0.21 port 44002 ssh2: ED25519 SHA256:JHKFnl1Yb+JqWKLf68VLM/cSIdDxGVDB9SHWvy+L9NR
+2026-10-21T08:10:17.169993+00:00 flaky-01 sshd[6548]: pam_unix(sshd:session): session opened for user ewhite(uid=1000) by (uid=0)
+2026-10-21T08:12:17.546856+00:00 flaky-01 sudo[27350]: ewhite : TTY=pts/0 ; PWD=/home/ewhite ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-21T08:12:17.879272+00:00 flaky-01 sudo[23306]: pam_unix(sudo:session): session opened for user root(uid=0) by ewhite(uid=1000)
+2026-10-21T08:17:00.909350+00:00 flaky-01 CRON[33950]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T08:17:01.345074+00:00 flaky-01 CRON[33950]: pam_unix(cron:session): session closed for user root
+2026-10-21T08:20:17.491567+00:00 flaky-01 sshd[6548]: pam_unix(sshd:session): session closed for user ewhite
+2026-10-21T09:17:00.236935+00:00 flaky-01 CRON[59596]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T09:17:01.507799+00:00 flaky-01 CRON[59596]: pam_unix(cron:session): session closed for user root
+2026-10-21T10:17:00.569691+00:00 flaky-01 CRON[51195]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T10:17:01.709581+00:00 flaky-01 CRON[51195]: pam_unix(cron:session): session closed for user root
+2026-10-21T11:17:00.457932+00:00 flaky-01 CRON[30216]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T11:17:01.592332+00:00 flaky-01 CRON[30216]: pam_unix(cron:session): session closed for user root
+2026-10-21T11:22:53.516116+00:00 flaky-01 sshd[36709]: Accepted publickey for ewhite from 10.13.0.21 port 39620 ssh2: ED25519 SHA256:kOILTtDAAB48YN1d4eeEVGOUcpKSlNlmL+vuyZRS2K5
+2026-10-21T11:22:53.416836+00:00 flaky-01 sshd[36709]: pam_unix(sshd:session): session opened for user ewhite(uid=1000) by (uid=0)
+2026-10-21T11:24:53.822397+00:00 flaky-01 sudo[35443]: ewhite : TTY=pts/0 ; PWD=/home/ewhite ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-21T11:24:53.734633+00:00 flaky-01 sudo[26981]: pam_unix(sudo:session): session opened for user root(uid=0) by ewhite(uid=1000)
+2026-10-21T11:33:53.796900+00:00 flaky-01 sshd[36709]: pam_unix(sshd:session): session closed for user ewhite
+2026-10-21T12:17:00.480152+00:00 flaky-01 CRON[11299]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T12:17:01.858280+00:00 flaky-01 CRON[11299]: pam_unix(cron:session): session closed for user root
+2026-10-21T13:17:00.650949+00:00 flaky-01 CRON[48802]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T13:17:01.243975+00:00 flaky-01 CRON[48802]: pam_unix(cron:session): session closed for user root
+2026-10-21T14:17:00.358857+00:00 flaky-01 CRON[64251]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T14:17:01.470100+00:00 flaky-01 CRON[64251]: pam_unix(cron:session): session closed for user root
+2026-10-21T15:17:00.132242+00:00 flaky-01 CRON[34491]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T15:17:01.238339+00:00 flaky-01 CRON[34491]: pam_unix(cron:session): session closed for user root
+2026-10-21T16:17:00.732827+00:00 flaky-01 CRON[22464]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T16:17:01.066772+00:00 flaky-01 CRON[22464]: pam_unix(cron:session): session closed for user root
+2026-10-21T17:17:00.909353+00:00 flaky-01 CRON[49133]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T17:17:01.309520+00:00 flaky-01 CRON[49133]: pam_unix(cron:session): session closed for user root
+2026-10-21T17:23:05.652113+00:00 flaky-01 sshd[33441]: Accepted publickey for ewhite from 10.13.0.21 port 39875 ssh2: ED25519 SHA256:uwOmJZ4JXjrkHHhowNH2qmrBZGn0aYtQA1pnHJt1EUc
+2026-10-21T17:23:05.686989+00:00 flaky-01 sshd[33441]: pam_unix(sshd:session): session opened for user ewhite(uid=1000) by (uid=0)
+2026-10-21T17:25:05.767549+00:00 flaky-01 sudo[62755]: ewhite : TTY=pts/0 ; PWD=/home/ewhite ; USER=root ; COMMAND=/usr/bin/tail -n 100 /var/log/syslog
+2026-10-21T17:25:05.954115+00:00 flaky-01 sudo[50452]: pam_unix(sudo:session): session opened for user root(uid=0) by ewhite(uid=1000)
+2026-10-21T17:40:05.777377+00:00 flaky-01 sshd[33441]: pam_unix(sshd:session): session closed for user ewhite
+2026-10-21T18:17:00.115609+00:00 flaky-01 CRON[44397]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T18:17:01.328079+00:00 flaky-01 CRON[44397]: pam_unix(cron:session): session closed for user root
+2026-10-21T19:17:00.167064+00:00 flaky-01 CRON[33504]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T19:17:01.220019+00:00 flaky-01 CRON[33504]: pam_unix(cron:session): session closed for user root
+2026-10-21T20:17:00.041914+00:00 flaky-01 CRON[54393]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T20:17:01.326599+00:00 flaky-01 CRON[54393]: pam_unix(cron:session): session closed for user root
+2026-10-21T21:17:00.392260+00:00 flaky-01 CRON[2958]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T21:17:01.037216+00:00 flaky-01 CRON[2958]: pam_unix(cron:session): session closed for user root
+2026-10-21T22:17:00.403177+00:00 flaky-01 CRON[41009]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T22:17:01.415395+00:00 flaky-01 CRON[41009]: pam_unix(cron:session): session closed for user root
+2026-10-21T23:17:00.375765+00:00 flaky-01 CRON[45440]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-21T23:17:01.542653+00:00 flaky-01 CRON[45440]: pam_unix(cron:session): session closed for user root
+2026-10-21T23:33:00.485716+00:00 flaky-01 sshd[28084]: Invalid user test from 91.74.196.13 port 37130
+2026-10-21T23:33:01.489394+00:00 flaky-01 sshd[28084]: Failed password for invalid user test from 91.74.196.13 port 37130 ssh2
+2026-10-21T23:37:01.141386+00:00 flaky-01 sshd[37011]: Failed password for root from 91.74.196.13 port 55747 ssh2

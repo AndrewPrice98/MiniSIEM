@@ -121,6 +121,8 @@ Selections support `field: value`, lists (any of), and the modifiers `|contains`
 
 Regenerate it with `python scripts/generate_attack.py`. A test checks that the sample data triggers every rule.
 
+For more, [samples/examples/](samples/examples/) holds 29 single-scenario logs: benign baselines, each attack on its own, format edge cases (classic syslog, time-zone offsets, Common Log Format, corrupted lines) and evasions the current rules deliberately miss. Load them all with `python -m minisiem examples`.
+
 ## Using it
 
 ```bash

