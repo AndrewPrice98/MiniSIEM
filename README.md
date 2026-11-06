@@ -14,6 +14,7 @@ cd backend
 python -m venv .venv
 .venv/Scripts/activate            # Windows   (macOS/Linux: source .venv/bin/activate)
 pip install -r requirements-dev.txt
+python -m minisiem create-admin     # choose the dashboard password (saved to backend/.env)
 python -m minisiem demo --serve
 
 # 2. Frontend (second terminal, from the repo root): dashboard on :5173
@@ -21,7 +22,7 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:5173>. API docs are at <http://localhost:8000/docs>.
+Open <http://localhost:5173> and sign in as `admin` with the password you chose. API docs are at <http://localhost:8000/docs>.
 
 `demo` resets the database, ingests `samples/auth.log` and `samples/access.log`, and runs detection:
 
@@ -34,6 +35,21 @@ Detection raised 15 alerts:
   MSIEM-002  SSH login succeeded after repeated failures       1
   ...
 ```
+
+## Deploying to Vercel
+
+The repo deploys to Vercel as one project. Vite builds the dashboard as static files, and `api/index.py` runs the FastAPI backend as a Python serverless function (`vercel.json` routes `/api/*` to it, and everything else to the single-page app).
+
+**It runs as a self-contained demo.** Serverless functions can't keep files, so each function instance builds its own SQLite database in `/tmp` from [samples/examples/](samples/examples/) when it starts (about 2 seconds). Every visitor sees the same fully loaded dashboard. Uploads work, but they only last until that instance shuts down, and the dashboard shows a `DEMO` tag to say so.
+
+1. Generate the login variables locally:
+   ```bash
+   cd backend && python -m minisiem create-admin --print
+   ```
+2. In Vercel, under **Project → Settings → Environment Variables**, add `MINISIEM_ADMIN_USER`, `MINISIEM_ADMIN_PASSWORD_HASH` and `MINISIEM_SECRET_KEY` from step 1. Leave `MINISIEM_COOKIE_SECURE` unset, so cookies are HTTPS-only. Without these variables, the API refuses every request.
+3. Push to the branch Vercel deploys, or run `vercel --prod`.
+
+Demo-mode differences, set in `api/index.py` and overridable with environment variables: uploads are capped at 4 MB (Vercel's request limit), `X-Forwarded-For` is trusted for the client IP, and login rate limiting counts per instance. `vercel.json` also sets security headers on every response: a Content Security Policy that blocks inline scripts and framing, `nosniff`, and `X-Frame-Options: DENY`.
 
 ## Architecture
 
@@ -136,9 +152,37 @@ python -m minisiem reset       # delete all events and alerts
 python -m minisiem serve       # API only
 ```
 
-You can also upload files from the **Overview** page (`.log` / `.txt`, max 10 MB).
+You can also upload files from the **Overview** page (`.log` / `.txt`, max 10 MB locally, 4 MB on the Vercel demo).
+
+### Authentication
+
+The dashboard and every data endpoint require a login. There is one admin account, configured through environment variables:
+
+| Variable | Purpose |
+|---|---|
+| `MINISIEM_ADMIN_USER` | Username (default `admin`) |
+| `MINISIEM_ADMIN_PASSWORD_HASH` | Salted PBKDF2-SHA256 hash (600k iterations). The plain password is never stored. |
+| `MINISIEM_SECRET_KEY` | Signs session tokens. At least 32 random characters; changing it logs everyone out. |
+| `MINISIEM_COOKIE_SECURE` | HTTPS-only cookie. On by default; `create-admin` turns it off in the local `.env` for plain-http development. |
+| `MINISIEM_TRUST_PROXY` | Read the client IP from `X-Forwarded-For`. Enable only behind a proxy you control (Vercel, Render, Fly). |
+
+`python -m minisiem create-admin` writes these to `backend/.env` (git-ignored). `create-admin --print` prints them for a hosting provider's environment settings instead.
+
+How it works:
+- `POST /api/auth/login` checks the password in constant time and returns a signed JWT (HS256, 8-hour expiry) in an **httpOnly, SameSite=Strict, Secure** cookie. Page scripts can't read it, and other sites can't make the browser send it (CSRF).
+- API clients can send the same token as `Authorization: Bearer <token>`.
+- **Brute-force protection:** five failed logins from one IP lock it out for five minutes (HTTP 429). Wrong usernames and wrong passwords get the same message and take the same time, so valid usernames can't be discovered.
+- **Fail closed:** without a password hash and a strong secret, the API refuses every request (503) instead of running open.
+
+```bash
+curl -s -X POST localhost:8000/api/auth/login -H 'Content-Type: application/json'      -d '{"username":"admin","password":"..."}'          # -> {"token": "..."}
+curl -s localhost:8000/api/alerts -H "Authorization: Bearer $TOKEN"
+```
 
 ### API
+
+All endpoints except `/api/health` and `/api/auth/login` require authentication.
+
 
 | Method & path | Purpose |
 |---|---|
@@ -166,7 +210,7 @@ You can also upload files from the **Overview** page (`.log` / `.txt`, max 10 MB
 cd backend && python -m pytest
 ```
 
-There are 93 tests: each parser (good, malformed and edge-case lines), each rule (should fire / should not fire), ingestion idempotency, every API endpoint, and input validation (bad uploads, SQL injection in the sort parameter, LIKE wildcards).
+There are 159 tests: each parser (good, malformed and edge-case lines), each rule (should fire / should not fire), every example log against its manifest, ingestion idempotency, every API endpoint, input validation (bad uploads, SQL injection in the sort parameter, LIKE wildcards), and authentication (every endpoint rejects anonymous requests; forged, expired and `alg: none` tokens are rejected; rate limiting; failing closed).
 
 ## Tech stack
 
@@ -174,7 +218,7 @@ Python 3 · FastAPI · SQLite · PyYAML · pytest · React 18 · Vite · React R
 
 ## Limitations & future work
 
-- **No authentication yet.** Run it locally only. Auth on the API and dashboard is milestone M7.
+- Login rate limiting is kept in memory, per server process. With several instances (e.g. serverless), each counts separately, and a shared store such as Redis would make the limit global.
 - Detection re-scans all stored events each run. That is fine for a demo dataset, but a production system would process incrementally.
 - Ingestion is batch-only (CLI or upload). Real-time syslog or folder watching, alert triage (status, assignee, notes), cross-source correlation and Docker are in the M8 stretch list.
 - Classic syslog lines have no year or time zone, so both are configurable at ingest time.

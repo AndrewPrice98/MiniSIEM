@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from 'react'
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { api } from './api.js'
 import Overview from './pages/Overview.jsx'
@@ -5,7 +6,8 @@ import Alerts from './pages/Alerts.jsx'
 import AlertDetail from './pages/AlertDetail.jsx'
 import Events from './pages/Events.jsx'
 import Attack from './pages/Attack.jsx'
-import { Empty, useAsync } from './components/ui.jsx'
+import Login from './pages/Login.jsx'
+import { Empty, ErrorState, Loading } from './components/ui.jsx'
 
 const NAV = [
   ['/', 'Overview'],
@@ -14,41 +16,98 @@ const NAV = [
   ['/attack', 'ATT&CK'],
 ]
 
-function ApiStatus() {
-  const { data, error, loading } = useAsync(() => api.health(), [])
-  const state = loading ? '' : error ? 'down' : 'up'
+function Shell({ user, version, demo, onLogout }) {
   return (
-    <div className="status" title={error ? error.message : undefined}>
-      <span className={`led ${state}`} aria-hidden="true" />
-      {loading ? 'api …' : error ? 'api offline' : `api ok · v${data.version}`}
+    <div className="app">
+      <header className="topbar">
+        <div className="brand">MINI<b>SIEM</b></div>
+        <nav className="nav" aria-label="Main">
+          {NAV.map(([to, label]) => (
+            <NavLink key={to} to={to} end={to === '/'}>{label}</NavLink>
+          ))}
+        </nav>
+        <div className="status">
+          {demo && (
+            <span className="tag" title="Hosted demo: data is loaded from the example logs, and uploads are temporary.">
+              demo
+            </span>
+          )}
+          <span className="led up" aria-hidden="true" />
+          v{version} · {user}
+          <button className="link" onClick={onLogout}>sign out</button>
+        </div>
+      </header>
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Overview />} />
+          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/alerts/:id" element={<AlertDetail />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/attack" element={<Attack />} />
+          <Route path="*" element={<Empty>Page not found.</Empty>} />
+        </Routes>
+      </main>
     </div>
   )
 }
 
 function App() {
+  // checking -> (anon | user) ; 'unconfigured' when the server has no admin set up
+  const [state, setState] = useState({ phase: 'checking' })
+
+  const check = useCallback(async () => {
+    try {
+      const health = await api.health()
+      if (!health.auth_configured) return setState({ phase: 'unconfigured' })
+      try {
+        const me = await api.me()
+        setState({ phase: 'user', user: me.username, version: health.version, demo: health.demo })
+      } catch (err) {
+        if (err.status === 401) setState({ phase: 'anon', version: health.version, demo: health.demo })
+        else throw err
+      }
+    } catch (error) {
+      setState({ phase: 'error', error })
+    }
+  }, [])
+
+  useEffect(() => { check() }, [check])
+
+  // Any API call that comes back 401 (session expired) returns to the login screen.
+  useEffect(() => {
+    const expire = () => setState((s) => (s.phase === 'user'
+      ? { phase: 'anon', version: s.version, demo: s.demo, notice: 'Your session has expired. Sign in again.' }
+      : s))
+    window.addEventListener('minisiem:unauthorized', expire)
+    return () => window.removeEventListener('minisiem:unauthorized', expire)
+  }, [])
+
+  async function logout() {
+    try { await api.logout() } catch { /* clearing local state is enough */ }
+    setState((s) => ({ phase: 'anon', version: s.version, demo: s.demo }))
+  }
+
+  if (state.phase === 'checking') return <Loading label="Connecting…" />
+  if (state.phase === 'error') {
+    return <div className="login-wrap"><ErrorState error={state.error} onRetry={check} /></div>
+  }
+  if (state.phase === 'unconfigured') {
+    return (
+      <div className="login-wrap">
+        <div className="state error" role="alert">
+          No admin account is configured on the server. Run{' '}
+          <code>python -m minisiem create-admin</code> (or set the MINISIEM_* environment variables
+          on your host) and restart the API.
+        </div>
+      </div>
+    )
+  }
+  if (state.phase === 'anon') {
+    return <Login notice={state.notice} onLogin={(user) => setState((s) => ({ ...s, phase: 'user', user, notice: undefined }))} />
+  }
   return (
     <BrowserRouter>
-      <div className="app">
-        <header className="topbar">
-          <div className="brand">MINI<b>SIEM</b></div>
-          <nav className="nav" aria-label="Main">
-            {NAV.map(([to, label]) => (
-              <NavLink key={to} to={to} end={to === '/'}>{label}</NavLink>
-            ))}
-          </nav>
-          <ApiStatus />
-        </header>
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<Overview />} />
-            <Route path="/alerts" element={<Alerts />} />
-            <Route path="/alerts/:id" element={<AlertDetail />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/attack" element={<Attack />} />
-            <Route path="*" element={<Empty>Page not found.</Empty>} />
-          </Routes>
-        </main>
-      </div>
+      <Shell user={state.user} version={state.version} demo={state.demo} onLogout={logout} />
     </BrowserRouter>
   )
 }

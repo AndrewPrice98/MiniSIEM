@@ -102,6 +102,60 @@ def cmd_examples(args):
         cmd_serve(args)
 
 
+def _read_password(args) -> str:
+    if args.password_stdin:
+        password = sys.stdin.readline().rstrip("\r\n")
+    else:
+        import getpass
+
+        password = getpass.getpass("Admin password: ")
+        if password != getpass.getpass("Repeat password: "):
+            sys.exit("Passwords do not match.")
+    if len(password) < 12:
+        sys.exit("Use at least 12 characters.")
+    return password
+
+
+def _update_env_file(path: Path, values: dict[str, str]) -> None:
+    """Set keys in a .env file, keeping any other lines as they are."""
+    lines = path.read_text(encoding="utf-8").splitlines() if path.exists() else []
+    remaining = dict(values)
+    out = []
+    for line in lines:
+        key = line.split("=", 1)[0].strip()
+        if key in remaining:
+            out.append(f"{key}={remaining.pop(key)}")
+        else:
+            out.append(line)
+    out += [f"{k}={v}" for k, v in remaining.items()]
+    path.write_text("\n".join(out) + "\n", encoding="utf-8")
+
+
+def cmd_create_admin(args):
+    import secrets
+
+    from .auth import hash_password
+
+    password = _read_password(args)
+    values = {
+        "MINISIEM_ADMIN_USER": args.username,
+        "MINISIEM_ADMIN_PASSWORD_HASH": hash_password(password),
+        # Reuse an existing secret so current sessions stay valid, unless asked to rotate.
+        "MINISIEM_SECRET_KEY": (config.secret_key() if config.secret_key() and not args.rotate_secret
+                                else secrets.token_urlsafe(48)),
+    }
+    if args.print:
+        print("Set these environment variables on your host (e.g. Vercel > Project > Settings >"
+              " Environment Variables). Keep them secret.\n")
+        for k, v in values.items():
+            print(f"{k}={v}")
+        print("MINISIEM_TRUST_PROXY=true")
+        return
+    _update_env_file(config.ENV_FILE, {**values, "MINISIEM_COOKIE_SECURE": "false"})
+    print(f"Admin '{args.username}' saved to {config.ENV_FILE} (git-ignored).")
+    print("Restart the API to pick it up. For a hosted deployment, run again with --print.")
+
+
 def cmd_rules(_args):
     for r in load_rules():
         print(f"{r.id}  {r.severity:<8} {r.attack_technique or '-':<10} {r.title}")
@@ -129,6 +183,14 @@ def main(argv=None):
     sub.add_parser("detect", help="run all detection rules").set_defaults(func=cmd_detect)
     sub.add_parser("rules", help="list detection rules").set_defaults(func=cmd_rules)
     sub.add_parser("reset", help="delete all events and alerts").set_defaults(func=cmd_reset)
+
+    s = sub.add_parser("create-admin", help="set the dashboard login (writes backend/.env)")
+    s.add_argument("--username", default="admin")
+    s.add_argument("--password-stdin", action="store_true", help="read the password from stdin")
+    s.add_argument("--print", action="store_true",
+                   help="print the variables for a hosting provider instead of writing .env")
+    s.add_argument("--rotate-secret", action="store_true", help="new signing secret (logs everyone out)")
+    s.set_defaults(func=cmd_create_admin)
 
     for name, func, help_ in (("serve", cmd_serve, "run the API server"),
                               ("demo", cmd_demo, "reset and load the sample dataset"),

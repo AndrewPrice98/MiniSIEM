@@ -147,7 +147,7 @@ This document breaks the project into **milestones**, each with ordered **steps*
 
 **Goal:** The security tool itself has no obvious holes.
 
-- [ ] **7.1** Add authentication to the API and dashboard
+- [x] **7.1** Add authentication to the API and dashboard
 - [ ] **7.2** Validate uploaded logs (size limits, file types)
 - [ ] **7.3** Review search/filter code for injection risks
 - [ ] **7.4** Confirm no secrets are committed (`.env` in `.gitignore`, history checked)

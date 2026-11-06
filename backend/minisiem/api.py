@@ -4,9 +4,10 @@ import sqlite3
 from datetime import timedelta
 from typing import Annotated, Iterator
 
-from fastapi import Depends, FastAPI, File, Form, HTTPException, Query, UploadFile
+from fastapi import APIRouter, Depends, FastAPI, File, Form, HTTPException, Query, Request, Response, UploadFile
+from pydantic import BaseModel, Field
 
-from . import __version__, config, db
+from . import __version__, auth, config, db
 from .detection import load_rules, run_detection
 from .ingest import ingest_lines
 from .models import parse_utc_string, to_utc_string
@@ -95,14 +96,70 @@ def _event_out(row: dict) -> dict:
     return row
 
 
-# -- endpoints ------------------------------------------------------------------
+# -- public endpoints -------------------------------------------------------------
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "version": __version__}
+    return {"status": "ok", "version": __version__, "auth_configured": auth.is_configured(),
+            "demo": config.demo_mode()}
 
 
-@app.get("/api/alerts")
+class LoginRequest(BaseModel):
+    username: str = Field(min_length=1, max_length=128)
+    password: str = Field(min_length=1, max_length=1024)
+
+
+def _set_session_cookie(response: Response, token: str, expires) -> None:
+    response.set_cookie(
+        auth.COOKIE_NAME,
+        token,
+        expires=expires,
+        httponly=True,  # not readable from JavaScript
+        secure=config.cookie_secure(),  # HTTPS only (off for local http dev)
+        samesite="strict",  # never sent on cross-site requests, which blocks CSRF
+        path="/api",
+    )
+
+
+@app.post("/api/auth/login")
+def login(body: LoginRequest, request: Request, response: Response):
+    if not auth.is_configured():
+        raise HTTPException(503, "Authentication is not configured. Run: python -m minisiem create-admin")
+    ip = auth.client_ip(request)
+    wait = auth.limiter.retry_after(ip)
+    if wait:
+        raise HTTPException(429, "Too many failed logins. Try again later.",
+                            headers={"Retry-After": str(wait)})
+    if not auth.check_credentials(body.username, body.password):
+        auth.limiter.record_failure(ip)
+        # Same message for unknown user and wrong password.
+        raise HTTPException(401, "Invalid username or password")
+    auth.limiter.reset(ip)
+    token, expires = auth.issue_token(body.username)
+    _set_session_cookie(response, token, expires)
+    # The token is also returned for API clients (curl, scripts) that use a Bearer header.
+    # The dashboard ignores it and relies on the httpOnly cookie.
+    return {"username": body.username, "expires_at": to_utc_string(expires), "token": token}
+
+
+@app.post("/api/auth/logout")
+def logout(response: Response):
+    response.delete_cookie(auth.COOKIE_NAME, path="/api", httponly=True,
+                           secure=config.cookie_secure(), samesite="strict")
+    return {"ok": True}
+
+
+# -- authenticated endpoints ------------------------------------------------------
+
+protected = APIRouter(dependencies=[Depends(auth.require_user)])
+
+
+@protected.get("/api/auth/me")
+def me(user: Annotated[str, Depends(auth.require_user)]):
+    return {"username": user}
+
+
+@protected.get("/api/alerts")
 def list_alerts(
     conn: Conn,
     severity: Annotated[list[str] | None, Query()] = None,
@@ -149,7 +206,7 @@ def list_alerts(
     return {"total": total, "limit": limit, "offset": offset, "items": [_alert_out(r) for r in rows]}
 
 
-@app.get("/api/alerts/{alert_id}")
+@protected.get("/api/alerts/{alert_id}")
 def get_alert(alert_id: int, conn: Conn):
     row = conn.execute("SELECT * FROM alerts WHERE id = ?", (alert_id,)).fetchone()
     if row is None:
@@ -167,7 +224,7 @@ def get_alert(alert_id: int, conn: Conn):
     }
 
 
-@app.get("/api/events")
+@protected.get("/api/events")
 def list_events(
     conn: Conn,
     source_type: str | None = None,
@@ -207,7 +264,7 @@ def list_events(
     return {"total": total, "limit": limit, "offset": offset, "items": [_event_out(r) for r in rows]}
 
 
-@app.get("/api/events/facets")
+@protected.get("/api/events/facets")
 def event_facets(conn: Conn):
     """Distinct values for the search filters' dropdowns."""
     def distinct(col):
@@ -217,7 +274,7 @@ def event_facets(conn: Conn):
     return {col: distinct(col) for col in ("source_type", "host", "event_action", "event_outcome")}
 
 
-@app.get("/api/stats")
+@protected.get("/api/stats")
 def stats(conn: Conn, start: str | None = None, end: str | None = None):
     ew, aw = Where(), Where()
     if s := _iso(start, "start"):
@@ -294,7 +351,7 @@ def stats(conn: Conn, start: str | None = None, end: str | None = None):
     }
 
 
-@app.get("/api/rules")
+@protected.get("/api/rules")
 def list_rules(conn: Conn):
     counts = {r[0]: (r[1], r[2]) for r in conn.execute(
         "SELECT rule_id, COUNT(*), MAX(last_seen) FROM alerts GROUP BY rule_id"
@@ -306,12 +363,12 @@ def list_rules(conn: Conn):
     return out
 
 
-@app.post("/api/detect")
+@protected.post("/api/detect")
 def detect(conn: Conn):
     return run_detection(conn)
 
 
-@app.post("/api/ingest")
+@protected.post("/api/ingest")
 def ingest(
     conn: Conn,
     file: Annotated[UploadFile, File(description="Log file (.log or .txt)")],
@@ -339,3 +396,7 @@ def ingest(
     result = ingest_lines(conn, text.splitlines(), source_type, ctx)
     detection = run_detection(conn)
     return {"ingest": result.to_dict(), "detection": detection}
+
+
+# Registered last so every @protected route above is included.
+app.include_router(protected)

@@ -129,7 +129,7 @@ function UploadForm({ onDone }) {
   return (
     <form onSubmit={submit}>
       <div className="upload">
-        <label className="field">Log file (.log, .txt, max 10 MB)
+        <label className="field">Log file (.log or .txt)
           <input type="file" name="file" accept=".log,.txt,text/plain" />
         </label>
         <label className="field">Source type

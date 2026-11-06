@@ -4,10 +4,16 @@ from fastapi.testclient import TestClient
 from minisiem import config
 from minisiem.api import app
 
+from .conftest import TEST_PASSWORD, TEST_USER
+
 
 @pytest.fixture
 def client(db_file):
-    return TestClient(app)
+    """A logged-in client (session cookie set)."""
+    c = TestClient(app)
+    r = c.post("/api/auth/login", json={"username": TEST_USER, "password": TEST_PASSWORD})
+    assert r.status_code == 200, r.text
+    return c
 
 
 @pytest.fixture
