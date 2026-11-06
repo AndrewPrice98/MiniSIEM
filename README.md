@@ -60,7 +60,7 @@ flowchart LR
 | Storage | `backend/minisiem/db.py` | SQLite with indexes on time, IP, user and host. The original log line is always kept. |
 | Detection | `backend/minisiem/detection/`, `backend/rules/` | Rules are data. Alerts are fingerprinted and upserted, so re-running detection never duplicates them. |
 | API | `backend/minisiem/api.py` | Parameterized SQL everywhere, whitelisted sort columns, LIKE wildcards escaped. |
-| Dashboard | `src/` | React 18 + Vite + React Router, hand-drawn SVG charts, light and dark mode. |
+| Dashboard | `src/` | React 18 + Vite + React Router. Dense dark console theme with hand-drawn SVG charts. |
 
 Design decisions and the full event schema are in [DECISIONS.md](DECISIONS.md).
 

@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const W = 720
-const H = 220
-const PAD = { top: 10, right: 8, bottom: 26, left: 40 }
+const H = 170
+const PAD = { top: 8, right: 4, bottom: 22, left: 34 }
 
 function niceMax(v) {
   if (v <= 5) return 5
@@ -22,6 +21,16 @@ function bucketLabel(iso, bucket) {
  */
 export function TimelineChart({ timeline, bucket }) {
   const [hover, setHover] = useState(null)
+  // Draw at the container's real pixel width so text and bars never get scaled up.
+  const boxRef = useRef(null)
+  const [W, setW] = useState(720)
+  useEffect(() => {
+    const el = boxRef.current
+    if (!el) return undefined
+    const ro = new ResizeObserver(([entry]) => setW(Math.max(280, Math.round(entry.contentRect.width))))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [Boolean(timeline?.length)]) // eslint-disable-line react-hooks/exhaustive-deps
   if (!timeline?.length) return null
 
   const max = niceMax(Math.max(...timeline.map((b) => b.events)))
@@ -32,7 +41,7 @@ export function TimelineChart({ timeline, bucket }) {
   const y = (v) => PAD.top + innerH - (v / max) * innerH
   const ticks = [0, max / 2, max]
   const labelEvery = Math.ceil(timeline.length / 8)
-  const r = Math.min(4, barW / 2)
+  const r = Math.min(1, barW / 2) // square-ish ends to match the console theme
 
   // A bar with only the top end rounded, anchored to the baseline.
   const roundedTop = (x, top, h) =>
@@ -43,7 +52,7 @@ export function TimelineChart({ timeline, bucket }) {
   const hovered = hover !== null ? timeline[hover] : null
 
   return (
-    <div className="chart">
+    <div className="chart" ref={boxRef}>
       <div className="legend">
         <span><i className="swatch" style={{ background: 'var(--series-2)' }} /> Failed events</span>
         <span><i className="swatch" style={{ background: 'var(--series-1)' }} /> Other events</span>
@@ -55,7 +64,7 @@ export function TimelineChart({ timeline, bucket }) {
           <g key={t}>
             <line x1={PAD.left} x2={W - PAD.right} y1={y(t)} y2={y(t)}
               stroke={t === 0 ? 'var(--axis)' : 'var(--grid)'} strokeWidth="1" />
-            <text x={PAD.left - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill="var(--muted)"
+            <text x={PAD.left - 6} y={y(t) + 4} textAnchor="end" fontSize="10" fill="var(--muted)"
               style={{ fontVariantNumeric: 'tabular-nums' }}>{t}</text>
           </g>
         ))}
@@ -76,7 +85,7 @@ export function TimelineChart({ timeline, bucket }) {
               )}
               {other > 0 && <path d={roundedTop(x, otherTop, otherH)} fill="var(--series-1)" />}
               {i % labelEvery === 0 && (
-                <text x={x + barW / 2} y={H - 8} textAnchor="middle" fontSize="11" fill="var(--muted)">
+                <text x={x + barW / 2} y={H - 8} textAnchor="middle" fontSize="10" fill="var(--muted)">
                   {bucketLabel(b.bucket, bucket)}
                 </text>
               )}

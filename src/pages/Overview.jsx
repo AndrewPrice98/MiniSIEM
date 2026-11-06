@@ -15,10 +15,9 @@ export default function Overview() {
         <div>
           <h1>Overview</h1>
           {stats.data?.time_range?.start && (
-            <div className="subtle">
-              Data from {formatTime(stats.data.time_range.start, { seconds: false })} to{' '}
-              {formatTime(stats.data.time_range.end, { seconds: false })}
-            </div>
+            <span className="subtle mono">
+              {formatTime(stats.data.time_range.start, { seconds: false })} → {formatTime(stats.data.time_range.end, { seconds: false })} UTC
+            </span>
           )}
         </div>
       </div>
@@ -26,7 +25,7 @@ export default function Overview() {
       {stats.loading && !stats.data && <Loading />}
       {stats.error && <ErrorState error={stats.error} onRetry={stats.reload} />}
       {stats.data && stats.data.total_events === 0 && (
-        <div className="card" style={{ marginBottom: 16 }}>
+        <div className="card" style={{ marginBottom: 10 }}>
           <Empty>
             No events yet. Upload a log below, or run <code>python -m minisiem demo</code> in <code>backend/</code>.
           </Empty>
@@ -35,39 +34,42 @@ export default function Overview() {
 
       {stats.data && stats.data.total_events > 0 && (
         <div className="stack">
-          <div className="grid grid-tiles">
-            <div className="card tile">
+          <div className="kpis">
+            <div className="kpi">
               <div className="label">Events</div>
               <div className="value">{stats.data.total_events.toLocaleString()}</div>
-              <div className="muted" style={{ fontSize: '0.8rem' }}>
-                {Object.entries(stats.data.events_by_source).map(([k, v]) => `${k}: ${v}`).join(' · ')}
+              <div className="sub">
+                {Object.entries(stats.data.events_by_source).map(([k, v]) => `${k} ${v}`).join(' · ')}
               </div>
             </div>
+            <Link className="kpi" to="/alerts">
+              <div className="label">Alerts</div>
+              <div className="value">{stats.data.total_alerts}</div>
+              <div className="sub">all severities</div>
+            </Link>
             {SEVERITIES.map((s) => (
-              <div className="card tile" key={s}>
-                <Link to={`/alerts?severity=${s}`}>
-                  <div className="label"><Severity level={s} /></div>
-                  <div className="value">{stats.data.alerts_by_severity[s]}</div>
-                  <div className="muted" style={{ fontSize: '0.8rem' }}>alerts</div>
-                </Link>
-              </div>
+              <Link className={`kpi sev-${s}`} key={s} to={`/alerts?severity=${s}`}>
+                <div className="label">{s}</div>
+                <div className="value">{stats.data.alerts_by_severity[s]}</div>
+                <div className="sub">alerts</div>
+              </Link>
             ))}
           </div>
 
           <div className="card">
-            <h2>Events over time <span className="muted" style={{ fontWeight: 400 }}>(per {stats.data.bucket}, UTC)</span></h2>
+            <h2>Events over time <span className="muted">· per {stats.data.bucket}, UTC</span></h2>
             <TimelineChart timeline={stats.data.timeline} bucket={stats.data.bucket} />
           </div>
 
           <div className="grid grid-2">
             <div className="card">
-              <h2>Top source IPs <span className="muted" style={{ fontWeight: 400 }}>by alerts</span></h2>
+              <h2>Top source IPs <span className="muted">· by alerts</span></h2>
               <BarList items={stats.data.top_source_ips} valueKey="alerts"
                 to={(i) => `/alerts?source_ip=${encodeURIComponent(i.value)}`}
                 extra={(i) => <Severity level={i.max_severity} />} />
             </div>
             <div className="card">
-              <h2>Top targeted users <span className="muted" style={{ fontWeight: 400 }}>by failed SSH logins</span></h2>
+              <h2>Top targeted users <span className="muted">· by failed SSH logins</span></h2>
               <BarList items={stats.data.top_targeted_users} valueKey="failures"
                 to={(i) => `/events?user_name=${encodeURIComponent(i.value)}&event_outcome=failure`} />
             </div>
@@ -84,7 +86,7 @@ export default function Overview() {
                       <tr key={a.id}>
                         <td><Severity level={a.severity} /></td>
                         <td><Link to={`/alerts/${a.id}`}>{a.summary}</Link></td>
-                        <td className="nowrap muted">{formatTime(a.first_seen)}</td>
+                        <td className="ts">{formatTime(a.first_seen)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -96,7 +98,7 @@ export default function Overview() {
         </div>
       )}
 
-      <div className="card" style={{ marginTop: 16 }}>
+      <div className="card" style={{ marginTop: 10 }}>
         <h2>Upload a log file</h2>
         <UploadForm onDone={reloadAll} />
       </div>

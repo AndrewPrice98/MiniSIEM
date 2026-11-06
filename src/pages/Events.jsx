@@ -94,19 +94,19 @@ export default function Events() {
               <table>
                 <thead>
                   <tr>
-                    <th>Time</th><th>Source</th><th>Host</th><th>Action</th><th>Outcome</th>
+                    <th>Time (UTC)</th><th>Source</th><th>Host</th><th>Action</th><th>Outcome</th>
                     <th>User</th><th>Source IP</th><th>Raw log</th>
                   </tr>
                 </thead>
                 <tbody>
                   {events.data.items.map((e) => (
                     <tr key={e.id}>
-                      <td className="nowrap">{formatTime(e.timestamp)}</td>
+                      <td className="ts">{formatTime(e.timestamp)}</td>
                       <td>{e.source_type}</td>
                       <td className="nowrap">{e.host || '—'}</td>
                       <td className="nowrap">{e.event_action}</td>
                       <td>{e.event_outcome || '—'}</td>
-                      <td>{e.user_name || '—'}</td>
+                      <td className="nowrap">{e.user_name || '—'}</td>
                       <td className="mono nowrap">{e.source_ip || '—'}</td>
                       <td className="raw">{e.raw}</td>
                     </tr>

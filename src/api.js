@@ -30,6 +30,7 @@ export function qs(params) {
 }
 
 export const api = {
+  health: () => request('/health'),
   stats: (params = {}) => request(`/stats${qs(params)}`),
   alerts: (params = {}) => request(`/alerts${qs(params)}`),
   alert: (id) => request(`/alerts/${encodeURIComponent(id)}`),

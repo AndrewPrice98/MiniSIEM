@@ -10,7 +10,7 @@ const COLUMNS = [
   ['host', 'Host'],
   ['source_ip', 'Source IP'],
   ['event_count', 'Events'],
-  ['first_seen', 'First seen'],
+  ['first_seen', 'First seen (UTC)'],
   ['status', 'Status'],
 ]
 const FILTER_KEYS = ['rule_id', 'host', 'source_ip', 'user_name', 'technique', 'q']
@@ -93,7 +93,7 @@ export default function Alerts() {
           )}
         </div>
         {(filters.host || filters.user_name || filters.technique) && (
-          <div className="subtle" style={{ fontSize: '0.85rem', marginBottom: 10 }}>
+          <div className="subtle" style={{ fontSize: 12, marginBottom: 8 }}>
             Also filtered by{' '}
             {['host', 'user_name', 'technique'].filter((k) => filters[k]).map((k) => (
               <span className="tag" key={k}>{k.replace('_', ' ')}: {filters[k]}</span>
@@ -131,13 +131,13 @@ export default function Alerts() {
                         <a href={`/alerts/${a.id}`} onClick={(e) => { e.preventDefault(); navigate(`/alerts/${a.id}`) }}>
                           {a.summary}
                         </a>
-                        <div className="muted" style={{ fontSize: '0.8rem' }}>{a.rule_title} · {a.attack_technique}</div>
+                        <div className="muted" style={{ fontSize: 11 }}>{a.rule_title} · <span className="mono">{a.attack_technique}</span></div>
                       </td>
                       <td className="nowrap mono">{a.rule_id}</td>
                       <td className="nowrap">{a.host || '—'}</td>
                       <td className="nowrap mono">{a.source_ip || '—'}</td>
                       <td className="num">{a.event_count}</td>
-                      <td className="nowrap">{formatTime(a.first_seen)}</td>
+                      <td className="ts">{formatTime(a.first_seen)}</td>
                       <td>{a.status}</td>
                     </tr>
                   ))}

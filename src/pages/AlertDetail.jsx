@@ -26,22 +26,22 @@ export default function AlertDetail() {
 
   return (
     <>
-      <p style={{ margin: '0 0 12px' }}><Link to="/alerts">← Alerts</Link></p>
+      <p style={{ margin: '0 0 8px', fontSize: 12 }}><Link to="/alerts">← Alerts</Link></p>
       <div className="page-head">
         <div>
-          <div style={{ marginBottom: 6 }}><Severity level={a.severity} /> <span className="muted">· Alert #{a.id}</span></div>
+          <Severity level={a.severity} />
           <h1>{a.summary}</h1>
-          <div className="subtle">{a.rule_title}</div>
+          <span className="subtle"><span className="mono">#{a.id}</span> · {a.rule_title}</span>
         </div>
       </div>
 
-      <div className="grid grid-2" style={{ marginBottom: 16 }}>
+      <div className="grid grid-2" style={{ marginBottom: 10 }}>
         <div className="card">
           <h2>Details</h2>
           <dl className="kv">
             <dt>Status</dt><dd>{a.status}</dd>
-            <dt>First seen</dt><dd>{formatTime(a.first_seen)}</dd>
-            <dt>Last seen</dt><dd>{formatTime(a.last_seen)}</dd>
+            <dt>First seen</dt><dd className="mono">{formatTime(a.first_seen)} UTC</dd>
+            <dt>Last seen</dt><dd className="mono">{formatTime(a.last_seen)} UTC</dd>
             <dt>Events</dt><dd className="num">{a.event_count}</dd>
             <dt>Host</dt><dd>{a.host ? <Link to={search('host', a.host)}>{a.host}</Link> : '—'}</dd>
             <dt>Source IP</dt>
@@ -85,15 +85,15 @@ export default function AlertDetail() {
         <div className="table-wrap">
           <table>
             <thead>
-              <tr>{EVENT_COLUMNS.map((c) => <th key={c}>{c.replace('event_', '').replace('_', ' ')}</th>)}<th>Raw log</th></tr>
+              <tr>{EVENT_COLUMNS.map((c) => <th key={c}>{c === 'timestamp' ? 'Time (UTC)' : c.replace('event_', '').replace('_', ' ')}</th>)}<th>Raw log</th></tr>
             </thead>
             <tbody>
               {a.events.map((e) => (
                 <tr key={e.id}>
-                  <td className="nowrap">{formatTime(e.timestamp)}</td>
+                  <td className="ts">{formatTime(e.timestamp)}</td>
                   <td className="nowrap">{e.event_action}</td>
                   <td>{e.event_outcome || '—'}</td>
-                  <td>{e.user_name || '—'}</td>
+                  <td className="nowrap">{e.user_name || '—'}</td>
                   <td className="mono nowrap">{e.source_ip || '—'}</td>
                   <td className="raw">{e.raw}</td>
                 </tr>

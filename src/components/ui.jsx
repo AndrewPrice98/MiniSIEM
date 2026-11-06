@@ -2,14 +2,11 @@ import { useCallback, useEffect, useState } from 'react'
 
 export const SEVERITIES = ['critical', 'high', 'medium', 'low']
 
-/** Severity is never shown by color alone: the dot always comes with its label. */
+const SEV_SHORT = { critical: 'crit', high: 'high', medium: 'med', low: 'low' }
+
+/** Severity tag: colored bar plus a text label, so it never relies on color alone. */
 export function Severity({ level }) {
-  return (
-    <span className="sev">
-      <span className={`sev-dot ${level}`} aria-hidden="true" />
-      {level}
-    </span>
-  )
+  return <span className={`sev ${level}`} title={level}>{SEV_SHORT[level] || level}</span>
 }
 
 export function Loading({ label = 'Loading…' }) {
@@ -46,11 +43,11 @@ export function useAsync(loader, deps) {
   return { ...state, reload: () => setTick((t) => t + 1) }
 }
 
+/** All times in the UI are UTC; column headers and page subtitles say so. */
 export function formatTime(iso, { seconds = true } = {}) {
   if (!iso) return '—'
-  // Show UTC explicitly: analysts compare against raw logs, which are UTC here.
   const d = iso.replace('T', ' ').replace('Z', '')
-  return (seconds ? d : d.slice(0, 16)) + ' UTC'
+  return seconds ? d : d.slice(0, 16)
 }
 
 export function Pager({ total, limit, offset, onChange }) {

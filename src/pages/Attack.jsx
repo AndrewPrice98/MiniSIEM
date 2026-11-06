@@ -9,14 +9,14 @@ const TACTICS = [
   'Collection', 'Command and Control', 'Exfiltration', 'Impact',
 ]
 
-// Sequential blue ramp: more alerts = darker. Covered-but-quiet techniques sit at step 0.
+// Sequential blue ramp: more alerts = brighter (on the dark surface). Covered-but-quiet techniques sit at step 0.
 const STEPS = [
   { min: 0, bg: 'var(--seq-0)', ink: 'var(--ink)', label: '0 (covered)' },
-  { min: 1, bg: 'var(--seq-1)', ink: '#0b0b0b', label: '1' },
-  { min: 2, bg: 'var(--seq-2)', ink: '#0b0b0b', label: '2–3' },
+  { min: 1, bg: 'var(--seq-1)', ink: '#f0efec', label: '1' },
+  { min: 2, bg: 'var(--seq-2)', ink: '#ffffff', label: '2–3' },
   { min: 4, bg: 'var(--seq-3)', ink: '#ffffff', label: '4–6' },
-  { min: 7, bg: 'var(--seq-4)', ink: '#ffffff', label: '7–9' },
-  { min: 10, bg: 'var(--seq-5)', ink: '#ffffff', label: '10+' },
+  { min: 7, bg: 'var(--seq-4)', ink: '#0b0b0b', label: '7–9' },
+  { min: 10, bg: 'var(--seq-5)', ink: '#0b0b0b', label: '10+' },
 ]
 const stepFor = (n) => [...STEPS].reverse().find((s) => n >= s.min)
 
@@ -59,20 +59,20 @@ export default function Attack() {
           <h1>ATT&CK coverage</h1>
           <div className="subtle">
             {covered} techniques across {tacticsCovered} of {TACTICS.length} tactics have a rule;{' '}
-            {detected} have fired. Darker = more alerts.
+            {detected} have fired. Brighter = more alerts.
           </div>
         </div>
         <div className="scale" aria-label="Color scale: alerts per technique">
           Alerts:
           {STEPS.map((s) => (
-            <span key={s.label} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, marginRight: 6 }}>
-              <i className="swatch" style={{ background: s.bg, border: '1px solid var(--border)' }} />{s.label}
+            <span key={s.label} style={{ display: 'inline-flex', alignItems: 'center', gap: 3, marginRight: 6 }}>
+              <i className="swatch" style={{ background: s.bg, border: '1px solid var(--line-strong)' }} />{s.label}
             </span>
           ))}
         </div>
       </div>
 
-      <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card" style={{ marginBottom: 10 }}>
         <div className="matrix">
           {matrix.map(({ tactic, techniques }) => (
             <section className="tactic" key={tactic} aria-label={tactic}>
