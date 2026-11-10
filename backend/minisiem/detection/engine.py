@@ -32,13 +32,20 @@ def _group_key(rule: Rule, event: dict) -> tuple | None:
     return None if any(v is None for v in key) else key
 
 
-def _fetch_events(conn: sqlite3.Connection, rule: Rule) -> list[dict]:
+def _fetch_events(conn: sqlite3.Connection, rule: Rule, only_host: str | None = None,
+                  skip_host: str | None = None) -> list[dict]:
+    where, params = [], []
     if rule.source_type:
-        cur = conn.execute(
-            "SELECT * FROM events WHERE source_type = ? ORDER BY timestamp, id", (rule.source_type,)
-        )
-    else:
-        cur = conn.execute("SELECT * FROM events ORDER BY timestamp, id")
+        where.append("source_type = ?")
+        params.append(rule.source_type)
+    if only_host is not None:
+        where.append("host = ?")
+        params.append(only_host)
+    if skip_host is not None:
+        where.append("(host IS NULL OR host != ?)")
+        params.append(skip_host)
+    clause = f" WHERE {' AND '.join(where)}" if where else ""
+    cur = conn.execute(f"SELECT * FROM events{clause} ORDER BY timestamp, id", params)
     return [dict(r) for r in cur]
 
 
@@ -222,8 +229,10 @@ _ALERT_COLUMNS = {
 }
 
 
-def run_detection(conn: sqlite3.Connection, rules: list[Rule] | None = None) -> dict:
-    """Run every enabled rule over all stored events. Safe to re-run."""
+def run_detection(conn: sqlite3.Connection, rules: list[Rule] | None = None, *,
+                  only_host: str | None = None, skip_host: str | None = None) -> dict:
+    """Run every enabled rule over stored events (optionally scoped to or excluding one host).
+    Safe to re-run."""
     rules = load_rules() if rules is None else rules
     per_rule = {}
     new_total = 0
@@ -232,7 +241,7 @@ def run_detection(conn: sqlite3.Connection, rules: list[Rule] | None = None) -> 
         if not rule.enabled:
             continue
         if rule.source_type not in events_by_source:
-            events_by_source[rule.source_type] = _fetch_events(conn, rule)
+            events_by_source[rule.source_type] = _fetch_events(conn, rule, only_host, skip_host)
         hits = DETECTORS[rule.type](rule, events_by_source[rule.source_type])
         new = sum(_store_hit(conn, h) for h in hits)
         new_total += new
