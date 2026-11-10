@@ -16,7 +16,7 @@ const NAV = [
   ['/attack', 'ATT&CK'],
 ]
 
-function Shell({ user, version, demo, guest, onLogout, onAdminSignIn }) {
+function Shell({ user, version, demo, guest, authConfigured, onLogout, onAdminSignIn }) {
   return (
     <div className="app">
       <header className="topbar">
@@ -35,7 +35,8 @@ function Shell({ user, version, demo, guest, onLogout, onAdminSignIn }) {
               <a href="https://github.com/AndrewPrice98/MiniSIEM#quick-start" target="_blank" rel="noreferrer">
                 Run it locally for the full version
               </a>
-              <button className="link" onClick={onAdminSignIn}>admin sign in</button>
+              {/* Without an admin account on the server, login would only return 503. */}
+              {authConfigured && <button className="link" onClick={onAdminSignIn}>admin sign in</button>}
             </>
           ) : (
             <>
@@ -76,12 +77,14 @@ function App() {
         // Demo mode: visitors browse read-only without signing in. A valid admin
         // cookie still wins (me.guest is false); an expired one falls back to guest.
         const me = await api.me()
-        return setState({ phase: 'user', user: me.username, guest: me.guest, version: health.version, demo: health.demo })
+        return setState({ phase: 'user', user: me.username, guest: me.guest, version: health.version, demo: health.demo,
+          authConfigured: health.auth_configured })
       }
       if (!health.auth_configured) return setState({ phase: 'unconfigured' })
       try {
         const me = await api.me()
-        setState({ phase: 'user', user: me.username, guest: false, version: health.version, demo: health.demo })
+        setState({ phase: 'user', user: me.username, guest: false, version: health.version, demo: health.demo,
+          authConfigured: true })
       } catch (err) {
         if (err.status === 401) setState({ phase: 'anon', version: health.version, demo: health.demo })
         else throw err
@@ -130,6 +133,7 @@ function App() {
   return (
     <BrowserRouter>
       <Shell user={state.user} version={state.version} demo={state.demo} guest={state.guest}
+        authConfigured={state.authConfigured}
         onLogout={logout}
         onAdminSignIn={() => setState((s) => ({ ...s, phase: 'anon', canCancel: true }))} />
     </BrowserRouter>
