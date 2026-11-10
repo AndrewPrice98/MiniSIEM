@@ -20,12 +20,13 @@ from collections import defaultdict, deque
 from datetime import datetime, timedelta, timezone
 
 import jwt
-from fastapi import HTTPException, Request
+from fastapi import Depends, HTTPException, Request
 
 from . import config
 
 COOKIE_NAME = "minisiem_session"
 ALGORITHM = "HS256"
+GUEST_USER = "guest"
 HASH_SCHEME = "pbkdf2_sha256"
 DEFAULT_ITERATIONS = 600_000  # OWASP 2023+ recommendation for PBKDF2-SHA256
 
@@ -114,13 +115,22 @@ def _token_from_request(request: Request) -> str | None:
 
 
 def require_user(request: Request) -> str:
-    """FastAPI dependency: the logged-in username, or 401."""
+    """FastAPI dependency: the logged-in username, the read-only guest (when enabled), or 401."""
+    token = _token_from_request(request) if is_configured() else None
+    user = decode_token(token) if token else None
+    if user is not None:
+        return user
+    if config.guest_enabled():
+        return GUEST_USER
     if not is_configured():
         raise HTTPException(503, "Authentication is not configured. Run: python -m minisiem create-admin")
-    token = _token_from_request(request)
-    user = decode_token(token) if token else None
-    if user is None:
-        raise HTTPException(401, "Not authenticated", headers={"WWW-Authenticate": "Bearer"})
+    raise HTTPException(401, "Not authenticated", headers={"WWW-Authenticate": "Bearer"})
+
+
+def require_writer(user: str = Depends(require_user)) -> str:
+    """FastAPI dependency for endpoints that change data: guests are refused."""
+    if user == GUEST_USER:
+        raise HTTPException(403, "Guests have read-only access. Log in to do this.")
     return user
 
 

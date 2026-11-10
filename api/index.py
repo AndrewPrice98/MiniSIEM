@@ -12,6 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "backend"))
 
+# The admin variables (MINISIEM_ADMIN_PASSWORD_HASH, MINISIEM_SECRET_KEY) are optional here:
+# without them visitors browse as a read-only guest and nobody can log in.
 # Serverless defaults; any of these can be overridden in Vercel's environment settings.
 os.environ.setdefault("MINISIEM_DB", "/tmp/minisiem.db")  # /tmp is the only writable path
 os.environ.setdefault("MINISIEM_DEMO", "true")

@@ -65,7 +65,7 @@ def test_login_sets_hardened_cookie_and_grants_access(anon):
     assert r.status_code == 200 and r.json()["username"] == TEST_USER
     cookie = r.headers["set-cookie"].lower()
     assert "httponly" in cookie and "samesite=strict" in cookie and "path=/api" in cookie
-    assert anon.get("/api/auth/me").json() == {"username": TEST_USER}
+    assert anon.get("/api/auth/me").json() == {"username": TEST_USER, "guest": False}
     assert anon.get("/api/stats").status_code == 200
 
 

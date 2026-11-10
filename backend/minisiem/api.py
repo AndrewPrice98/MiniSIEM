@@ -101,7 +101,7 @@ def _event_out(row: dict) -> dict:
 @app.get("/api/health")
 def health():
     return {"status": "ok", "version": __version__, "auth_configured": auth.is_configured(),
-            "demo": config.demo_mode()}
+            "demo": config.demo_mode(), "guest": config.guest_enabled()}
 
 
 class LoginRequest(BaseModel):
@@ -156,7 +156,7 @@ protected = APIRouter(dependencies=[Depends(auth.require_user)])
 
 @protected.get("/api/auth/me")
 def me(user: Annotated[str, Depends(auth.require_user)]):
-    return {"username": user}
+    return {"username": user, "guest": user == auth.GUEST_USER}
 
 
 @protected.get("/api/alerts")
@@ -364,13 +364,14 @@ def list_rules(conn: Conn):
 
 
 @protected.post("/api/detect")
-def detect(conn: Conn):
+def detect(conn: Conn, _user: Annotated[str, Depends(auth.require_writer)]):
     return run_detection(conn)
 
 
 @protected.post("/api/ingest")
 def ingest(
     conn: Conn,
+    _user: Annotated[str, Depends(auth.require_writer)],
     file: Annotated[UploadFile, File(description="Log file (.log or .txt)")],
     source_type: Annotated[str, Form()],
     host: Annotated[str | None, Form(max_length=255)] = None,

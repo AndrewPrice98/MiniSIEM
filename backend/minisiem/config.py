@@ -86,6 +86,11 @@ def demo_mode() -> bool:
     return _flag("MINISIEM_DEMO", False)
 
 
+def guest_enabled() -> bool:
+    """Anonymous read-only access. Defaults to on in demo mode, off everywhere else."""
+    return _flag("MINISIEM_GUEST", demo_mode())
+
+
 def trust_proxy() -> bool:
     """Use X-Forwarded-For for the client IP. Enable only behind a proxy you control."""
     return _flag("MINISIEM_TRUST_PROXY", False)
