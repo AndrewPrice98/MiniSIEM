@@ -6,9 +6,16 @@ example logs, so every visitor sees a fully populated dashboard. Anything upload
 afterwards lives only as long as that instance.
 
 To look alive, the demo also replays the sample intrusion (samples/auth.log and
-samples/access.log) on host REPLAY_HOST: every source line keeps its time of day and
-is inserted once that time has passed on the current date (see catch_up). Requests
-trigger the catch-up, so a visitor at any time sees new events and alerts arriving.
+samples/access.log) on host REPLAY_HOST, on two schedules:
+
+- the attack segment (source times ATTACK_START..ATTACK_END, i.e. 02:40:00-03:31:15,
+  from the first scanner request to the intruder's session closing) replays every hour,
+  each line at the top of the hour plus its offset within the segment, so its alerts fire
+  hourly;
+- every other (background) line keeps its time of day and replays once a day.
+
+A line is inserted once its replay time has passed (see catch_up). Requests trigger the
+catch-up, so a visitor at any time sees new events and alerts arriving.
 """
 
 import json
@@ -30,6 +37,13 @@ REPLAY_HOST = "demo-live"
 REPLAY_SOURCES = (("auth", "auth.log"), ("web", "access.log"))
 REPLAY_WINDOW = timedelta(hours=24)
 DEFAULT_THROTTLE_SECONDS = 10.0
+# The intrusion in the source day, inclusive bounds as UTC seconds of day: from the first
+# gobuster request by 192.0.2.77 (02:40:00) to the compromised deploy session closing
+# (03:31:15). Every line that drives a replay alert except MSIEM-006 for bob (14:05, a
+# background login) falls inside it. It is 51m15s long, so it fits in one hour.
+ATTACK_START = 2 * 3600 + 40 * 60
+ATTACK_END = 3 * 3600 + 31 * 60 + 15
+ATTACK_PERIOD = timedelta(hours=1)
 
 _MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -117,24 +131,69 @@ def retime_line(source_type: str, line: str, when: datetime, host: str) -> str:
 
 def _replay_lines() -> list[tuple[int, str, str]]:
     """The replay source lines with their UTC second of day (parsed once per process).
-    Lines that don't parse are dropped."""
+    Lines that don't parse, or that retime_line can't rewrite, are dropped (and counted
+    in the log), so a bad sample line can never make every catch-up fail."""
     global _replay_cache
     if _replay_cache is None:
         items = []
+        skipped = 0
+        probe = datetime(2000, 1, 1, tzinfo=timezone.utc)
         for source_type, name in REPLAY_SOURCES:
             parser = get_parser(source_type)
             ctx = ParseContext.build(host=REPLAY_HOST)
             with open(config.SAMPLES_DIR / name, encoding="utf-8", errors="replace") as fh:
                 for raw in fh:
                     line = raw.rstrip("\r\n")
+                    if not line.strip():
+                        continue
                     event = parser.parse_line(line, ctx)
-                    if event is None:
+                    try:
+                        if event is None:
+                            raise ValueError("unparsable")
+                        retime_line(source_type, line, probe, REPLAY_HOST)
+                    except ValueError:
+                        skipped += 1
                         continue
                     ts = parse_utc_string(event.timestamp)
                     items.append((ts.hour * 3600 + ts.minute * 60 + ts.second, source_type, line))
+        if skipped:
+            # The samples include deliberately malformed lines (parser error handling demo).
+            log.info("Demo replay skipped %d sample lines it cannot parse or retime", skipped)
         items.sort(key=lambda item: item[0])
         _replay_cache = items
     return _replay_cache
+
+
+def _replay_streams() -> tuple[list[tuple[int, str, str]], list[tuple[int, str, str]]]:
+    """Split the replay lines into (daily, hourly). Daily items carry their second of day;
+    hourly items (the attack segment) carry their offset from ATTACK_START."""
+    daily, hourly = [], []
+    for second, source_type, line in _replay_lines():
+        if ATTACK_START <= second <= ATTACK_END:
+            hourly.append((second - ATTACK_START, source_type, line))
+        else:
+            daily.append((second, source_type, line))
+    return daily, hourly
+
+
+def _due(start: datetime, now: datetime):
+    """Yield (replay time, source_type, line) for every replay line due in (start, now]."""
+    daily, hourly = _replay_streams()
+    day = start.date()
+    while day <= now.date():
+        midnight = datetime(day.year, day.month, day.day, tzinfo=timezone.utc)
+        for second, source_type, line in daily:
+            when = midnight + timedelta(seconds=second)
+            if start < when <= now:
+                yield when, source_type, line
+        day += timedelta(days=1)
+    hour = start.replace(minute=0, second=0, microsecond=0)
+    while hour <= now:
+        for offset, source_type, line in hourly:
+            when = hour + timedelta(seconds=offset)
+            if start < when <= now:
+                yield when, source_type, line
+        hour += ATTACK_PERIOD
 
 
 def catch_up(conn, now: datetime | None = None, *,
@@ -161,6 +220,9 @@ def catch_up(conn, now: datetime | None = None, *,
 def _catch_up(conn, now: datetime) -> int:
     now = now.astimezone(timezone.utc).replace(microsecond=0)
     floor = now - REPLAY_WINDOW
+    # One watermark covers both schedules: each catch-up inserts every line (daily or
+    # hourly) due in (start, now], so nothing at or before the newest replay event is
+    # still missing.
     watermark = conn.execute(
         "SELECT MAX(timestamp) FROM events WHERE host = ?", (REPLAY_HOST,)).fetchone()[0]
     # Never reach back more than one window: an instance idle for days gets only the last 24h.
@@ -168,21 +230,15 @@ def _catch_up(conn, now: datetime) -> int:
     if start >= now:
         return 0
 
-    lines = _replay_lines()
+    batches: dict[tuple[str, int], list[tuple[datetime, str]]] = {}
+    for when, source_type, line in _due(start, now):
+        batches.setdefault((source_type, when.year), []).append(
+            (when, retime_line(source_type, line, when, REPLAY_HOST)))
     inserted = 0
-    day = start.date()
-    while day <= now.date():
-        midnight = datetime(day.year, day.month, day.day, tzinfo=timezone.utc)
-        due: dict[str, list[str]] = {source_type: [] for source_type, _ in REPLAY_SOURCES}
-        for second, source_type, line in lines:
-            when = midnight + timedelta(seconds=second)
-            if start < when <= now:
-                due[source_type].append(retime_line(source_type, line, when, REPLAY_HOST))
-        ctx = ParseContext.build(year=day.year, host=REPLAY_HOST)
-        for source_type, retimed in due.items():
-            if retimed:
-                inserted += ingest_lines(conn, retimed, source_type, ctx).inserted
-        day += timedelta(days=1)
+    for (source_type, year), items in sorted(batches.items()):
+        items.sort(key=lambda item: item[0])
+        ctx = ParseContext.build(year=year, host=REPLAY_HOST)
+        inserted += ingest_lines(conn, [line for _, line in items], source_type, ctx).inserted
 
     if inserted:
         run_detection(conn, only_host=REPLAY_HOST)
