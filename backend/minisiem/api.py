@@ -62,7 +62,7 @@ def _iso(value: str | None, name: str) -> str | None:
         return None
     try:
         return to_utc_string(parse_utc_string(value))
-    except ValueError:
+    except (ValueError, OverflowError):
         raise HTTPException(400, f"{name} must be an ISO 8601 timestamp") from None
 
 
