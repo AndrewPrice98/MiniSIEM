@@ -6,7 +6,7 @@ A lightweight **Security Information and Event Management** tool. It ingests Lin
 
 ## Quick start
 
-Requires **Python 3.12+** and **Node 18+**.
+Requires **Python 3.12+** and **Node 20.19+**.
 
 ```bash
 # 1. Backend: install, load the sample attack dataset, start the API on :8000
@@ -40,16 +40,22 @@ Detection raised 15 alerts:
 
 The repo deploys to Vercel as one project. Vite builds the dashboard as static files, and `api/index.py` runs the FastAPI backend as a Python serverless function (`vercel.json` routes `/api/*` to it, and everything else to the single-page app).
 
-**It runs as a self-contained demo.** Serverless functions can't keep files, so each function instance builds its own SQLite database in `/tmp` from [samples/examples/](samples/examples/) when it starts (about 2 seconds). Every visitor sees the same fully loaded dashboard. Uploads work, but they only last until that instance shuts down, and the dashboard shows a `DEMO` tag to say so.
+**It runs as a self-contained, read-only demo.** Serverless functions can't keep files, so each function instance builds its own SQLite database in `/tmp` from [samples/examples/](samples/examples/) when it starts (about 2 seconds). The example dataset is shifted so that it ends at the present time (60 alerts). On top of that, the demo **replays the sample intrusion live** on host `demo-live`: each line of `samples/auth.log` and `samples/access.log` keeps its time of day and is inserted once that time has passed today, so new events and alerts keep arriving. Requests trigger the catch-up (throttled and locked, so it is cheap), and the dashboard polls every 15 seconds in demo mode.
 
-1. Generate the login variables locally:
+**Visitors are guests.** In demo mode, anonymous visitors browse as a read-only `guest` with no password. `POST /api/detect` and `POST /api/ingest` return 403 for guests. The header shows "Demo · read-only" and a link to run the full version locally. An admin can still sign in to upload logs and re-run detection. Set `MINISIEM_GUEST=false` to turn guest mode off, which brings back the login-only behaviour.
+
+Steps:
+
+1. In Vercel, choose **Add New → Project**, import this repository and select the branch to deploy. Keep the detected defaults (framework Vite, `npm run build`, output `dist`).
+2. Under **Project → Settings → General → Node.js Version**, choose **20.x (20.19 or newer) or 22.x**. The Vite 8 build needs Node 20.19+.
+3. Optional, only if you want admin login on the hosted demo: generate the variables locally with
    ```bash
    cd backend && python -m minisiem create-admin --print
    ```
-2. In Vercel, under **Project → Settings → Environment Variables**, add `MINISIEM_ADMIN_USER`, `MINISIEM_ADMIN_PASSWORD_HASH` and `MINISIEM_SECRET_KEY` from step 1. Leave `MINISIEM_COOKIE_SECURE` unset, so cookies are HTTPS-only. Without these variables, the API refuses every request.
-3. Push to the branch Vercel deploys, or run `vercel --prod`.
+   and add `MINISIEM_ADMIN_USER`, `MINISIEM_ADMIN_PASSWORD_HASH` and `MINISIEM_SECRET_KEY` under **Project → Settings → Environment Variables**. Leave `MINISIEM_COOKIE_SECURE` unset, so cookies are HTTPS-only. Without these variables the guest view works as normal, but nobody can sign in as admin.
+4. Click **Deploy** (or run `vercel --prod`). Open the URL: the dashboard should load without a password and show "Demo · read-only".
 
-Demo-mode differences, set in `api/index.py` and overridable with environment variables: uploads are capped at 4 MB (Vercel's request limit), `X-Forwarded-For` is trusted for the client IP, and login rate limiting counts per instance. `vercel.json` also sets security headers on every response: a Content Security Policy that blocks inline scripts and framing, `nosniff`, and `X-Frame-Options: DENY`.
+Demo-mode differences, set in `api/index.py` and overridable with environment variables: uploads are capped at 4 MB (Vercel's request limit), `X-Forwarded-For` is trusted for the client IP, and login rate limiting counts per instance. `vercel.json` also sets security headers on every response (see [Security](#security)).
 
 ## Architecture
 
@@ -156,7 +162,7 @@ You can also upload files from the **Overview** page (`.log` / `.txt`, max 10 MB
 
 ### Authentication
 
-The dashboard and every data endpoint require a login. There is one admin account, configured through environment variables:
+Locally, the dashboard and every data endpoint require a login (in demo mode, anonymous visitors are read-only guests instead; see [Security](#security)). There is one admin account, configured through environment variables:
 
 | Variable | Purpose |
 |---|---|
@@ -164,6 +170,8 @@ The dashboard and every data endpoint require a login. There is one admin accoun
 | `MINISIEM_ADMIN_PASSWORD_HASH` | Salted PBKDF2-SHA256 hash (600k iterations). The plain password is never stored. |
 | `MINISIEM_SECRET_KEY` | Signs session tokens. At least 32 random characters; changing it logs everyone out. |
 | `MINISIEM_COOKIE_SECURE` | HTTPS-only cookie. On by default; `create-admin` turns it off in the local `.env` for plain-http development. |
+| `MINISIEM_DEMO` | `true` seeds a self-contained demo database and enables guest mode (the Vercel entry point sets it). |
+| `MINISIEM_GUEST` | `false` turns guest mode off, even in demo mode. |
 | `MINISIEM_TRUST_PROXY` | Read the client IP from `X-Forwarded-For`. Enable only behind a proxy you control (Vercel, Render, Fly). |
 
 `python -m minisiem create-admin` writes these to `backend/.env` (git-ignored). `create-admin --print` prints them for a hosting provider's environment settings instead.
@@ -194,6 +202,28 @@ All endpoints except `/api/health` and `/api/auth/login` require authentication.
 | `POST /api/ingest` | Multipart upload: `file`, `source_type`, optional `host`, `year`, `tz_offset` |
 | `POST /api/detect` | Re-run detection |
 
+## Security
+
+MiniSIEM is a security tool, so its own attack surface matters. These are the measures in the code today.
+
+**Authentication.** Passwords are stored only as salted PBKDF2-SHA256 hashes (600k iterations) and compared in constant time. A successful login sets an HS256 JWT in an httpOnly, SameSite=Strict cookie (Secure by default), so page scripts can't read it and other sites can't make the browser send it. Failed logins are rate-limited per IP (five failures, five-minute lockout, HTTP 429), and wrong usernames and wrong passwords look identical. The API fails closed: without a password hash and a strong secret key it returns 503 rather than running open. Forged, expired and `alg: none` tokens are rejected (tested).
+
+**Guest mode (demo only).** When `MINISIEM_DEMO=true` (the Vercel entry point sets it), anonymous visitors are a read-only `guest`. Guests can read alerts, events, stats and rules, but `POST /api/detect` and `POST /api/ingest` return 403. Admin login still works if the admin variables are set. `MINISIEM_GUEST=false` disables guest mode. Outside demo mode there are no guests: every request needs a login.
+
+**Injection.** All SQL is parameterised. Sort columns and other identifiers come from allowlists, and LIKE wildcards in search terms are escaped. [backend/tests/test_injection.py](backend/tests/test_injection.py) sends SQL injection payloads through the filter, sort and pagination parameters. Out-of-range `start` and `end` values return 400.
+
+**Upload validation.** Uploads are size-capped (10 MB locally, 4 MB on the demo) and checked before parsing: files containing NUL bytes or invalid UTF-8 are rejected with 415 (so Latin-1 files must be converted to UTF-8 first), and any line longer than 8192 characters gets 413. A UTF-8 BOM and CRLF line endings are accepted. See `backend/minisiem/uploads.py`.
+
+**Security headers.** `vercel.json` sets these on every response: a Content Security Policy (`default-src 'self'`, no inline scripts, `frame-ancestors 'none'`, `base-uri 'self'`, `form-action 'self'`), `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY` and `Referrer-Policy: strict-origin-when-cross-origin`.
+
+**Supply chain and CI.** [.github/workflows/ci.yml](.github/workflows/ci.yml) runs backend tests and `python -m minisiem rules`, the frontend build, `npm audit --audit-level=high`, `pip-audit` on both `backend/requirements.txt` and the root `requirements.txt` (the one Vercel installs), and a gitleaks secret scan. Dependabot proposes updates for pip, npm and GitHub Actions.
+
+Known advisories: `npm audit` reports 2 moderate advisories in `react-router-dom` 6.x. The fix requires react-router v7, and this app is client-side only, so they are accepted for now. CI fails only on high severity.
+
+**Secrets.** Secrets live only in environment variables or `backend/.env`, which is git-ignored. `backend/.env.example` holds placeholders only, and the git history was checked for real values.
+
+**Threat model.** The public demo exposes a read-only view of synthetic data: the bundled sample logs and a replay of them, with documentation-reserved IP ranges (192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24) and made-up hosts and usernames. Guests can't write, no real credentials or logs exist on the server, and each serverless instance has its own throwaway database in `/tmp`. The worst case from abuse is load on a free-tier function, not exposure of real data. That is why letting anyone in without a password is acceptable here. A real deployment should set `MINISIEM_GUEST=false`, keep the admin login and serve the API over TLS. Not covered: a rate limit shared across instances, per-user accounts and audit logging.
+
 ## Screenshots
 
 | Alerts | Alert detail |
@@ -210,7 +240,7 @@ All endpoints except `/api/health` and `/api/auth/login` require authentication.
 cd backend && python -m pytest
 ```
 
-There are 159 tests: each parser (good, malformed and edge-case lines), each rule (should fire / should not fire), every example log against its manifest, ingestion idempotency, every API endpoint, input validation (bad uploads, SQL injection in the sort parameter, LIKE wildcards), and authentication (every endpoint rejects anonymous requests; forged, expired and `alg: none` tokens are rejected; rate limiting; failing closed).
+There are 278 tests: each parser (good, malformed and edge-case lines), each rule (should fire / should not fire), every example log against its manifest, ingestion idempotency, every API endpoint, input validation (upload checks, SQL injection payloads on every parameter, LIKE wildcards), the demo replay and guest mode, and authentication (every endpoint rejects anonymous requests; forged, expired and `alg: none` tokens are rejected; rate limiting; failing closed).
 
 ## Tech stack
 

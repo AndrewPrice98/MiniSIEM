@@ -122,7 +122,7 @@ This document breaks the project into **milestones**, each with ordered **steps*
 - [x] **5.4** Take screenshots / record a GIF of the dashboard
 - [x] **5.5** Draw an architecture diagram
 - [x] **5.6** Write the README (see [README Checklist](#f-readme-checklist))
-- [ ] **5.7** Tag a release (`v0.1.0`)
+- [ ] **5.7** Tag a release (`v0.1.0`) (pending deploy)
 
 **Done when:** A fresh clone runs the demo by following the README alone, and every README checklist item is checked. **This is the MVP.**
 
@@ -148,11 +148,11 @@ This document breaks the project into **milestones**, each with ordered **steps*
 **Goal:** The security tool itself has no obvious holes.
 
 - [x] **7.1** Add authentication to the API and dashboard
-- [ ] **7.2** Validate uploaded logs (size limits, file types)
-- [ ] **7.3** Review search/filter code for injection risks
-- [ ] **7.4** Confirm no secrets are committed (`.env` in `.gitignore`, history checked)
-- [ ] **7.5** Enable dependency scanning (Dependabot, `npm audit`, `pip-audit`)
-- [ ] **7.6** Add a "Security" section to the README describing these measures
+- [x] **7.2** Validate uploaded logs (size limits, file types)
+- [x] **7.3** Review search/filter code for injection risks
+- [x] **7.4** Confirm no secrets are committed (`.env` in `.gitignore`, history checked)
+- [x] **7.5** Enable dependency scanning (Dependabot, `npm audit`, `pip-audit`)
+- [x] **7.6** Add a "Security" section to the README describing these measures
 
 **Done when:** Unauthenticated requests are rejected, bad uploads are refused, and dependency scans are clean or triaged.
 

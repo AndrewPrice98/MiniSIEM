@@ -1,6 +1,6 @@
 [project]
 name = "minisiem"
-version = "0.2.0"
+version = "0.1.0"
 description = "A lightweight SIEM: log ingestion, Sigma-like detection rules, MITRE ATT&CK mapping."
 requires-python = ">=3.12"
 dependencies = [
