@@ -2,6 +2,8 @@
 
 A lightweight **Security Information and Event Management** tool. It ingests Linux auth logs and web server access logs, normalizes them into one event schema, runs **Sigma-style detection rules** mapped to **MITRE ATT&CK**, and shows the resulting alerts in a React dashboard. The bundled sample dataset replays a full intrusion, from web recon and SSH brute force to a successful login, privilege escalation and a backdoor account, so every rule fires in a repeatable demo.
 
+**Live demo: <https://minisiem.vercel.app/>** (read-only, no password; the intrusion replays every hour).
+
 ![Overview dashboard](docs/screenshots/overview.png)
 
 ## Quick start
