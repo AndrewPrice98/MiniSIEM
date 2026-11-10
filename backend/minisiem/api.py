@@ -13,6 +13,7 @@ from .detection import load_rules, run_detection
 from .ingest import ingest_lines
 from .models import parse_utc_string, to_utc_string
 from .parsers import PARSERS, ParseContext
+from .uploads import UploadError, decode_log_upload
 
 app = FastAPI(
     title="MiniSIEM API",
@@ -400,12 +401,13 @@ def ingest(
     data = file.file.read(limit + 1)
     if len(data) > limit:
         raise HTTPException(413, f"File too large (max {limit // (1024 * 1024)} MB)")
-    if b"\x00" in data:
-        raise HTTPException(415, "File looks binary, expected a text log")
+    try:
+        lines = decode_log_upload(data)
+    except UploadError as e:
+        raise HTTPException(e.status, str(e)) from None
 
-    text = data.decode("utf-8", errors="replace")
     ctx = ParseContext.build(year=year, tz_offset_hours=tz_offset, host=host)
-    result = ingest_lines(conn, text.splitlines(), source_type, ctx)
+    result = ingest_lines(conn, lines, source_type, ctx)
     detection = run_detection(conn)
     return {"ingest": result.to_dict(), "detection": detection}
 
