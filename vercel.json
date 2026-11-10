@@ -6,7 +6,7 @@
   "functions": {
     "api/index.py": {
       "maxDuration": 30,
-      "includeFiles": "{backend/minisiem/**,backend/rules/**,samples/examples/**}"
+      "includeFiles": "{backend/minisiem/**,backend/rules/**,samples/examples/**,samples/auth.log,samples/access.log}"
     }
   },
   "rewrites": [
