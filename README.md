@@ -240,7 +240,7 @@ Known advisories: `npm audit` reports 2 moderate advisories in `react-router-dom
 cd backend && python -m pytest
 ```
 
-There are 278 tests: each parser (good, malformed and edge-case lines), each rule (should fire / should not fire), every example log against its manifest, ingestion idempotency, every API endpoint, input validation (upload checks, SQL injection payloads on every parameter, LIKE wildcards), the demo replay and guest mode, and authentication (every endpoint rejects anonymous requests; forged, expired and `alg: none` tokens are rejected; rate limiting; failing closed).
+There are 285 tests: each parser (good, malformed and edge-case lines), each rule (should fire / should not fire), every example log against its manifest, ingestion idempotency, every API endpoint, input validation (upload checks, SQL injection payloads on every parameter, LIKE wildcards), the demo replay (including hourly attack alerts), guest mode and the Vercel entry point, and authentication (every endpoint rejects anonymous requests; forged, expired and `alg: none` tokens are rejected; rate limiting; failing closed).
 
 ## Tech stack
 
