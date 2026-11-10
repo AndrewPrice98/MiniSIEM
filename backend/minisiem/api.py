@@ -182,7 +182,7 @@ def list_alerts(
     technique: str | None = None,
     start: str | None = None,
     end: str | None = None,
-    q: str | None = None,
+    q: Annotated[str | None, Query(max_length=200)] = None,
     sort: str = "last_seen",
     order: str = "desc",
     limit: Annotated[int, Query(ge=1, le=500)] = 50,
