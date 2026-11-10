@@ -121,12 +121,14 @@ def test_alerts_q_over_length_rejected(client):
 
 def test_backslash_matches_literally(client, load):
     load("auth", [
-        "2026-11-02T10:00:00+00:00 srv1 sshd[1]: Failed password for invalid user a\b from 10.9.9.9 port 22 ssh2",
+        r"2026-11-02T10:00:00+00:00 srv1 sshd[1]: Failed password for invalid user a\b from 10.9.9.9 port 22 ssh2",
         "2026-11-02T10:00:01+00:00 srv1 sshd[1]: Failed password for invalid user ab from 10.9.9.9 port 22 ssh2",
     ])
-    r = client.get("/api/events", params={"q": "user a\b"})
+    r = client.get("/api/events", params={"q": r"user a\b"})
     assert r.json()["total"] == 1
-    assert "a\b" in r.json()["items"][0]["raw"]
+    assert r"a\b" in r.json()["items"][0]["raw"]
+    # A bare backslash must not act as a LIKE escape that swallows the next character.
+    assert client.get("/api/events", params={"q": "\\"}).json()["total"] == 1
 
 
 def test_alerts_q_wildcards_match_literally(client, conn):

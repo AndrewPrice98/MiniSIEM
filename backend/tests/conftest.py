@@ -1,6 +1,6 @@
 import pytest
 
-from minisiem import db
+from minisiem import db, demo
 from minisiem.auth import hash_password, limiter
 from minisiem.detection import load_rules
 from minisiem.ingest import ingest_lines
@@ -24,6 +24,14 @@ def auth_env(monkeypatch):
     limiter.reset()
     yield
     limiter.reset()
+
+
+@pytest.fixture(autouse=True)
+def reset_demo_replay(monkeypatch):
+    """Each test starts with the replay throttle cleared, so a catch-up in one test can't
+    make another test's catch-up a silent no-op. The parsed-line cache (_replay_cache) is
+    read-only data from samples/ and is kept for speed."""
+    monkeypatch.setattr(demo, "_last_run", None)
 
 
 @pytest.fixture
