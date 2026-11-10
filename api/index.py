@@ -2,7 +2,9 @@
 
 vercel.json rewrites every /api/* request here; FastAPI routes on the original path.
 Each function instance builds its own SQLite database in /tmp from samples/examples/
-on cold start (about 2 seconds), so the hosted site is a self-contained demo.
+on cold start, so the hosted site is a self-contained demo. ensure_seeded() also runs the
+first live-replay catch-up (the last 24 hours of the sample intrusion on host demo-live);
+after that, requests keep the replay current (see minisiem.demo.catch_up).
 """
 
 import os

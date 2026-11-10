@@ -65,13 +65,18 @@ CREATE INDEX IF NOT EXISTS idx_alert_events_event ON alert_events(event_id);
 """
 
 
+BUSY_TIMEOUT_SECONDS = 15.0
+
+
 def connect(path: Path | None = None) -> sqlite3.Connection:
     """Open the database, creating it and its schema if needed."""
     path = Path(path or config.db_path())
     path.parent.mkdir(parents=True, exist_ok=True)
     # FastAPI may run a dependency and its endpoint on different worker
     # threads; each request still gets its own connection.
-    conn = sqlite3.connect(path, check_same_thread=False)
+    # A concurrent writer (e.g. the demo's seeding or replay catch-up) makes others wait
+    # up to BUSY_TIMEOUT_SECONDS instead of failing with "database is locked".
+    conn = sqlite3.connect(path, timeout=BUSY_TIMEOUT_SECONDS, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("PRAGMA journal_mode = WAL")

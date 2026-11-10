@@ -1,5 +1,6 @@
 """REST API serving events, alerts, stats, and rules to the dashboard."""
 
+import logging
 import sqlite3
 from datetime import timedelta
 from typing import Annotated, Iterator
@@ -7,7 +8,7 @@ from typing import Annotated, Iterator
 from fastapi import APIRouter, Depends, FastAPI, File, Form, HTTPException, Query, Request, Response, UploadFile
 from pydantic import BaseModel, Field
 
-from . import __version__, auth, config, db
+from . import __version__, auth, config, db, demo
 from .detection import load_rules, run_detection
 from .ingest import ingest_lines
 from .models import parse_utc_string, to_utc_string
@@ -32,10 +33,20 @@ ALERT_SORTS = {
 }
 ALLOWED_UPLOAD_SUFFIXES = (".log", ".txt")
 
+log = logging.getLogger("minisiem.api")
+
 
 def get_conn() -> Iterator[sqlite3.Connection]:
     conn = db.connect()
     try:
+        if config.demo_mode():
+            # The demo replays its sample intrusion live; a failed catch-up must never
+            # fail the request it rode in on.
+            try:
+                demo.catch_up(conn)
+            except Exception:
+                conn.rollback()
+                log.exception("Demo replay catch-up failed; serving the request anyway")
         yield conn
     finally:
         conn.close()
