@@ -15,7 +15,7 @@ const COLUMNS = [
 ]
 const FILTER_KEYS = ['rule_id', 'host', 'source_ip', 'user_name', 'technique', 'q']
 
-export default function Alerts() {
+export default function Alerts({ demo }) {
   const [params, setParams] = useSearchParams()
   const navigate = useNavigate()
   const severity = params.getAll('severity')
@@ -28,6 +28,7 @@ export default function Alerts() {
   const alerts = useAsync(
     () => api.alerts({ ...filters, severity, sort, order, limit: LIMIT, offset }),
     [params.toString()],
+    { pollMs: demo ? 15000 : 0 },
   )
 
   function update(changes, { resetPage = true } = {}) {

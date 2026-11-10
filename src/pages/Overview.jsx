@@ -4,9 +4,12 @@ import { api } from '../api.js'
 import { BarList, TimelineChart } from '../components/charts.jsx'
 import { Empty, ErrorState, Loading, SEVERITIES, Severity, formatTime, useAsync } from '../components/ui.jsx'
 
-export default function Overview() {
-  const stats = useAsync(() => api.stats(), [])
-  const recent = useAsync(() => api.alerts({ sort: 'severity', order: 'desc', limit: 6 }), [])
+const POLL_MS = 15000
+
+export default function Overview({ guest, demo }) {
+  const poll = { pollMs: demo ? POLL_MS : 0 }
+  const stats = useAsync(() => api.stats(), [], poll)
+  const recent = useAsync(() => api.alerts({ sort: 'severity', order: 'desc', limit: 6 }), [], poll)
   const reloadAll = () => { stats.reload(); recent.reload() }
 
   return (
@@ -27,7 +30,9 @@ export default function Overview() {
       {stats.data && stats.data.total_events === 0 && (
         <div className="card" style={{ marginBottom: 10 }}>
           <Empty>
-            No events yet. Upload a log below, or run <code>python -m minisiem demo</code> in <code>backend/</code>.
+            {guest
+              ? 'No events yet. The demo data is still loading; check back shortly.'
+              : <>No events yet. Upload a log below, or run <code>python -m minisiem demo</code> in <code>backend/</code>.</>}
           </Empty>
         </div>
       )}
@@ -98,10 +103,12 @@ export default function Overview() {
         </div>
       )}
 
-      <div className="card" style={{ marginTop: 10 }}>
-        <h2>Upload a log file</h2>
-        <UploadForm onDone={reloadAll} />
-      </div>
+      {!guest && (
+        <div className="card" style={{ marginTop: 10 }}>
+          <h2>Upload a log file</h2>
+          <UploadForm onDone={reloadAll} />
+        </div>
+      )}
     </>
   )
 }

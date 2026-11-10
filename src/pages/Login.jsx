@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { api } from '../api.js'
 
-export default function Login({ onLogin, notice }) {
+export default function Login({ onLogin, notice, onCancel }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [busy, setBusy] = useState(false)
@@ -38,6 +38,7 @@ export default function Login({ onLogin, notice }) {
         </label>
         {error && <div className="state error" role="alert">{error}</div>}
         <button className="primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
+        {onCancel && <button type="button" className="link" onClick={onCancel}>Back to the demo</button>}
       </form>
     </div>
   )

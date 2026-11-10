@@ -26,8 +26,12 @@ export function Empty({ children }) {
   return <div className="state">{children}</div>
 }
 
-/** Run an async loader whenever deps change. Ignores stale responses. */
-export function useAsync(loader, deps) {
+/**
+ * Run an async loader whenever deps change. Ignores stale responses.
+ * With pollMs, also refetch quietly on that interval while the tab is visible: no
+ * loading flag, and a failed refresh keeps the data already on screen.
+ */
+export function useAsync(loader, deps, { pollMs = 0 } = {}) {
   const [state, setState] = useState({ loading: true, error: null, data: null })
   const [tick, setTick] = useState(0)
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,6 +44,15 @@ export function useAsync(loader, deps) {
       .catch((error) => live && setState({ loading: false, error, data: null }))
     return () => { live = false }
   }, [load, tick])
+  useEffect(() => {
+    if (!pollMs) return undefined
+    let live = true
+    const id = setInterval(() => {
+      if (document.visibilityState !== 'visible') return
+      load().then((data) => live && setState({ loading: false, error: null, data })).catch(() => {})
+    }, pollMs)
+    return () => { live = false; clearInterval(id) }
+  }, [load, pollMs])
   return { ...state, reload: () => setTick((t) => t + 1) }
 }
 

@@ -16,7 +16,7 @@ const NAV = [
   ['/attack', 'ATT&CK'],
 ]
 
-function Shell({ user, version, demo, onLogout }) {
+function Shell({ user, version, demo, guest, onLogout, onAdminSignIn }) {
   return (
     <div className="app">
       <header className="topbar">
@@ -27,20 +27,34 @@ function Shell({ user, version, demo, onLogout }) {
           ))}
         </nav>
         <div className="status">
-          {demo && (
-            <span className="tag" title="Hosted demo: data is loaded from the example logs, and uploads are temporary.">
-              demo
-            </span>
+          {guest ? (
+            <>
+              <span className="tag" title="Hosted demo: you are browsing example data. Uploads and detection runs are disabled.">
+                Demo · read-only
+              </span>
+              <a href="https://github.com/AndrewPrice98/MiniSIEM#quick-start" target="_blank" rel="noreferrer">
+                Run it locally for the full version
+              </a>
+              <button className="link" onClick={onAdminSignIn}>admin sign in</button>
+            </>
+          ) : (
+            <>
+              {demo && (
+                <span className="tag" title="Hosted demo: data is loaded from the example logs, and uploads are temporary.">
+                  demo
+                </span>
+              )}
+              <span className="led up" aria-hidden="true" />
+              v{version} · {user}
+              <button className="link" onClick={onLogout}>sign out</button>
+            </>
           )}
-          <span className="led up" aria-hidden="true" />
-          v{version} · {user}
-          <button className="link" onClick={onLogout}>sign out</button>
         </div>
       </header>
       <main className="main">
         <Routes>
-          <Route path="/" element={<Overview />} />
-          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/" element={<Overview guest={guest} demo={demo} />} />
+          <Route path="/alerts" element={<Alerts demo={demo} />} />
           <Route path="/alerts/:id" element={<AlertDetail />} />
           <Route path="/events" element={<Events />} />
           <Route path="/attack" element={<Attack />} />
@@ -58,10 +72,16 @@ function App() {
   const check = useCallback(async () => {
     try {
       const health = await api.health()
+      if (health.guest) {
+        // Demo mode: visitors browse read-only without signing in. A valid admin
+        // cookie still wins (me.guest is false); an expired one falls back to guest.
+        const me = await api.me()
+        return setState({ phase: 'user', user: me.username, guest: me.guest, version: health.version, demo: health.demo })
+      }
       if (!health.auth_configured) return setState({ phase: 'unconfigured' })
       try {
         const me = await api.me()
-        setState({ phase: 'user', user: me.username, version: health.version, demo: health.demo })
+        setState({ phase: 'user', user: me.username, guest: false, version: health.version, demo: health.demo })
       } catch (err) {
         if (err.status === 401) setState({ phase: 'anon', version: health.version, demo: health.demo })
         else throw err
@@ -84,7 +104,8 @@ function App() {
 
   async function logout() {
     try { await api.logout() } catch { /* clearing local state is enough */ }
-    setState((s) => ({ phase: 'anon', version: s.version, demo: s.demo }))
+    // In demo mode this lands back on the guest view; otherwise on the login page.
+    await check()
   }
 
   if (state.phase === 'checking') return <Loading label="Connecting…" />
@@ -103,11 +124,14 @@ function App() {
     )
   }
   if (state.phase === 'anon') {
-    return <Login notice={state.notice} onLogin={(user) => setState((s) => ({ ...s, phase: 'user', user, notice: undefined }))} />
+    return <Login notice={state.notice} onLogin={(user) => setState((s) => ({ ...s, phase: 'user', user, guest: false, notice: undefined }))}
+      onCancel={state.canCancel ? check : undefined} />
   }
   return (
     <BrowserRouter>
-      <Shell user={state.user} version={state.version} demo={state.demo} onLogout={logout} />
+      <Shell user={state.user} version={state.version} demo={state.demo} guest={state.guest}
+        onLogout={logout}
+        onAdminSignIn={() => setState((s) => ({ ...s, phase: 'anon', canCancel: true }))} />
     </BrowserRouter>
   )
 }
