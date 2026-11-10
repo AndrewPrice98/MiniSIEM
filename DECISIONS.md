@@ -13,6 +13,16 @@ Decisions that the rest of the project depends on. Change them here first if the
 | 0.7 | Architecture | Collector → Parser → SQLite → Detection engine → REST API → React dashboard | See README diagram. |
 | — | Frontend | Existing **React 18 + Vite** scaffold, `react-router-dom`, hand-drawn SVG charts | No charting dependency for a handful of simple charts. |
 
+## Phase 1 — hosted demo
+
+| # | Decision | Choice | Why |
+|---|---|---|---|
+| 1.1 | Demo access | **Read-only guest mode**, on by default in demo mode (`MINISIEM_GUEST`), off elsewhere | Visitors see the dashboard without a password. Guests can't call `POST /api/detect` or `/api/ingest` (403), and the data is synthetic, so nothing is exposed. Admin login still works when configured. |
+| 1.2 | Making the demo look live | **Insert replay events as their time arrives** (a throttled, locked catch-up on requests, watermarked by the newest `demo-live` event) instead of filtering a pre-loaded future dataset at query time | Every query, count and chart stays plain SQL over stored events; nothing has to know about a "visible until" cutoff. Inserts are idempotent (line fingerprints), so concurrent or repeated catch-ups can't duplicate. |
+| 1.3 | Replay detection scope | **Detection for the replay runs only on host `demo-live`**; seeding skips that host | Replay catch-ups stay cheap and can never merge with, re-open or change the 60 base example alerts. |
+| 1.4 | Replay cadence | **The attack segment (02:40:00–03:31:15 of the source day) replays every hour**, on the hour; background lines keep a daily loop | With a daily loop every alert landed between 02:40 and 03:25 UTC, so most visitors saw none arrive. Each step recurs 60 minutes after its previous run, longer than any rule window (15 minutes at most), so every cycle raises its own alerts. MSIEM-006 (first-seen IP) fires only once per instance by design. |
+| 1.5 | Rule storage | **Rules stay YAML files** in `backend/rules/`, read-only at runtime | No rule editor or rules table in Phase 1: files are reviewable in git and need no migration. |
+
 ## Common event schema
 
 | Field | ECS equivalent | Notes |
